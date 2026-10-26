@@ -1,6 +1,6 @@
 # Latest repository file inventory
 
-**Observed:** 2026-10-26. This inventory enumerates 1,540 non-ignored files in the 15 checked-out Git repositories under `~/Vapor`, including non-code material. It includes tracked files and non-ignored untracked files; it excludes ignored/generated output and does not expand submodule gitlinks twice. The two untracked October 24 content-graph documents are included. The owner-accepted comparison baseline is **791 / 1,540** files path-cited. A mechanical recount of current artifact Markdown produced the previous 959 figure; the latest recount is 1,007; its comparability has not been established, so it is explicitly provisional and does not replace that baseline.
+**Observed:** 2026-10-26. This inventory enumerates 1,540 non-ignored files in the 15 checked-out Git repositories under `~/Vapor`, including non-code material. It includes tracked files and non-ignored untracked files; it excludes ignored/generated output and does not expand submodule gitlinks twice. The two untracked October 24 content-graph documents are included. The owner-accepted comparison baseline is **791 / 1,540** files path-cited. A mechanical recount of current artifact Markdown produced the previous 959 figure; the latest recount is 1,009; its comparability has not been established, so it is explicitly provisional and does not replace that baseline.
 
 | Measure | Count | Meaning |
 |---|---:|---|
@@ -8,8 +8,8 @@
 | Rust/Rhai/shell/Python source | 913 | The narrower code census tracked separately in [source coverage](latest-source-file-coverage.md) |
 | Markdown | 455 | Documentation, design, plans, operator records, READMEs and other Markdown |
 | TOML | 82 | Cargo, Vapor, tool, service and other TOML manifests/configuration |
-| Files with an exact absolute path mention in the latest recount (unreconciled) | 1,007 | Provisional citation reach only; not comparable to the accepted baseline yet |
-| Files without such an exact mention in that recount | 533 | Provisional; grouped discussion does not count as per-file reach |
+| Files with an exact absolute path mention in the latest recount (unreconciled) | 1,009 | Provisional citation reach only; not comparable to the accepted baseline yet |
+| Files without such an exact mention in that recount | 531 | Provisional; grouped discussion does not count as per-file reach |
 | All-file current-state dispositions recorded per file | 36 / 1,540 | Explicit per-file status; citation reach does not prove review |
 | All-file history/intent reconciliations recorded per file | 36 / 1,540 | Separate per-file status; citation reach does not prove cross-reference |
 | Dirty or untracked files | 4 | Loo-Cast `Cargo.lock`; Vapor Installer UI formatting; two untracked Vapor content-graph documents |
