@@ -77,3 +77,11 @@ The follow-up traced player and world health bars back through Health, USF owner
 ## October 26 — Engine UI foundation source pass
 
 The current UI root centralizes shared text and panel tokens but no reusable layout/control kit. Adoption is partial (including a locally styled flight HUD), z-order combines named 0/100/110 layers with literal 1,840–20,000 values, and both font roles still use Bevy defaults; a bundled engine font was not found. The `Stage 6` comment has no matching Markdown definition in the checkout. Latest path reach is 802/913 focused, 716/913 cross-reference, and 1,003/1,540 all-file. These are provisional reach counts only; accepted baselines remain separate. No UI/runtime test was performed.
+
+
+## October 26 follow-up — Loo-Cast developer-adapter slice
+
+The adapter review records the generic Engine contracts and Loo-Cast-specific camera, collider/portal, and USF identity projection. It identifies a source-location ownership mismatch and an unresolved chart-unit-versus-metre policy at the focus ray; neither was runtime-tested. Citation reach was refreshed independently: focused source 806/913 (107 uncited), source history/intent 721/913 (192 uncited), whole-repository 1,007/1,540 (533 uncited). The accepted baselines remain 568/913, 437/913, and 791/1,540; all latest values remain provisional and unreconciled. Per-file disposition counts remain 19 on each source track and 36 on each whole-repository track. These reach measures and disposition measures remain separate.
+
+
+The same pass reviewed the embedded Developer Editor shell: live camera projection, transient docking/selection state, and a flat visualization registry shared by two separate presentation surfaces. It adds path reach, not per-file certification. No game UI was launched.
