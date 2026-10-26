@@ -427,7 +427,7 @@ def build_site(root: Path, output: Path, base_url: str = "/") -> list[Validation
     (output / "index.html").write_text(_page("Home", home, base, "index.html"), encoding="utf-8")
 
     system_sections = [
-        ("Product and model", ("atlas-product", "knowledge-model", "timeline-is-a-view")),
+        ("Product and model", ("atlas-product", "knowledge-model", "timeline-is-a-view", "current-site-is-disposable-bootstrap")),
         ("Authored data and generation", ("atlas-authoring", "atlas-generator", "atlas-validation")),
         ("Published experience", ("atlas-site", "atlas-search-and-export", "atlas-publishing")),
         ("Boundaries and open design", ("atlas-scope", "entrypoint-review")),
@@ -530,7 +530,7 @@ def main(argv: list[str] | None = None) -> int:
     build_parser = subparsers.add_parser("build", help="build the static Atlas site and JSON export")
     build_parser.add_argument("--root", type=Path, default=Path.cwd())
     build_parser.add_argument("--output", type=Path, default=Path("dist"))
-    build_parser.add_argument("--base-url", default="/")
+    build_parser.add_argument("--base-url", default=None, help="site base path (defaults to atlas.toml publication.base_path)")
     serve_parser = subparsers.add_parser("serve", help="build and serve Atlas locally")
     serve_parser.add_argument("--root", type=Path, default=Path.cwd())
     serve_parser.add_argument("--output", type=Path, default=Path("dist"))
@@ -549,7 +549,14 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     output = args.output if args.output.is_absolute() else root / args.output
-    errors = build_site(root, output, args.base_url)
+    base_url = args.base_url
+    if base_url is None:
+        try:
+            config = tomllib.loads((root / "atlas.toml").read_text(encoding="utf-8"))
+            base_url = str(config.get("publication", {}).get("base_path", "/"))
+        except (OSError, UnicodeError, tomllib.TOMLDecodeError):
+            base_url = "/"
+    errors = build_site(root, output, base_url)
     if errors:
         _print_errors(errors)
         return 1

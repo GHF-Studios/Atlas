@@ -105,6 +105,7 @@ class AtlasRenderingTests(unittest.TestCase):
             self.assertIn("How Atlas works", home)
             self.assertIn("How Atlas is built", system)
             self.assertIn("Authored data and generation", system)
+            self.assertIn("disposable bootstrap visualization", system)
             self.assertIn("/atlas/timeline.html", home)
             self.assertIn("Record types", map_page)
             self.assertIn("not independently confirmed", map_page)
@@ -129,6 +130,16 @@ class AtlasRenderingTests(unittest.TestCase):
             for page in ("product", "authoring", "site", "generator", "search-and-export", "validation", "publishing", "scope"):
                 self.assertTrue((output / "records" / f"atlas-{page}.html").is_file(), page)
             self.assertIn("not a server", (output / "records/atlas-scope.html").read_text(encoding="utf-8"))
+
+            default_output = Path(temporary) / "default-base-site"
+            default_build = subprocess.run(
+                [sys.executable, str(Path(__file__).resolve().parents[1] / "tools/atlas.py"),
+                 "build", "--root", str(root), "--output", str(default_output)],
+                capture_output=True,
+                text=True,
+            )
+            self.assertEqual(0, default_build.returncode, default_build.stderr)
+            self.assertIn('/atlas/timeline.html', (default_output / "index.html").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

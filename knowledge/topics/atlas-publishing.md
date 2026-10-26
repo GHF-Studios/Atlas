@@ -12,7 +12,7 @@ sources = [".github/workflows/validate-and-package.yml", "README.md", "atlas.tom
 
 The GitHub Actions workflow validates records, checks `site/assets/search.js` syntax, runs the test suite, and builds a static site under `_site` with base path `/atlas/`. It uploads the result as a workflow artifact on pushes, pull requests, and manual runs. It does not publish the production website.
 
-GitHub is the recoverable source and CI host. The intended public address is `https://vapor.ghf-studios.site/atlas/`, served from the GHF Studios Strato VPS. The server route, document root, and transfer mechanism are not configured by this repository yet. This is a target, not a claim that the new site is already live.
+GitHub is the recoverable source and CI host. The intended public address is `https://vapor.ghf-studios.site/atlas/`, served from the GHF Studios Strato VPS. The server route, document root, and transfer mechanism are not configured by this repository yet. This is a target, not a claim that the new site is already live. The current generated site is a disposable visualization, not an approved Atlas design; see the owner-directed decision record.
 
 ## Deliberate operational limits
 
