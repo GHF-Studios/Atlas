@@ -6,7 +6,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import dataclass
 from datetime import date, datetime
-from html import escape
+from html import escape, unescape
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -17,6 +17,7 @@ import sys
 import tomllib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any
+from urllib.parse import quote, unquote, urlsplit
 
 
 KIND_DIRS = {
@@ -223,7 +224,7 @@ def validate_records(
     return errors
 
 
-def _inline_markdown(text: str) -> str:
+def _inline_markdown(text: str, link_resolver=None) -> str:
     escaped = escape(text, quote=True)
     escaped = re.sub(r"`([^`]+)`", r"<code>\1</code>", escaped)
     escaped = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", escaped)
@@ -234,29 +235,51 @@ def _inline_markdown(text: str) -> str:
     def link(match: re.Match[str]) -> str:
         label = match.group(1)
         target = match.group(2)
-        decoded_target = target.replace("&amp;", "&")
-        if decoded_target.startswith(("https://", "http://", "mailto:", "/", "#")):
+        decoded_target = unescape(target)
+        if decoded_target.startswith(("https://", "http://", "mailto:", "#")):
+            return f'<a href="{target}">{label}</a>'
+        if link_resolver is not None:
+            resolved = link_resolver(decoded_target)
+            if resolved is not None:
+                return f'<a href="{escape(resolved, quote=True)}">{label}</a>'
+            if decoded_target.startswith("/"):
+                return label
+        elif decoded_target.startswith("/"):
             return f'<a href="{target}">{label}</a>'
         return label
 
     return link_pattern.sub(link, escaped)
 
 
-def render_markdown(markdown: str) -> str:
+def render_markdown(markdown: str, link_resolver=None) -> str:
     """Render a conservative Markdown subset; raw HTML is always escaped."""
     output: list[str] = []
     paragraph: list[str] = []
     list_items: list[str] = []
     code_lines: list[str] | None = None
+    heading_ids: set[str] = set()
+
+    def heading_id(source: str) -> str:
+        plain = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", source)
+        plain = re.sub(r"[`*~]", "", plain).lower()
+        plain = re.sub(r"[^\w -]", "", plain, flags=re.UNICODE).strip().replace(" ", "-")
+        base_id = plain or "section"
+        candidate = base_id
+        suffix = 1
+        while candidate in heading_ids:
+            candidate = f"{base_id}-{suffix}"
+            suffix += 1
+        heading_ids.add(candidate)
+        return candidate
 
     def flush_paragraph() -> None:
         if paragraph:
-            output.append("<p>" + _inline_markdown(" ".join(part.strip() for part in paragraph)) + "</p>")
+            output.append("<p>" + _inline_markdown(" ".join(part.strip() for part in paragraph), link_resolver) + "</p>")
             paragraph.clear()
 
     def flush_list() -> None:
         if list_items:
-            output.append("<ul>" + "".join(f"<li>{_inline_markdown(item)}</li>" for item in list_items) + "</ul>")
+            output.append("<ul>" + "".join(f"<li>{_inline_markdown(item, link_resolver)}</li>" for item in list_items) + "</ul>")
             list_items.clear()
 
     for line in markdown.splitlines():
@@ -277,7 +300,13 @@ def render_markdown(markdown: str) -> str:
         if heading:
             flush_paragraph(); flush_list()
             level = len(heading.group(1))
-            output.append(f"<h{level}>{_inline_markdown(heading.group(2))}</h{level}>")
+            identifier = heading_id(heading.group(2))
+            aliases = []
+            underscore_alias = identifier.replace("-", "_")
+            if underscore_alias != identifier and underscore_alias not in heading_ids:
+                heading_ids.add(underscore_alias)
+                aliases.append(f'<span id="{escape(underscore_alias, quote=True)}"></span>')
+            output.append(f'{"".join(aliases)}<h{level} id="{escape(identifier, quote=True)}">{_inline_markdown(heading.group(2), link_resolver)}</h{level}>')
         elif bullet:
             flush_paragraph()
             list_items.append(bullet.group(1))
@@ -543,17 +572,60 @@ def build_site(root: Path, output: Path, base_url: str = "/", source_revision: s
     timeline_body += '<section class="section"><h2>Timeline boundary</h2><p>This page contains normalized Atlas event records only. The preserved audit contains a separate historical reconstruction; it is source material, not a timeline dataset. <a href="' + base + 'archive.html">Open the preserved audit archive</a>.</p></section>'
     (output / "timeline.html").write_text(_page("Timeline", timeline_body, base, "timeline.html"), encoding="utf-8")
 
-    archive_dir = root / "archive/audit-snapshot-2026-10-26"
-    archive_items = sorted(path for path in archive_dir.rglob("*") if path.is_file() and path.name != "PRESERVATION.md")
-    archive_links = "".join(
-        f'<li>{_source_link(_relative_path(path, root), revision, _relative_path(path, root).removeprefix("archive/audit-snapshot-2026-10-26/"))}</li>'
-        for path in archive_items
-    )
-    archive_readme_url = _source_url("archive/audit-snapshot-2026-10-26/README.md", revision)
-    archive_manifest_url = _source_url("archive/audit-snapshot-2026-10-26/PRESERVATION.md", revision)
-    archive_readme = f'<a class="button" href="{archive_readme_url}">Read the bundle guide</a>' if archive_readme_url else '<span class="button disabled">Bundle guide link available after publishing a fixed revision</span>'
-    archive_manifest = f'<a class="button" href="{archive_manifest_url}">File-by-file preservation manifest</a>' if archive_manifest_url else '<span class="button disabled">Preservation link available after publishing a fixed revision</span>'
-    archive_body = f'''<section class="page-intro"><p class="eyebrow">HISTORICAL WORKING MATERIAL</p><h1>Preserved audit bundle</h1><p>This is the earlier Loo-Cast/Vapor audit and timeline work, preserved before Atlas implementation. It is not an approved knowledge model, a complete audit, or a statement that every historical claim is current.</p><p>{archive_readme} {archive_manifest}</p></section><section class="section"><h2>Browse files <small>{len(archive_items)}</small></h2><ul class="file-list">{archive_links}</ul></section>'''
+    archive_relative = PurePosixPath("archive/audit-snapshot-2026-10-26")
+    archive_dir = root.joinpath(*archive_relative.parts)
+    archive_items = sorted(path for path in archive_dir.rglob("*") if path.is_file())
+    archive_site_dir = output.joinpath(*archive_relative.parts)
+    archive_read_dir = output / "archive/read"
+    if archive_site_dir.exists():
+        shutil.rmtree(archive_site_dir)
+    if archive_read_dir.exists():
+        shutil.rmtree(archive_read_dir)
+    shutil.copytree(archive_dir, archive_site_dir)
+    archive_read_dir.mkdir(parents=True, exist_ok=True)
+
+    def archive_urls(path: Path) -> tuple[str, str]:
+        relative = path.relative_to(archive_dir).as_posix()
+        encoded = quote(relative, safe="/")
+        raw_url = base + archive_relative.as_posix() + "/" + encoded
+        page_url = base + "archive/read/" + quote(relative + ".html", safe="/")
+        return raw_url, page_url
+
+    def resolve_archive_link(source: Path, target: str) -> str | None:
+        parsed = urlsplit(target)
+        candidate = (source.parent / unquote(parsed.path)).resolve()
+        try:
+            relative = candidate.relative_to(archive_dir.resolve())
+        except ValueError:
+            return None
+        if not candidate.is_file():
+            return None
+        if candidate.suffix.lower() == ".md":
+            destination = base + "archive/read/" + quote(relative.as_posix() + ".html", safe="/")
+        else:
+            destination = base + archive_relative.as_posix() + "/" + quote(relative.as_posix(), safe="/")
+        return destination + ("#" + quote(parsed.fragment, safe="-._~") if parsed.fragment else "")
+
+    archive_links: list[str] = []
+    for path in archive_items:
+        relative = path.relative_to(archive_dir).as_posix()
+        raw_url, page_url = archive_urls(path)
+        if path.suffix.lower() == ".md":
+            label = f'<a href="{page_url}">{escape(relative)}</a> <a class="source-path" href="{raw_url}">download original</a>'
+            archive_links.append(f"<li>{label}</li>")
+            source_url = _source_url(_relative_path(path, root), revision)
+            source_link = f' · <a href="{source_url}">Versioned GitHub source</a>' if source_url else ""
+            page_body = f'''<section class="page-intro"><p class="eyebrow">PRESERVED AUDIT · {escape(relative)}</p><h1>{escape(path.stem.replace("-", " ").title())}</h1><p><a href="{base}archive.html">← Preserved audit bundle</a> · <a class="button" href="{raw_url}">Download original</a>{source_link}</p></section><article class="record-body">{render_markdown(path.read_text(encoding="utf-8"), lambda target, source=path: resolve_archive_link(source, target))}</article>'''
+            page_path = archive_read_dir / (relative + ".html")
+            page_path.parent.mkdir(parents=True, exist_ok=True)
+            page_path.write_text(_page(path.name, page_body, base), encoding="utf-8")
+        else:
+            archive_links.append(f'<li><a href="{raw_url}">{escape(relative)}</a></li>')
+    archive_readme = base + "archive/read/README.md.html"
+    archive_manifest = base + "archive/read/PRESERVATION.md.html"
+    archive_source_url = "https://github.com/GHF-Studios/Atlas/tree/" + revision + "/" + archive_relative.as_posix() if revision else None
+    archive_source_link = f'<a href="{escape(archive_source_url, quote=True)}">Versioned GitHub snapshot</a>' if archive_source_url else ""
+    archive_body = f'''<section class="page-intro"><p class="eyebrow">HISTORICAL WORKING MATERIAL</p><h1>Preserved audit bundle</h1><p>This is the earlier Loo-Cast/Vapor audit and timeline work, preserved before Atlas implementation. It is not an approved knowledge model, a complete audit, or a statement that every historical claim is current.</p><p><a class="button" href="{archive_readme}">Read the bundle guide</a> <a class="button" href="{archive_manifest}">File-by-file preservation manifest</a></p><p>Read the preserved files here in Atlas; the originals remain downloadable. {archive_source_link}</p></section><section class="section"><h2>Browse files <small>{len(archive_items)}</small></h2><ul class="file-list">{"".join(archive_links)}</ul></section>'''
     (output / "archive.html").write_text(_page("Preserved audit", archive_body, base, "archive.html"), encoding="utf-8")
 
     for record in records:

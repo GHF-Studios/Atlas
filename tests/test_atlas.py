@@ -117,6 +117,7 @@ class AtlasRenderingTests(unittest.TestCase):
             search_page = (output / "search.html").read_text(encoding="utf-8")
             connections_page = (output / "connections.html").read_text(encoding="utf-8")
             timeline = (output / "timeline.html").read_text(encoding="utf-8")
+            archive = (output / "archive.html").read_text(encoding="utf-8")
             data = (output / "atlas.json").read_text(encoding="utf-8")
             payload = json.loads(data)
             self.assertIn("A place to understand how the work fits together", home)
@@ -171,6 +172,18 @@ class AtlasRenderingTests(unittest.TestCase):
             self.assertNotIn('id="atlas-search"', home)
             self.assertNotIn('id="atlas-search"', timeline)
             self.assertIn("Preserved audit material", home)
+            archive_page = output / "archive/read/README.md.html"
+            self.assertTrue(archive_page.is_file())
+            self.assertTrue((output / "archive/audit-snapshot-2026-10-26/README.md").is_file())
+            self.assertIn("/atlas/archive/read/README.md.html", archive)
+            self.assertIn("/atlas/archive/audit-snapshot-2026-10-26/README.md", archive)
+            readme_page = archive_page.read_text(encoding="utf-8")
+            self.assertIn("Loo-Cast / Vapor cross-product audit", readme_page)
+            self.assertIn(f"/blob/{source_revision}/archive/audit-snapshot-2026-10-26/README.md", readme_page)
+            self.assertIn("Download original", archive_page.read_text(encoding="utf-8"))
+            self.assertIn(f"/tree/{source_revision}/archive/audit-snapshot-2026-10-26", archive)
+            evidence_page = (output / "archive/read/vapor-ecosystem-evidence-atlas.md.html").read_text(encoding="utf-8")
+            self.assertNotIn('href="/home/leslieghf/', evidence_page)
             self.assertIn("Search", home.split("</nav>", 1)[0])
             self.assertIn("Connections", home.split("</nav>", 1)[0])
             self.assertIn("Timeline", home.split("</nav>", 1)[0])
@@ -221,7 +234,11 @@ class AtlasRenderingTests(unittest.TestCase):
                     if linked_page.is_dir():
                         linked_page /= "index.html"
                     self.assertTrue(linked_page.is_file(), f"{html_path.relative_to(output)} links to missing {href}")
-                    if target.fragment:
+                    # Historical Markdown is preserved verbatim and may contain
+                    # already-dangling fragments; Atlas verifies its local file
+                    # routes without claiming to repair those source references.
+                    source_is_archived_reference = html_path.relative_to(output).as_posix().startswith("archive/read/")
+                    if target.fragment and not source_is_archived_reference:
                         destination = documents.get(linked_page)
                         if destination is not None:
                             self.assertIn(unquote(target.fragment), destination.ids, f"{href} has no matching anchor")
