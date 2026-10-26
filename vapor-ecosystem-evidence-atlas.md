@@ -773,7 +773,7 @@ This 15-root census excludes a preserved duplicate checkout inside the project: 
 | Vapor-Examples | 8 | 1,318 | July–October wheel/example transition traced; current authored graph compared with hardcoded Cargo composition; every artifact and release payload not audited. |
 | Platform Server container | 31 | 3,055 | Docs/deploy/backup/restore and service orchestration scripts selected; remaining scripts need full pass. |
 | Diagnostics Server | 1 | 747 | Focused cross-service review of Client transport, consent/schema, redaction, quota, export and server routes; no upload/runtime behavior exercised. |
-| Docs Server | 1 | 423 | Generator/upload/serve path selected, including fallback link behavior and release-history reversal; full server behavior and rendered docs not exhaustively reviewed. |
+| Docs Server | 1 | 423 | Sole server source and six repository files reviewed; current-tree upload/serve/export, archive bounds and publication race traced. No live site/render test. |
 | Homepage Server | 1 | 86 | Current routes/page bodies cross-checked with README, Caddy routing, vertical-slice scope and stale deployment status; no live site check. |
 | Identity Server | 15 | 4,302 | Focused source review now covers provider verifiers, browser state/session flow, role/root transitions, registered routes and downstream publishing boundary. Not a full route/error-path audit; no tests or runtime were performed. |
 | Registry Server | 3 | 724 | Seeded read model, startup membership reset, GET-only API, schema marker and Sept 15 topology change reviewed; no service/API or VPS run. |

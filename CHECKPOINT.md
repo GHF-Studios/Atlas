@@ -38,8 +38,8 @@ The documents contain substantial useful analysis, including current Loo-Cast/Va
 5. Reconcile the latest-state findings against the owner's decisions, reported behavior, and older design material; label evidence and uncertainty.
 6. Review the current snapshot as a coherent set, identify overlapping documents and authority order, and let the owner redirect the next phase before resuming the long audit.
 
-The original objective remains latest-state-first, evidence-based understanding of Loo-Cast and Vapor and how they formed. It is not a character-by-character audit of early prototype code. Historical depth should grow toward the present, with older work expanded where it explains a surviving idea, reset, reversal, or ownership boundary. The ChatGPT project source mirror is read-only, and no pre-Git 2021 archive has been established in this snapshot.
+The original objective remains latest-state-first, evidence-based understanding of Loo-Cast and Vapor and how they formed. It is not a character-by-character audit of early prototype code. Historical depth should grow toward the present, with older work expanded where it explains a surviving idea, reset, reversal, or ownership boundary. The ChatGPT project source mirror is read-only, and no pre-Git 2021 archive has been established in this snapshot. After this checkpoint was created, the owner directed that the audit resume locally while they create its destination documentation repository. The resumed pass added path-by-path history for Diagnostics and current-state plus history coverage for Docs Server.
 
 ## Preservation state
 
-All pre-existing files under `artifacts/` were copied into this snapshot without editing their contents. Source worktrees remain untouched. This checkpoint records a pause and reset of the audit process, not authorization to resume its remaining research automatically.
+All pre-existing files under `artifacts/` were copied into this snapshot without editing their contents. Source worktrees remain untouched. The local audit repository is now the working copy for continued review until the owner supplies the destination repository.
