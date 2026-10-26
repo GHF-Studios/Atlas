@@ -17,7 +17,7 @@ These tracks must each reach the 913-file denominator. Their overlap is useful f
 
 ## Exact-path reference census
 
-The latest reproducible absolute-path-base recount finds 808/913 files path-cited in the focused semantic review and 724/913 in the current-state cross-reference. Their separate uncited counts are 107 and 192. Per-file current-state dispositions and history/intent reconciliations are tracked separately at 19/913 in each source subset; neither reach track substitutes for or combines with the other. Do not compare these totals to the accepted checkpoint until the path-counting rules and source corpus are reconciled.
+The latest reproducible absolute-path-base recount finds 808/913 files path-cited in the focused semantic review and 725/913 in the current-state cross-reference. Their separate uncited counts are 105 and 188. Per-file current-state dispositions and history/intent reconciliations are tracked separately at 19/913 in each source subset; neither reach track substitutes for or combines with the other. Do not compare these totals to the accepted checkpoint until the path-counting rules and source corpus are reconciled.
 
 | Repository root | Source files | Focused review path-cited | Focused review not path-cited | Current-state path-cited | Current-state not path-cited |
 |---|---:|---:|---:|---:|---:|
