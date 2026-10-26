@@ -1426,7 +1426,7 @@ Vapor-Examples,content/wheel-rules/Cargo.toml,.toml,tracked,clean,276,13,1,not_a
 Vapor-Examples,content/wheel-rules/Crate.vapor.toml,.toml,tracked,clean,498,21,1,not_assessed,,not_reconciled,
 Vapor-Examples,content/wheel-rules/src/lib.rs,.rs,tracked,clean,2825,118,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,.github/workflows/ci.yml,.yml,tracked,clean,435,25,4,not_assessed,,not_reconciled,
-Vapor-Platform-Server,.github/workflows/deploy.yml,.yml,tracked,clean,6316,185,3,not_assessed,,not_reconciled,
+Vapor-Platform-Server,.github/workflows/deploy.yml,.yml,tracked,clean,6316,185,4,not_assessed,,not_reconciled,
 Vapor-Platform-Server,.gitignore,[no extension],tracked,clean,48,6,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,.gitmodules,[no extension],tracked,clean,646,15,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,AGENTS.md,.md,tracked,clean,925,21,0,not_assessed,,not_reconciled,
@@ -1437,15 +1437,15 @@ Vapor-Platform-Server,deploy/README.md,.md,tracked,clean,4342,89,5,not_assessed,
 Vapor-Platform-Server,deploy/caddy/Caddyfile.example,.example,tracked,clean,348,23,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/caddy/Caddyfile.template,.template,tracked,clean,573,41,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/bootstrap-ubuntu.sh,.sh,tracked,clean,2586,59,4,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/build-vapor-client-docs-bundle.sh,.sh,tracked,clean,6013,206,1,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/build-vapor-client-docs-bundle.sh,.sh,tracked,clean,6013,206,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/build.sh,.sh,tracked,clean,639,25,1,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/configure-identity-auth.sh,.sh,tracked,clean,8859,320,2,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/deploy-vapor-client-docs.sh,.sh,tracked,clean,1723,94,1,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/deploy-vapor-client-docs.sh,.sh,tracked,clean,1723,94,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/deploy.sh,.sh,tracked,clean,3649,99,8,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/export-state.sh,.sh,tracked,clean,3460,118,9,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/grant-identity-role.sh,.sh,tracked,clean,5009,207,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/harden-vps.sh,.sh,tracked,clean,766,33,0,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/health-check.sh,.sh,tracked,clean,1277,33,4,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/health-check.sh,.sh,tracked,clean,1277,33,5,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/http-contract-checks.sh,.sh,tracked,clean,2749,91,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/install-auto-deploy.sh,.sh,tracked,clean,629,22,1,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/install-caddy.sh,.sh,tracked,clean,1080,41,0,not_assessed,,not_reconciled,
@@ -1454,16 +1454,16 @@ Vapor-Platform-Server,deploy/scripts/install-state-backup.sh,.sh,tracked,clean,5
 Vapor-Platform-Server,deploy/scripts/install-systemd.sh,.sh,tracked,clean,987,24,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/lib.sh,.sh,tracked,clean,1442,60,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/list-identity-audit.sh,.sh,tracked,clean,2937,125,0,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/public-http-check.sh,.sh,tracked,clean,894,28,0,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/public-http-check.sh,.sh,tracked,clean,894,28,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/restore-state.sh,.sh,tracked,clean,3208,137,4,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/revoke-identity-role.sh,.sh,tracked,clean,5077,208,0,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/smoke-diagnostics.sh,.sh,tracked,clean,2355,80,0,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/smoke-docs-upload.sh,.sh,tracked,clean,1591,60,0,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/smoke-diagnostics.sh,.sh,tracked,clean,2355,80,1,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/smoke-docs-upload.sh,.sh,tracked,clean,1591,60,1,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/smoke-identity-auth.sh,.sh,tracked,clean,10283,333,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/state-bundle-validate.py,.py,tracked,clean,3627,99,1,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/scripts/test.sh,.sh,tracked,clean,896,34,4,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/upload-docs-via-http.sh,.sh,tracked,clean,1820,97,0,not_assessed,,not_reconciled,
-Vapor-Platform-Server,deploy/scripts/upload-docs-via-ssh.sh,.sh,tracked,clean,3030,123,1,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/upload-docs-via-http.sh,.sh,tracked,clean,1820,97,1,not_assessed,,not_reconciled,
+Vapor-Platform-Server,deploy/scripts/upload-docs-via-ssh.sh,.sh,tracked,clean,3030,123,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/systemd/README.md,.md,tracked,clean,568,21,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/systemd/vapor-deploy.service,.service,tracked,clean,309,10,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,deploy/systemd/vapor-deploy.timer,.timer,tracked,clean,176,12,0,not_assessed,,not_reconciled,
@@ -1478,9 +1478,9 @@ Vapor-Platform-Server,deploy/tests/test_state_bundle_validation.py,.py,tracked,c
 Vapor-Platform-Server,deploy/tests/test_upload_docs_via_ssh.py,.py,tracked,clean,3839,92,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,docs/cross-service-authorization-contract.md,.md,tracked,clean,3381,115,5,not_assessed,,not_reconciled,
 Vapor-Platform-Server,docs/decisions-and-backlog.md,.md,tracked,clean,9946,171,0,not_assessed,,not_reconciled,
-Vapor-Platform-Server,docs/deployment-status.md,.md,tracked,clean,8780,162,3,not_assessed,,not_reconciled,
-Vapor-Platform-Server,docs/diagnostics-report-contract.md,.md,tracked,clean,2499,114,2,not_assessed,,not_reconciled,
-Vapor-Platform-Server,docs/docs-publication-contract.md,.md,tracked,clean,2096,78,1,not_assessed,,not_reconciled,
+Vapor-Platform-Server,docs/deployment-status.md,.md,tracked,clean,8780,162,4,not_assessed,,not_reconciled,
+Vapor-Platform-Server,docs/diagnostics-report-contract.md,.md,tracked,clean,2499,114,3,not_assessed,,not_reconciled,
+Vapor-Platform-Server,docs/docs-publication-contract.md,.md,tracked,clean,2096,78,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,docs/github-deployment.md,.md,tracked,clean,3000,100,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,docs/identity-auth-runbook.md,.md,tracked,clean,5340,157,2,not_assessed,,not_reconciled,
 Vapor-Platform-Server,docs/operations-evidence-and-recovery-contract.md,.md,tracked,clean,2304,81,2,not_assessed,,not_reconciled,
@@ -1489,27 +1489,27 @@ Vapor-Platform-Server,docs/publish-pipeline-authority-model.md,.md,tracked,clean
 Vapor-Platform-Server,docs/server-domain-boundaries.md,.md,tracked,clean,11045,203,3,not_assessed,,not_reconciled,
 Vapor-Platform-Server,docs/steam-authority-model.md,.md,tracked,clean,2562,83,0,not_assessed,,not_reconciled,
 Vapor-Platform-Server,docs/vertical-slice-contracts.md,.md,tracked,clean,10208,251,1,not_assessed,,not_reconciled,
-Vapor-Diagnostics-Server,.gitignore,[no extension],tracked,clean,17,3,1,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
-Vapor-Diagnostics-Server,AGENTS.md,.md,tracked,clean,397,11,1,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
-Vapor-Diagnostics-Server,Cargo.lock,.lock,tracked,clean,16388,653,1,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
-Vapor-Diagnostics-Server,Cargo.toml,.toml,tracked,clean,335,14,1,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
-Vapor-Diagnostics-Server,README.md,.md,tracked,clean,2998,127,2,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
-Vapor-Diagnostics-Server,Workspace.vapor.toml,.toml,tracked,clean,305,17,1,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
-Vapor-Diagnostics-Server,src/main.rs,.rs,tracked,clean,23112,748,7,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
-Vapor-Docs-Server,.gitignore,[no extension],tracked,clean,17,3,0,not_assessed,,not_reconciled,
-Vapor-Docs-Server,AGENTS.md,.md,tracked,clean,270,9,0,not_assessed,,not_reconciled,
-Vapor-Docs-Server,Cargo.lock,.lock,tracked,clean,18151,728,0,not_assessed,,not_reconciled,
-Vapor-Docs-Server,Cargo.toml,.toml,tracked,clean,290,14,0,not_assessed,,not_reconciled,
-Vapor-Docs-Server,README.md,.md,tracked,clean,1645,73,0,not_assessed,,not_reconciled,
-Vapor-Docs-Server,Workspace.vapor.toml,.toml,tracked,clean,284,17,2,not_assessed,,not_reconciled,
-Vapor-Docs-Server,src/main.rs,.rs,tracked,clean,14264,424,4,not_assessed,,not_reconciled,
+Vapor-Diagnostics-Server,.gitignore,[no extension],tracked,clean,17,3,2,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
+Vapor-Diagnostics-Server,AGENTS.md,.md,tracked,clean,397,11,2,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
+Vapor-Diagnostics-Server,Cargo.lock,.lock,tracked,clean,16388,653,2,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
+Vapor-Diagnostics-Server,Cargo.toml,.toml,tracked,clean,335,14,2,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
+Vapor-Diagnostics-Server,README.md,.md,tracked,clean,2998,127,4,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
+Vapor-Diagnostics-Server,Workspace.vapor.toml,.toml,tracked,clean,305,17,2,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
+Vapor-Diagnostics-Server,src/main.rs,.rs,tracked,clean,23112,748,10,reviewed,current-state-semantic-cross-reference.md#diagnostics-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--diagnostics-servers-narrow-vertical-slice-against-its-original-scope
+Vapor-Docs-Server,.gitignore,[no extension],tracked,clean,17,3,2,not_assessed,,not_reconciled,
+Vapor-Docs-Server,AGENTS.md,.md,tracked,clean,270,9,2,not_assessed,,not_reconciled,
+Vapor-Docs-Server,Cargo.lock,.lock,tracked,clean,18151,728,2,not_assessed,,not_reconciled,
+Vapor-Docs-Server,Cargo.toml,.toml,tracked,clean,290,14,2,not_assessed,,not_reconciled,
+Vapor-Docs-Server,README.md,.md,tracked,clean,1645,73,2,not_assessed,,not_reconciled,
+Vapor-Docs-Server,Workspace.vapor.toml,.toml,tracked,clean,284,17,4,not_assessed,,not_reconciled,
+Vapor-Docs-Server,src/main.rs,.rs,tracked,clean,14264,424,6,not_assessed,,not_reconciled,
 Vapor-Homepage-Server,.gitignore,[no extension],tracked,clean,17,3,0,not_assessed,,not_reconciled,
-Vapor-Homepage-Server,AGENTS.md,.md,tracked,clean,288,9,0,not_assessed,,not_reconciled,
-Vapor-Homepage-Server,Cargo.lock,.lock,tracked,clean,12730,508,0,not_assessed,,not_reconciled,
-Vapor-Homepage-Server,Cargo.toml,.toml,tracked,clean,196,10,0,not_assessed,,not_reconciled,
-Vapor-Homepage-Server,README.md,.md,tracked,clean,647,38,1,not_assessed,,not_reconciled,
-Vapor-Homepage-Server,Workspace.vapor.toml,.toml,tracked,clean,296,17,0,not_assessed,,not_reconciled,
-Vapor-Homepage-Server,src/main.rs,.rs,tracked,clean,1930,87,2,not_assessed,,not_reconciled,
+Vapor-Homepage-Server,AGENTS.md,.md,tracked,clean,288,9,1,not_assessed,,not_reconciled,
+Vapor-Homepage-Server,Cargo.lock,.lock,tracked,clean,12730,508,1,not_assessed,,not_reconciled,
+Vapor-Homepage-Server,Cargo.toml,.toml,tracked,clean,196,10,1,not_assessed,,not_reconciled,
+Vapor-Homepage-Server,README.md,.md,tracked,clean,647,38,2,not_assessed,,not_reconciled,
+Vapor-Homepage-Server,Workspace.vapor.toml,.toml,tracked,clean,296,17,1,not_assessed,,not_reconciled,
+Vapor-Homepage-Server,src/main.rs,.rs,tracked,clean,1930,87,3,not_assessed,,not_reconciled,
 Vapor-Identity-Server,.gitignore,[no extension],tracked,clean,17,3,2,reviewed,current-state-semantic-cross-reference.md#identity-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--identity-service-files-reconciled-to-their-history
 Vapor-Identity-Server,AGENTS.md,.md,tracked,clean,357,10,2,reviewed,current-state-semantic-cross-reference.md#identity-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--identity-service-files-reconciled-to-their-history
 Vapor-Identity-Server,Cargo.lock,.lock,tracked,clean,46170,1861,2,reviewed,current-state-semantic-cross-reference.md#identity-server-file-by-file-current-state-disposition--2026-10-26,reconciled,loo-cast-vapor-history-timeline.md#october-26-evidence-pass--identity-service-files-reconciled-to-their-history
@@ -1536,6 +1536,6 @@ Vapor-Registry-Server,Cargo.lock,.lock,tracked,clean,32607,1307,2,reviewed,curre
 Vapor-Registry-Server,Cargo.toml,.toml,tracked,clean,343,11,2,reviewed,current-state-semantic-cross-reference.md#registry-is-still-a-static-git-topology-catalog-workshop-authority-is-future-work; loo-cast-vapor-semantic-diff-review.md#october-22--accepted-workshop-authority-boundary-implementation-still-topology-only,reconciled,"loo-cast-vapor-history-timeline.md#october-22--registry-is-assigned-canonical-workshop-catalog-authority; Registry commits 12c2e5a, 8d2278c, 1f1536d, 7f5fb1e, 0f4500e, 566130c; Platform Server d02a0c6"
 Vapor-Registry-Server,README.md,.md,tracked,clean,873,26,4,reviewed,current-state-semantic-cross-reference.md#registry-is-still-a-static-git-topology-catalog-workshop-authority-is-future-work; loo-cast-vapor-semantic-diff-review.md#october-22--accepted-workshop-authority-boundary-implementation-still-topology-only,reconciled,"loo-cast-vapor-history-timeline.md#october-22--registry-is-assigned-canonical-workshop-catalog-authority; Registry commits 12c2e5a, 8d2278c, 1f1536d, 7f5fb1e, 0f4500e, 566130c; Platform Server d02a0c6"
 Vapor-Registry-Server,Workspace.vapor.toml,.toml,tracked,clean,295,16,3,reviewed,current-state-semantic-cross-reference.md#registry-is-still-a-static-git-topology-catalog-workshop-authority-is-future-work; loo-cast-vapor-semantic-diff-review.md#october-22--accepted-workshop-authority-boundary-implementation-still-topology-only,reconciled,"loo-cast-vapor-history-timeline.md#october-22--registry-is-assigned-canonical-workshop-catalog-authority; Registry commits 12c2e5a, 8d2278c, 1f1536d, 7f5fb1e, 0f4500e, 566130c; Platform Server d02a0c6"
-Vapor-Registry-Server,src/db.rs,.rs,tracked,clean,14552,520,11,reviewed,current-state-semantic-cross-reference.md#registry-is-still-a-static-git-topology-catalog-workshop-authority-is-future-work; loo-cast-vapor-semantic-diff-review.md#october-22--accepted-workshop-authority-boundary-implementation-still-topology-only,reconciled,"loo-cast-vapor-history-timeline.md#october-22--registry-is-assigned-canonical-workshop-catalog-authority; Registry commits 12c2e5a, 8d2278c, 1f1536d, 7f5fb1e, 0f4500e, 566130c; Platform Server d02a0c6"
+Vapor-Registry-Server,src/db.rs,.rs,tracked,clean,14552,520,14,reviewed,current-state-semantic-cross-reference.md#registry-is-still-a-static-git-topology-catalog-workshop-authority-is-future-work; loo-cast-vapor-semantic-diff-review.md#october-22--accepted-workshop-authority-boundary-implementation-still-topology-only,reconciled,"loo-cast-vapor-history-timeline.md#october-22--registry-is-assigned-canonical-workshop-catalog-authority; Registry commits 12c2e5a, 8d2278c, 1f1536d, 7f5fb1e, 0f4500e, 566130c; Platform Server d02a0c6"
 Vapor-Registry-Server,src/main.rs,.rs,tracked,clean,3347,129,7,reviewed,current-state-semantic-cross-reference.md#registry-is-still-a-static-git-topology-catalog-workshop-authority-is-future-work; loo-cast-vapor-semantic-diff-review.md#october-22--accepted-workshop-authority-boundary-implementation-still-topology-only,reconciled,"loo-cast-vapor-history-timeline.md#october-22--registry-is-assigned-canonical-workshop-catalog-authority; Registry commits 12c2e5a, 8d2278c, 1f1536d, 7f5fb1e, 0f4500e, 566130c; Platform Server d02a0c6"
 Vapor-Registry-Server,src/types.rs,.rs,tracked,clean,1586,77,4,reviewed,current-state-semantic-cross-reference.md#registry-is-still-a-static-git-topology-catalog-workshop-authority-is-future-work; loo-cast-vapor-semantic-diff-review.md#october-22--accepted-workshop-authority-boundary-implementation-still-topology-only,reconciled,"loo-cast-vapor-history-timeline.md#october-22--registry-is-assigned-canonical-workshop-catalog-authority; Registry commits 12c2e5a, 8d2278c, 1f1536d, 7f5fb1e, 0f4500e, 566130c; Platform Server d02a0c6"
