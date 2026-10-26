@@ -317,7 +317,7 @@ def _page(title: str, content: str, base: str, active: str = "") -> str:
 <body>
   <header class="site-header"><a class="brand" href="{base}index.html"><span class="brand-mark">A</span><span>Atlas<small>GHF Studios knowledge map</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
   <main>{content}</main>
-  <footer><span>Atlas is generated from versioned Markdown records.</span><a href="https://github.com/GHF-Studios/Atlas">Source repository</a></footer>
+  <footer><span>Atlas is generated from versioned Markdown records.</span><span><a href="{base}atlas.json">Structured data</a> · <a href="https://github.com/GHF-Studios/Atlas">Source repository</a></span></footer>
 </body>
 </html>'''
 
@@ -341,6 +341,30 @@ def _record_json(record: Record, root: Path) -> dict[str, Any]:
     item["body"] = record.body
     item["url"] = f"records/{record.id}.html"
     return item
+
+
+def _graph_json(records: list[Record]) -> dict[str, list[dict[str, str]]]:
+    """Return a normalized graph projection without changing record ownership."""
+    nodes = [
+        {"id": record.id, "kind": record.kind, "claim_status": record.claim_status}
+        for record in sorted(records, key=lambda item: item.id)
+    ]
+    edges: list[dict[str, str]] = []
+    for record in records:
+        parent = record.metadata.get("parent")
+        if isinstance(parent, str):
+            edges.append({"source": record.id, "type": "parent", "target": parent})
+        for relation in record.metadata.get("relations", []):
+            if isinstance(relation, dict):
+                edges.append({
+                    "source": record.id,
+                    "type": relation["type"],
+                    "target": relation["target"],
+                })
+    return {
+        "nodes": nodes,
+        "edges": sorted(edges, key=lambda edge: (edge["source"], edge["type"], edge["target"])),
+    }
 
 
 def _source_url(path: str) -> str:
@@ -375,7 +399,9 @@ def build_site(root: Path, output: Path, base_url: str = "/") -> list[Validation
 
     # A typed and queryable export; chronology is a projection over dated events.
     payload = {
+        "schema_version": 1,
         "atlas": _toml_scalar(config.get("atlas", {})),
+        "graph": _graph_json(records),
         "records": [_record_json(record, root) for record in sorted(records, key=lambda item: (item.kind, item.title.casefold(), item.id))],
     }
     (output / "atlas.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

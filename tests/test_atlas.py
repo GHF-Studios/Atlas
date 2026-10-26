@@ -1,8 +1,9 @@
+import json
+import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
-import subprocess
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -97,12 +98,27 @@ class AtlasRenderingTests(unittest.TestCase):
             map_page = (output / "map.html").read_text(encoding="utf-8")
             timeline = (output / "timeline.html").read_text(encoding="utf-8")
             data = (output / "atlas.json").read_text(encoding="utf-8")
+            payload = json.loads(data)
             self.assertIn("What Atlas is", home)
             self.assertIn("/Atlas/timeline.html", home)
             self.assertIn("Record types", map_page)
             self.assertIn("not independently confirmed", map_page)
             self.assertIn("Atlas bootstrap and audit preservation", timeline)
             self.assertIn('"id": "atlas"', data)
+            self.assertEqual(1, payload["schema_version"])
+            self.assertIn(
+                {"id": "audit-snapshot", "kind": "evidence", "claim_status": "historical-snapshot"},
+                payload["graph"]["nodes"],
+            )
+            self.assertIn(
+                {"source": "atlas-bootstrap", "type": "preserves", "target": "audit-snapshot"},
+                payload["graph"]["edges"],
+            )
+            self.assertIn('/Atlas/atlas.json', home)
+            self.assertIn(
+                {"source": "atlas-bootstrap-workstream", "type": "parent", "target": "atlas"},
+                payload["graph"]["edges"],
+            )
 
 
 if __name__ == "__main__":

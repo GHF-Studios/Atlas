@@ -7,8 +7,7 @@ truth.
 
 ## Start here
 
-- **Readers:** open the [Atlas homepage](https://ghf-studios.github.io/Atlas/)
-  (after the first Pages deployment).
+- **Readers:** open the [Atlas homepage](https://ghf-studios.github.io/Atlas/).
 - **Authors:** start with [`atlas.toml`](atlas.toml) and the typed Markdown
   records under [`knowledge/`](knowledge/).
 - **Developers:** run the commands below; the generator uses only Python’s
@@ -34,3 +33,10 @@ timeline.
 The current site is a review preview of Atlas itself and the preserved audit.
 Its vocabulary and sample records remain provisional. Broader knowledge
 import waits for owner review of the entrypoint.
+
+`atlas.json` is the current machine-readable read model. It contains the
+versioned record list plus a normalized `graph.nodes` / `graph.edges`
+projection; `records` remain authoritative, and the graph projection is
+derived during each build. A `parent` field emits a `parent` edge, while each
+typed `relations` entry emits its declared edge. Consumers should check
+`schema_version` before relying on the export shape.
