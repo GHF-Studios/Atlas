@@ -909,6 +909,6 @@ observation_date,repository_root,head_commit,head_date,file_path,language,file_s
 2026-10-26,Vapor-Identity-Server,6110547,2026-10-22,src/status_handlers.rs,rs,tracked-clean,128,0,no exact path mention,"individually dispositioned, 2026-10-26",2,"reconciled per path history, 2026-10-26"
 2026-10-26,Vapor-Identity-Server,6110547,2026-10-22,src/types.rs,rs,tracked-clean,190,0,no exact path mention,"individually dispositioned, 2026-10-26",2,"reconciled per path history, 2026-10-26"
 2026-10-26,Vapor-Identity-Server,6110547,2026-10-22,src/util.rs,rs,tracked-clean,360,1,exact path mention found,"individually dispositioned, 2026-10-26",2,"reconciled per path history, 2026-10-26"
-2026-10-26,Vapor-Registry-Server,566130c,2026-09-15,src/db.rs,rs,tracked-clean,519,11,exact path mention found,"individually dispositioned, 2026-10-26",2,"reconciled per path history, 2026-10-26"
-2026-10-26,Vapor-Registry-Server,566130c,2026-09-15,src/main.rs,rs,tracked-clean,129,4,exact path mention found,"individually dispositioned, 2026-10-26",1,"reconciled per path history, 2026-10-26"
+2026-10-26,Vapor-Registry-Server,566130c,2026-09-15,src/db.rs,rs,tracked-clean,519,11,exact path mention found,"individually dispositioned, 2026-10-26",3,"reconciled per path history, 2026-10-26"
+2026-10-26,Vapor-Registry-Server,566130c,2026-09-15,src/main.rs,rs,tracked-clean,129,4,exact path mention found,"individually dispositioned, 2026-10-26",2,"reconciled per path history, 2026-10-26"
 2026-10-26,Vapor-Registry-Server,566130c,2026-09-15,src/types.rs,rs,tracked-clean,76,1,exact path mention found,"individually dispositioned, 2026-10-26",2,"reconciled per path history, 2026-10-26"
