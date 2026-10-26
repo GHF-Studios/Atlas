@@ -90,3 +90,8 @@ The same pass reviewed the embedded Developer Editor shell: live camera projecti
 ## October 26 follow-up — voxel diagnostics and palette
 
 The voxel inspection cross-check found that one toggle draws both spatial-demand and materialization bounds, the 16-hue palette disagrees with its seven-band comment, and a prior per-scale pipeline census was removed. Aggregate worker counters and one first-surface log remain, but they do not locate a particular stalled stage. Citation reach now stands at focused source 808/913 (105 uncited), source history/intent 724/913 (189 uncited), and whole repository 1,009/1,540 (531 uncited). The earlier accepted baselines remain 568/913, 437/913, and 791/1,540; current reach is unreconciled. Disposition counts remain separate and unchanged. No runtime diagnostics were collected.
+
+
+## October 26 follow-up — flight and navigation policy model
+
+The flight review found explicit capability/control/contact/assistance/safety/telemetry boundaries and a separate approach-refinement contract. It also found one multi-domain `TravelProfile`, a spacecraft constructor identical to the character profile, and a stale future-tense safety-supervisor comment despite the current evaluator. Current citation reach: focused source 808/913 (105 uncited), source history/intent 725/913 (188 uncited), whole repository 1,009/1,540 (531 uncited). The accepted comparison points remain unchanged and unreconciled. No movement/runtime behavior was tested.
