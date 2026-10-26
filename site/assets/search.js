@@ -4,7 +4,7 @@
   const base = document.querySelector('meta[name="atlas-base"]')?.content || "/";
   if (!input || !results) return;
 
-  fetch(\`${base}atlas.json\`)
+  fetch(`${base}atlas.json`)
     .then((response) => {
       if (!response.ok) throw new Error("Atlas search index is unavailable.");
       return response.json();
@@ -15,7 +15,7 @@
         results.replaceChildren();
         if (!query) return;
         const matches = records.filter((record) =>
-          \`${record.title} ${record.kind} ${record.claim_status} ${record.body}\`
+          `${record.title} ${record.kind} ${record.claim_status} ${record.body}`
             .toLocaleLowerCase()
             .includes(query),
         ).slice(0, 12);
@@ -29,10 +29,10 @@
           const row = document.createElement("div");
           row.className = "search-result";
           const link = document.createElement("a");
-          link.href = \`${base}${record.url}\`;
+          link.href = `${base}${record.url}`;
           link.textContent = record.title;
           const type = document.createElement("small");
-          type.textContent = \`${record.kind} · ${record.claim_status}\`;
+          type.textContent = `${record.kind} · ${record.claim_status}`;
           row.append(link, type);
           results.append(row);
         }
