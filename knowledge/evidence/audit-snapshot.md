@@ -9,6 +9,7 @@ sources = [
   "archive/audit-snapshot-2026-10-26/CHECKPOINT.md",
 ]
 relations = [{ type = "documents", target = "atlas-bootstrap" }]
+parent = "atlas"
 +++
 
 The preserved bundle contains a long historical and current-state review of Loo-Cast and Vapor, its supporting evidence, separate progress measures, several design crosswalks, a PlantUML timeline, and a rendered SVG.

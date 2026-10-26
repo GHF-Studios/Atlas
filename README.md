@@ -33,17 +33,24 @@ reports, inference, proposals, unresolved questions, and historical snapshots.
 Dates are optional. Only dated `event` records appear in the generated
 timeline.
 
-The current site documents Atlas itself and preserves a separate historical
+The current site explains Atlas itself and preserves a separate historical
 audit snapshot. Its vocabulary and sample records remain provisional. Atlas
 currently has no server, accounts, online editing, discussion system, issue
 synchronization, multi-repository ingestion, or automatic interpretation of
-commits. See the [scope record](knowledge/topics/atlas-scope.md).
+commits. The brand returns to the home entrypoint. Search is the primary record
+lookup tab, with a sub-tab for each record kind; Structure is subordinate to
+Search. Timeline is a separate date-based view, and How it works is a separated
+system reference. Questions are a record kind, not a parallel product area.
+The preserved audit and JSON export are secondary references. See the [site
+information architecture](knowledge/topics/atlas-site.md)
+and the [scope record](knowledge/topics/atlas-scope.md).
 
 `atlas.json` is the current machine-readable read model. It contains the
 versioned record list plus a normalized `graph.nodes` / `graph.edges`
 projection; `records` remain authoritative, and the graph projection is
 derived during each build. A `parent` field emits a `parent` edge, while each
-typed `relations` entry emits its declared edge. Consumers should check
+typed `relations` entry emits its declared edge. The export also identifies
+the source revision when one is available. Consumers should check
 `schema_version` before relying on the export shape.
 
 ## Hosting

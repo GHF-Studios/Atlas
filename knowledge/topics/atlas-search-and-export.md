@@ -4,7 +4,7 @@ kind = "topic"
 title = "Atlas search and machine-readable export"
 summary = "Atlas provides small client-side search and a versioned static JSON graph export; neither is a server API."
 claim_status = "source-verified"
-parent = "atlas"
+parent = "atlas-system"
 sources = ["site/assets/search.js", "tools/atlas.py"]
 +++
 

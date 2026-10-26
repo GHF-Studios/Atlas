@@ -4,7 +4,7 @@ kind = "topic"
 title = "Atlas build and publication lifecycle"
 summary = "GitHub Actions validates and packages Atlas; the intended public site is on the Strato VPS at /atlas/."
 claim_status = "source-verified"
-parent = "atlas"
+parent = "atlas-system"
 sources = [".github/workflows/validate-and-package.yml", "README.md", "atlas.toml"]
 +++
 
@@ -16,4 +16,4 @@ GitHub is the recoverable source and CI host. The intended public address is `ht
 
 ## Deliberate operational limits
 
-The current workflow does not transfer files to the VPS, manage DNS or server routing, deploy a backend, synchronize GitHub issues, pull records from other repositories, or provide a collaborative web editor. Those are not current capabilities. Atlas is intended to remain a static site in this first deployment; no application server is needed for its current pages.
+The current workflow does not transfer files to the VPS, manage DNS or server routing, deploy a backend, synchronize GitHub issues, pull records from other repositories, or provide a collaborative web editor. Those are not current capabilities. Atlas is intended to remain a static site in this first deployment; no application server is needed for its current pages. Source links in a build are pinned to the source revision when the build environment provides it.

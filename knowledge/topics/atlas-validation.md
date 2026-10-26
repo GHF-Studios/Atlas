@@ -4,7 +4,7 @@ kind = "topic"
 title = "What Atlas validation does and does not establish"
 summary = "Automated checks establish structural validity, not truth, owner approval, or human-facing clarity."
 claim_status = "source-verified"
-parent = "atlas"
+parent = "atlas-system"
 sources = ["tools/atlas.py", "tests/test_atlas.py"]
 +++
 

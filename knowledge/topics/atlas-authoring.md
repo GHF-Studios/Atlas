@@ -4,7 +4,7 @@ kind = "topic"
 title = "Atlas authoring and source of truth"
 summary = "Knowledge is authored as typed Markdown records in Git; the site and JSON are reproducible views of that source."
 claim_status = "source-verified"
-parent = "atlas"
+parent = "atlas-system"
 sources = ["README.md", "atlas.toml", "knowledge/topics/atlas-authoring.md"]
 +++
 

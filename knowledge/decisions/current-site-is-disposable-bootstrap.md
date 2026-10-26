@@ -4,7 +4,7 @@ kind = "decision"
 title = "The current Atlas site is a disposable bootstrap visualization"
 summary = "The first site exists to test Atlas explaining itself; its visual design and structure are not approved as the product."
 claim_status = "owner-directed"
-parent = "atlas"
+parent = "atlas-system"
 relations = [{ type = "applies-to", target = "atlas-site" }]
 +++
 

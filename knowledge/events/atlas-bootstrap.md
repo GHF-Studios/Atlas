@@ -4,6 +4,7 @@ kind = "event"
 title = "Atlas bootstrap and audit preservation"
 claim_status = "source-verified"
 date = 2026-10-26
+parent = "atlas"
 relations = [{ type = "preserves", target = "audit-snapshot" }]
 +++
 

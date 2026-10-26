@@ -4,17 +4,17 @@ kind = "topic"
 title = "Atlas scope, current limits, and unknowns"
 summary = "Atlas is currently a Git-backed static knowledge site, without a server, online editing, issue sync, or multi-repository ingestion."
 claim_status = "source-verified"
-parent = "atlas"
+parent = "atlas-system"
 sources = ["README.md", "atlas.toml", ".github/workflows/validate-and-package.yml", "tools/atlas.py"]
 +++
 
 ## What exists in this bootstrap
 
-Atlas currently has a Git-backed set of Markdown records, a small TOML vocabulary, a Python validator and static-site builder, generated HTML and JSON, a basic browser search, tests, and a GitHub Actions build-and-package workflow. The site includes home, system guide, map, timeline, questions, archive, and record-detail views.
+Atlas currently has a Git-backed set of Markdown records, a small TOML vocabulary, a Python validator and static-site builder, generated HTML and JSON, browser search with type filters, tests, and a GitHub Actions build-and-package workflow. The site includes a home entrypoint, Search and its subordinate Structure view, a Timeline, a separate system reference, an archive, and record-detail pages.
 
 ## What does not exist yet
 
-Atlas is **not a server**. It has no database, account system, online editing, discussion/forum, issue synchronization, multi-repository ingestion, semantic search service, or automated commit-to-knowledge interpretation. The “map” is not yet an interactive graph renderer. The current timeline has only the dated events authored as Atlas records; the preserved audit diagram is not itself a normalized event dataset.
+Atlas is **not a server**. It has no database, account system, online editing, discussion/forum, issue synchronization, multi-repository ingestion, semantic search service, or automated commit-to-knowledge interpretation. The Structure view is only the parent hierarchy; it is not a second record catalogue or an interactive graph renderer. The current timeline has only the dated events authored as Atlas records; the preserved audit diagram is not itself a normalized event dataset.
 
 The preserved audit bundle is a read-only historical snapshot for review. It is not silently imported as canon. Broader product knowledge, organizational history, and future plans need to be reconciled and authored deliberately.
 

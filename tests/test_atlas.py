@@ -1,13 +1,29 @@
 import json
+from html.parser import HTMLParser
 import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from urllib.parse import unquote, urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from tools import atlas
+
+
+class LinkInventory(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.hrefs = []
+        self.ids = set()
+
+    def handle_starttag(self, tag, attributes):
+        values = dict(attributes)
+        if "href" in values:
+            self.hrefs.append(values["href"])
+        if "id" in values:
+            self.ids.add(values["id"])
 
 
 class AtlasValidationTests(unittest.TestCase):
@@ -86,9 +102,11 @@ class AtlasRenderingTests(unittest.TestCase):
             output = Path(temporary) / "site"
             root = Path(__file__).resolve().parents[1]
 
+            source_revision = "b" * 40
             result = subprocess.run(
                 [sys.executable, str(Path(__file__).resolve().parents[1] / "tools/atlas.py"),
-                 "build", "--root", str(root), "--output", str(output), "--base-url", "/atlas/"],
+                 "build", "--root", str(root), "--output", str(output), "--base-url", "/atlas/",
+                 "--source-revision", source_revision],
                 capture_output=True,
                 text=True,
             )
@@ -96,24 +114,41 @@ class AtlasRenderingTests(unittest.TestCase):
             self.assertEqual(0, result.returncode, result.stderr)
             home = (output / "index.html").read_text(encoding="utf-8")
             system = (output / "system.html").read_text(encoding="utf-8")
-            map_page = (output / "map.html").read_text(encoding="utf-8")
+            search_page = (output / "search.html").read_text(encoding="utf-8")
+            structure_page = (output / "structure.html").read_text(encoding="utf-8")
             timeline = (output / "timeline.html").read_text(encoding="utf-8")
             data = (output / "atlas.json").read_text(encoding="utf-8")
             payload = json.loads(data)
-            self.assertIn("One product among three", home)
-            self.assertIn("PRODUCT 03", home)
-            self.assertIn("How Atlas works", home)
-            self.assertIn("How Atlas is built", system)
+            self.assertIn("A place to understand how the work fits together", home)
+            self.assertIn("ONE RECORD SET · TWO PRIMARY VIEWS", home)
+            self.assertIn("What Atlas is", home)
+            self.assertIn('class="system-link"', home)
+            self.assertIn("How Atlas works", system)
+            self.assertIn("SYSTEM REFERENCE", system)
             self.assertIn("Authored data and generation", system)
             self.assertIn("disposable bootstrap visualization", system)
+            self.assertIn("Follow the generated views", system)
             self.assertIn("/atlas/timeline.html", home)
-            self.assertIn("Record types", map_page)
-            self.assertIn("not independently confirmed", map_page)
+            self.assertIn("Search Atlas", search_page)
+            self.assertIn('role="tablist"', search_page)
+            self.assertIn('data-kind="question"', search_page)
+            self.assertIn(">Questions</button>", search_page)
+            search_header = search_page.split("<main>", 1)[0]
+            self.assertIn('href="/atlas/search.html" aria-current="page">Search</a>', search_header)
+            self.assertNotIn("Questions", search_header)
+            self.assertIn("Structure", search_page)
+            self.assertIn("Record types", system)
+            self.assertIn("not independently confirmed", system)
+            self.assertNotIn("Browse by kind", structure_page)
+            self.assertNotIn('class="catalog-group"', structure_page)
+            self.assertNotIn('class="model-definitions"', structure_page)
+            self.assertNotIn(".catalog-group", (output / "assets/style.css").read_text(encoding="utf-8"))
             self.assertIn("Atlas bootstrap and audit preservation", timeline)
             self.assertIn('"id": "atlas"', data)
             self.assertEqual(1, payload["schema_version"])
             self.assertEqual("/atlas/", payload["publication"]["base_path"])
             self.assertEqual("https://vapor.ghf-studios.site/atlas/", payload["publication"]["public_url"])
+            self.assertEqual(source_revision, payload["source_revision"])
             self.assertIn(
                 {"id": "audit-snapshot", "kind": "evidence", "claim_status": "historical-snapshot"},
                 payload["graph"]["nodes"],
@@ -122,14 +157,67 @@ class AtlasRenderingTests(unittest.TestCase):
                 {"source": "atlas-bootstrap", "type": "preserves", "target": "audit-snapshot"},
                 payload["graph"]["edges"],
             )
-            self.assertIn('/atlas/atlas.json', home)
+            self.assertIn('id="atlas-search"', search_page)
+            self.assertNotIn('id="atlas-search"', home)
+            self.assertNotIn('id="atlas-search"', timeline)
+            self.assertIn("Preserved audit material", home)
+            self.assertIn("Search", home.split("</nav>", 1)[0])
+            self.assertIn("Timeline", home.split("</nav>", 1)[0])
+            self.assertIn('class="system-link"', home)
+            self.assertNotIn("archive.html", home.split("</nav>", 1)[0])
+            self.assertIn("Questions are one record type", search_page)
+            self.assertIn('aria-label="Knowledge views"', structure_page)
+            self.assertIn('href="/atlas/search.html" aria-current="page">Search</a>', structure_page)
+            self.assertNotIn(">Explore</a>", structure_page)
+            self.assertIn("not a timeline dataset", timeline)
+            self.assertNotIn("/archive/audit-snapshot-2026-10-26/loo-cast-vapor-history-timeline.md", timeline)
             self.assertIn(
                 {"source": "atlas-bootstrap-workstream", "type": "parent", "target": "atlas"},
                 payload["graph"]["edges"],
             )
+            self.assertIn("Parent hierarchy", structure_page)
+            self.assertIn("/atlas/records/atlas-system.html", structure_page)
+            self.assertTrue((output / "records" / "claim-basis-and-review-state.html").is_file())
+            self.assertTrue((output / "records" / "relation-vocabulary.html").is_file())
+            self.assertTrue((output / "records" / "time-and-validity.html").is_file())
+            self.assertTrue((output / "records" / "source-identity.html").is_file())
+            atlas_page = (output / "records/atlas.html").read_text(encoding="utf-8")
+            self.assertIn("contains", atlas_page)
+            self.assertIn("atlas-system", atlas_page)
+            self.assertIn(f"/blob/{source_revision}/knowledge/topics/atlas.md", atlas_page)
+            self.assertNotIn("/blob/main/knowledge/topics/atlas.md", atlas_page)
+            self.assertFalse((output / "about-atlas.html").exists())
+            self.assertFalse((output / "map.html").exists())
+            self.assertFalse((output / "questions.html").exists())
             for page in ("product", "authoring", "site", "generator", "search-and-export", "validation", "publishing", "scope"):
                 self.assertTrue((output / "records" / f"atlas-{page}.html").is_file(), page)
             self.assertIn("not a server", (output / "records/atlas-scope.html").read_text(encoding="utf-8"))
+
+            documents = {}
+            for html_path in output.rglob("*.html"):
+                parser = LinkInventory()
+                parser.feed(html_path.read_text(encoding="utf-8"))
+                documents[html_path] = parser
+            for html_path, parser in documents.items():
+                for href in parser.hrefs:
+                    target = urlsplit(href)
+                    if target.scheme or target.netloc:
+                        continue
+                    path = unquote(target.path)
+                    if path.startswith("/atlas/"):
+                        relative = path.removeprefix("/atlas/")
+                    elif path.startswith("/"):
+                        continue
+                    else:
+                        relative = path
+                    linked_page = (output / relative) if relative else html_path
+                    if linked_page.is_dir():
+                        linked_page /= "index.html"
+                    self.assertTrue(linked_page.is_file(), f"{html_path.relative_to(output)} links to missing {href}")
+                    if target.fragment:
+                        destination = documents.get(linked_page)
+                        if destination is not None:
+                            self.assertIn(unquote(target.fragment), destination.ids, f"{href} has no matching anchor")
 
             default_output = Path(temporary) / "default-base-site"
             default_build = subprocess.run(
@@ -139,7 +227,7 @@ class AtlasRenderingTests(unittest.TestCase):
                 text=True,
             )
             self.assertEqual(0, default_build.returncode, default_build.stderr)
-            self.assertIn('/atlas/timeline.html', (default_output / "index.html").read_text(encoding="utf-8"))
+            self.assertIn('/search.html', (default_output / "index.html").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":
