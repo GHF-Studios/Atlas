@@ -1,0 +1,28 @@
+[atlas]
+id = "ghf-studios-atlas"
+title = "Atlas"
+organization = "GHF Studios"
+description = "A linked, versioned source for questions, decisions, evidence, work, and history."
+canonical_repository = "https://github.com/GHF-Studios/Atlas"
+
+[records]
+kinds = ["topic", "question", "decision", "evidence", "event", "workstream"]
+claim_statuses = ["owner-directed", "source-verified", "reported", "inferred", "proposed", "unresolved", "historical-snapshot"]
+
+[records.kind_descriptions]
+topic = "An area, concept, or product the knowledge map needs to explain."
+question = "An unresolved prompt whose answer may change understanding or action."
+decision = "An explicitly accepted direction or rule."
+evidence = "A source-backed observation, artifact, or report that supports claims."
+event = "A dated occurrence that can appear in the timeline."
+workstream = "A bounded body of work with an intended outcome."
+
+[records.claim_status_descriptions]
+owner-directed = "Explicit direction from the project owner; not a claim that code already behaves this way."
+source-verified = "Checked against a cited repository artifact or other direct source."
+reported = "Reported by a person, not independently confirmed here."
+inferred = "Reasoned from available evidence; interpretation may be wrong."
+proposed = "A candidate direction awaiting acceptance."
+unresolved = "An open question or unverified claim."
+historical-snapshot = "Preserved prior work that has not been normalized or endorsed as current canon."
+

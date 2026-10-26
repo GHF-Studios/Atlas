@@ -2,6 +2,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+import subprocess
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
@@ -43,6 +44,17 @@ class AtlasValidationTests(unittest.TestCase):
 
         self.assertEqual([dated], atlas.timeline_records([dated, undated]))
 
+    def test_rejects_a_record_stored_under_the_wrong_kind(self):
+        record = atlas.Record(
+            Path("knowledge/questions/not-a-topic.md"),
+            {"id": "not-a-topic", "kind": "topic", "title": "Wrong home", "claim_status": "owner-directed"},
+            "Body",
+        )
+
+        errors = atlas.validate_records([record])
+
+        self.assertIn("kind-path-mismatch", {error.code for error in errors})
+
 
 class AtlasRenderingTests(unittest.TestCase):
     def test_markdown_html_is_escaped(self):
@@ -67,6 +79,30 @@ class AtlasRenderingTests(unittest.TestCase):
         self.assertEqual([], errors)
         self.assertEqual("atlas", loaded[0].id)
         self.assertIn("A map of knowledge.", loaded[0].body)
+
+    def test_build_writes_explainer_entrypoint_and_machine_export(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            output = Path(temporary) / "site"
+            root = Path(__file__).resolve().parents[1]
+
+            result = subprocess.run(
+                [sys.executable, str(Path(__file__).resolve().parents[1] / "tools/atlas.py"),
+                 "build", "--root", str(root), "--output", str(output), "--base-url", "/Atlas/"],
+                capture_output=True,
+                text=True,
+            )
+
+            self.assertEqual(0, result.returncode, result.stderr)
+            home = (output / "index.html").read_text(encoding="utf-8")
+            map_page = (output / "map.html").read_text(encoding="utf-8")
+            timeline = (output / "timeline.html").read_text(encoding="utf-8")
+            data = (output / "atlas.json").read_text(encoding="utf-8")
+            self.assertIn("What Atlas is", home)
+            self.assertIn("/Atlas/timeline.html", home)
+            self.assertIn("Record types", map_page)
+            self.assertIn("not independently confirmed", map_page)
+            self.assertIn("Atlas bootstrap and audit preservation", timeline)
+            self.assertIn('"id": "atlas"', data)
 
 
 if __name__ == "__main__":

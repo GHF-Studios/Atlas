@@ -28,24 +28,24 @@
 
 ---
 
-### Task 1: Preserve the audit and its goal as an archive
+### Task 1: Preserve the audit bundle — complete
 
 **Files:**
-- Move current audit files under `archive/audit-snapshot-2026-10-26/` without content edits.
-- Create `archive/audit-snapshot-2026-10-26/README.md` and `manifest.toml`.
-- Add a `workstream` record that snapshots the paused audit goal and its accepted independent progress measures.
+- Preserve the existing audit bundle under `archive/audit-snapshot-2026-10-26/`.
+- Add `PRESERVATION.md` and link it from the archive guide.
+- Refresh nine files from newer workspace copies while keeping the prior committed versions in Git history.
 
-**Checks:** compare the pre/post file inventory and content hashes; ensure the snapshot note distinguishes accepted baseline from later unreconciled counts.
+**Checks:** inventory and content comparison passed; all 28 prior bundle files remain present; the nine refreshed workspace files match byte-for-byte. Commit `874a24a` pushed to `main`.
 
-### Task 2: Define the bootstrap model and self-records
+### Task 2: Define the bootstrap model and self-records — complete
 
 **Files:**
 - Create `atlas.toml` and Markdown records under `knowledge/{topics,questions,decisions,evidence,events,workstreams}/`.
-- Record the accepted source/derived-view boundary, the audit snapshot, and one owner-review question.
+- Record Atlas, the source/derived-view boundary, the audit snapshot, one owner-review question, and the active Atlas bootstrap workstream.
 
 **Checks:** IDs are stable; claim status and dates are explicit; links only assert what the conversation or snapshot supports.
 
-### Task 3: Validate and export the graph
+### Task 3: Validate and export the graph — complete
 
 **Files:**
 - Create `tools/atlas.py` with `validate`, `build`, and `serve` commands.
@@ -53,7 +53,7 @@
 
 **Checks:** run each test red before implementation, then green; run validation on all source records and inspect generated JSON.
 
-### Task 4: Build the reviewable site
+### Task 4: Build the reviewable site — complete
 
 **Files:**
 - Create `site/assets/style.css` and the generator templates/pages.
@@ -61,7 +61,7 @@
 
 **Checks:** build from a clean temporary output directory; verify every generated internal link resolves; inspect the rendered pages in a browser if available.
 
-### Task 5: Automate and publish the preview
+### Task 5: Automate and publish the preview — in progress
 
 **Files:**
 - Add GitHub Actions for validation/build and Pages deployment.

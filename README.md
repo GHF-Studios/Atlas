@@ -1,22 +1,36 @@
 # Atlas
 
-Atlas is being developed as GHF Studios' durable, navigable knowledge source.
-The intended model connects questions, decisions, evidence, work, and dated
-events; a timeline is one generated way to explore that graph.
-
-This repository is at its bootstrap stage. It currently preserves the
-Loo-Cast/Vapor audit snapshot below, plus a provisional design and plan for an
-Atlas self-description. The generated Atlas entrypoint and validated record
-model do not exist yet.
+Atlas is GHF Studios’ versioned source for knowledge about its products,
+decisions, questions, evidence, work, and history. Its public site is generated
+from this repository; the site is a navigable view, not a separate source of
+truth.
 
 ## Start here
 
-1. [Provisional self-description design](docs/superpowers/specs/2026-10-26-atlas-self-description-design.md)
-2. [Implementation plan](docs/superpowers/plans/2026-10-26-atlas-self-description.md)
-3. [Preserved audit snapshot](archive/audit-snapshot-2026-10-26/README.md)
+- **Readers:** open the [Atlas homepage](https://ghf-studios.github.io/Atlas/)
+  (after the first Pages deployment).
+- **Authors:** start with [`atlas.toml`](atlas.toml) and the typed Markdown
+  records under [`knowledge/`](knowledge/).
+- **Developers:** run the commands below; the generator uses only Python’s
+  standard library.
+- **Historical audit:** the [preserved Loo-Cast/Vapor bundle](archive/audit-snapshot-2026-10-26/README.md)
+  remains working evidence, not owner-approved canon. Its exact contents and
+  preservation boundary are in [`PRESERVATION.md`](archive/audit-snapshot-2026-10-26/PRESERVATION.md).
 
-The audit snapshot is retained as historical working material, not as
-canonical or owner-reviewed knowledge. Its [checkpoint](archive/audit-snapshot-2026-10-26/CHECKPOINT.md)
-explains the accepted progress measures and their limits. Its claims must be
-reconciled with current source and owner direction before they are adopted as
-Atlas records.
+## Validate, build, preview
+
+```sh
+python3 tools/atlas.py validate
+python3 tools/atlas.py build --output dist
+python3 tools/atlas.py serve --port 8000
+```
+
+Records use TOML frontmatter followed by Markdown. Stable IDs connect records;
+explicit claim status distinguishes owner direction, source-verified facts,
+reports, inference, proposals, unresolved questions, and historical snapshots.
+Dates are optional. Only dated `event` records appear in the generated
+timeline.
+
+The current site is a review preview of Atlas itself and the preserved audit.
+Its vocabulary and sample records remain provisional. Broader knowledge
+import waits for owner review of the entrypoint.
