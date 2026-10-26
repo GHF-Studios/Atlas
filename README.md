@@ -57,7 +57,9 @@ the source revision when one is available. Consumers should check
 
 GitHub is Atlas’s versioned source and CI host; it does not host the production
 website. CI validates the records, builds the static files, and stores them as
-a workflow artifact. The intended public site is `https://vapor.ghf-studios.site/atlas/`
-on the GHF Studios Strato VPS. Server routing and file transfer still need to
-be configured; the URL is the intended destination, not a claim that this
-revision is already live there.
+a workflow artifact. The Platform Server also checks out Atlas as a source
+submodule, fetches its configured ref (default `main`), validates and builds it,
+then publishes a versioned static release to the GHF Studios Strato VPS. Caddy
+serves that release at `https://vapor.ghf-studios.site/atlas/`, separately from
+the `/docs/` service. The published `atlas.json` identifies the source revision
+used for each build.
