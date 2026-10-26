@@ -1,12 +1,12 @@
 +++
 id = "entrypoint-review"
 kind = "question"
-title = "Does this entrypoint explain Atlas clearly?"
+title = "Which parts of the knowledge model need definition next?"
 claim_status = "unresolved"
 relations = [{ type = "about", target = "atlas" }]
 +++
 
-Does the homepage make it clear what Atlas is for, how questions and decisions connect to evidence, why the timeline is only one way to explore it, and what is preserved versus not yet established?
+The bootstrap direction is one connected knowledge graph, with hierarchy for meaningful containment and separate views such as chronology. Which record kinds, relation meanings, and evidence rules need to be made precise before Atlas can responsibly add broader knowledge?
 
-Please review the generated homepage and its first navigation links. Broader knowledge import waits until this explanation feels right.
+Keep this question bounded to Atlas's own knowledge model. It does not ask Atlas to import or redesign another product's systems.
 

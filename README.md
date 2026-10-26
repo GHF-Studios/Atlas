@@ -1,13 +1,17 @@
 # Atlas
 
-Atlas is GHF Studios’ versioned source for knowledge about its products,
-decisions, questions, evidence, work, and history. Its public site is generated
-from this repository; the site is a navigable view, not a separate source of
-truth.
+Atlas is one of GHF Studios’ products, alongside Vapor and Loo-Cast. Its role
+is to make the organization’s products, decisions, evidence, questions, work,
+and history understandable. This repository is the authored source; the
+published site and JSON are generated views. Atlas is the subject of its first
+knowledge set, so its own product intent, data, tools, site, and limits are
+documented here before importing broader product knowledge.
 
 ## Start here
 
-- **Readers:** open the [Atlas homepage](https://ghf-studios.github.io/Atlas/).
+- **Readers:** open the [Atlas homepage](https://ghf-studios.github.io/Atlas/),
+  then start with [Atlas as a product](knowledge/topics/atlas-product.md) or
+  the generated [system guide](https://ghf-studios.github.io/Atlas/system.html).
 - **Authors:** start with [`atlas.toml`](atlas.toml) and the typed Markdown
   records under [`knowledge/`](knowledge/).
 - **Developers:** run the commands below; the generator uses only Python’s
@@ -30,9 +34,11 @@ reports, inference, proposals, unresolved questions, and historical snapshots.
 Dates are optional. Only dated `event` records appear in the generated
 timeline.
 
-The current site is a review preview of Atlas itself and the preserved audit.
-Its vocabulary and sample records remain provisional. Broader knowledge
-import waits for owner review of the entrypoint.
+The current site documents Atlas itself and preserves a separate historical
+audit snapshot. Its vocabulary and sample records remain provisional. Atlas
+currently has no server, accounts, online editing, discussion system, issue
+synchronization, multi-repository ingestion, or automatic interpretation of
+commits. See the [scope record](knowledge/topics/atlas-scope.md).
 
 `atlas.json` is the current machine-readable read model. It contains the
 versioned record list plus a normalized `graph.nodes` / `graph.edges`

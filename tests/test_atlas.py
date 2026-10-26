@@ -95,11 +95,16 @@ class AtlasRenderingTests(unittest.TestCase):
 
             self.assertEqual(0, result.returncode, result.stderr)
             home = (output / "index.html").read_text(encoding="utf-8")
+            system = (output / "system.html").read_text(encoding="utf-8")
             map_page = (output / "map.html").read_text(encoding="utf-8")
             timeline = (output / "timeline.html").read_text(encoding="utf-8")
             data = (output / "atlas.json").read_text(encoding="utf-8")
             payload = json.loads(data)
-            self.assertIn("What Atlas is", home)
+            self.assertIn("One product among three", home)
+            self.assertIn("PRODUCT 03", home)
+            self.assertIn("How Atlas works", home)
+            self.assertIn("How Atlas is built", system)
+            self.assertIn("Authored data and generation", system)
             self.assertIn("/Atlas/timeline.html", home)
             self.assertIn("Record types", map_page)
             self.assertIn("not independently confirmed", map_page)
@@ -119,6 +124,9 @@ class AtlasRenderingTests(unittest.TestCase):
                 {"source": "atlas-bootstrap-workstream", "type": "parent", "target": "atlas"},
                 payload["graph"]["edges"],
             )
+            for page in ("product", "authoring", "site", "generator", "search-and-export", "validation", "publishing", "scope"):
+                self.assertTrue((output / "records" / f"atlas-{page}.html").is_file(), page)
+            self.assertIn("not a server", (output / "records/atlas-scope.html").read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

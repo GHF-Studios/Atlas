@@ -298,7 +298,7 @@ def _base_url(value: str) -> str:
 
 
 def _page(title: str, content: str, base: str, active: str = "") -> str:
-    links = [("Home", "index.html"), ("Map", "map.html"), ("Timeline", "timeline.html"), ("Questions", "questions.html"), ("Archive", "archive.html")]
+    links = [("Home", "index.html"), ("System", "system.html"), ("Map", "map.html"), ("Timeline", "timeline.html"), ("Questions", "questions.html"), ("Archive", "archive.html")]
     nav = "".join(
         f'<a href="{base}{route}"{(" aria-current=\"page\"" if active == route else "")}>{label}</a>'
         for label, route in links
@@ -315,7 +315,7 @@ def _page(title: str, content: str, base: str, active: str = "") -> str:
   <script defer src="{base}assets/search.js"></script>
 </head>
 <body>
-  <header class="site-header"><a class="brand" href="{base}index.html"><span class="brand-mark">A</span><span>Atlas<small>GHF Studios knowledge map</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
+  <header class="site-header"><a class="brand" href="{base}index.html"><span class="brand-mark">A</span><span>Atlas<small>GHF Studios product · knowledge system</small></span></a><nav aria-label="Main navigation">{nav}</nav></header>
   <main>{content}</main>
   <footer><span>Atlas is generated from versioned Markdown records.</span><span><a href="{base}atlas.json">Structured data</a> · <a href="https://github.com/GHF-Studios/Atlas">Source repository</a></span></footer>
 </body>
@@ -327,7 +327,14 @@ def _record_link(record: Record, base: str) -> str:
 
 
 def _record_card(record: Record, base: str) -> str:
-    excerpt = render_markdown(record.body)
+    summary = record.metadata.get("summary")
+    if not isinstance(summary, str) or not summary.strip():
+        # Listing views should orient readers, not duplicate the entire record.
+        summary = record.body.split("\n\n", 1)[0]
+        summary = re.sub(r"[`*#]", "", summary)
+        if len(summary) > 260:
+            summary = summary[:257].rsplit(" ", 1)[0].rstrip(".,;:") + "…"
+    excerpt = f"<p>{_inline_markdown(summary)}</p>"
     return (
         f'<article class="record-card"><div class="eyebrow">{escape(record.kind.replace("-", " ").title())} · '
         f'<span class="status">{escape(record.claim_status.replace("-", " "))}</span></div>'
@@ -408,14 +415,28 @@ def build_site(root: Path, output: Path, base_url: str = "/") -> list[Validation
 
     search = '''<section class="search-box" aria-label="Search Atlas"><label for="atlas-search">Search Atlas</label><input id="atlas-search" type="search" placeholder="Search questions, decisions, evidence…" autocomplete="off"><div id="atlas-search-results" aria-live="polite"></div></section>'''
 
-    home_records = [by_id[key] for key in ("atlas", "knowledge-model", "timeline-view", "audit-snapshot", "entrypoint-review") if key in by_id]
-    home = f'''<section class="hero"><p class="eyebrow">GHF STUDIOS · KNOWLEDGE MAP</p><h1>Understand how the work fits together.</h1><p class="lead">Atlas connects what we know, what we decided, what remains a question, and how the work changed over time.</p><p class="actions"><a class="button primary" href="{base}map.html">Explore the map</a><a class="button" href="{base}timeline.html">Browse the timeline</a></p></section>
-<section class="intro-grid"><article class="panel"><h2>What Atlas is</h2><p>Atlas is GHF Studios’ versioned source for knowledge about its products and work. Records are linked, typed, and explicit about whether a statement is confirmed, reported, inferred, proposed, or still unresolved.</p></article><article class="panel"><h2>How to read it</h2><p>Questions and decisions shape the knowledge graph. Evidence supports claims. Workstreams connect decisions to action. Dated events create a timeline view; the timeline does not dictate the structure.</p><p><a href="{base}map.html#record-types">See the type and status definitions.</a></p></article><article class="panel"><h2>What exists now</h2><p>This first slice explains Atlas and preserves the Loo-Cast/Vapor audit as historical working material. The audit is not adopted as settled or owner-reviewed knowledge.</p><p><a href="{base}archive.html">Open the preserved audit bundle</a></p></article></section>
-<section class="section"><div class="section-heading"><div><p class="eyebrow">CURRENT REVIEW</p><h2>Start with the open question</h2></div><a href="{base}questions.html">All questions →</a></div><div class="cards">{_record_card(by_id['entrypoint-review'], base) if 'entrypoint-review' in by_id else '<p>No review question is recorded yet.</p>'}</div></section>
-<section class="section"><div class="section-heading"><div><p class="eyebrow">ORIENTATION</p><h2>Core records</h2></div></div><div class="cards">{''.join(_record_card(record, base) for record in home_records)}</div></section>
+    home_record_ids = ("atlas-product", "knowledge-model", "atlas-scope")
+    home_records = [by_id[key] for key in home_record_ids if key in by_id]
+    home = f'''<section class="hero"><p class="eyebrow">GHF STUDIOS · PRODUCT 03</p><h1>Atlas makes the work understandable.</h1><p class="lead">Atlas is a product in its own right: a versioned knowledge system, with a navigable website generated from its records. This first knowledge set describes Atlas itself.</p><p class="actions"><a class="button primary" href="{base}records/atlas-product.html">Understand Atlas</a><a class="button" href="{base}map.html">Explore its knowledge map</a><a class="button" href="{base}timeline.html">Browse dated events</a></p></section>
+<section class="intro-grid"><article class="panel"><h2>One product among three</h2><p>GHF Studios’ current product picture names Vapor, Loo-Cast, and Atlas as distinct products. Atlas is the product being explained here; it does not absorb or stand in for the others.</p><p><a href="{base}records/atlas-product.html">Product role and boundaries →</a></p></article><article class="panel"><h2>How Atlas works</h2><p>People author typed Markdown records in Git. A small generator validates them and builds the website and machine-readable graph export. The website is a view; the repository is the source.</p><p><a href="{base}records/atlas-authoring.html">Authoring model →</a> · <a href="{base}records/atlas-generator.html">Build path →</a></p></article><article class="panel"><h2>What this proves</h2><p>The first dataset is intentionally Atlas itself: product intent, knowledge structure, site, generation, search, validation, deployment, and known limits. This is a bootstrap, not a claim that the wider knowledge base is complete.</p><p><a href="{base}records/atlas-scope.html">Current scope and absences →</a></p></article></section>
+<section class="section"><div class="section-heading"><div><p class="eyebrow">ATLAS, EXPLAINED BY ATLAS</p><h2>Start with these</h2></div><a href="{base}system.html">How Atlas is built →</a></div><div class="cards">{''.join(_record_card(record, base) for record in home_records)}</div></section>
+<section class="section"><div class="section-heading"><div><p class="eyebrow">OPEN FOR REVIEW</p><h2>Questions that shape the next iteration</h2></div><a href="{base}questions.html">All questions →</a></div><div class="cards">{_record_card(by_id['entrypoint-review'], base) if 'entrypoint-review' in by_id else '<p>No review question is recorded yet.</p>'}</div></section>
 <section class="section"><h2>Find a record</h2>{search}</section>
-<aside class="notice"><strong>Review preview.</strong> The record vocabulary and links are intentionally small and provisional. Please review whether this entrypoint explains the system clearly before broader knowledge is imported.</aside>'''
+<aside class="notice"><strong>Honest boundary.</strong> The product relationships and intended role are owner direction. Technical descriptions marked source-verified describe the current Atlas repository. Atlas is not yet a complete organizational history, discussion platform, or automated mirror of other products.</aside>'''
     (output / "index.html").write_text(_page("Home", home, base, "index.html"), encoding="utf-8")
+
+    system_sections = [
+        ("Product and model", ("atlas-product", "knowledge-model", "timeline-is-a-view")),
+        ("Authored data and generation", ("atlas-authoring", "atlas-generator", "atlas-validation")),
+        ("Published experience", ("atlas-site", "atlas-search-and-export", "atlas-publishing")),
+        ("Boundaries and open design", ("atlas-scope", "entrypoint-review")),
+    ]
+    system_html = '<section class="page-intro"><p class="eyebrow">ATLAS, EXPLAINED BY ATLAS</p><h1>How Atlas is built</h1><p>This guide describes Atlas as a product and the current implementation behind it. Product intent is labeled as owner direction; implementation claims link to the files that establish them. Each card opens the full record.</p></section>'
+    for heading, identifiers in system_sections:
+        section_records = [by_id[identifier] for identifier in identifiers if identifier in by_id]
+        if section_records:
+            system_html += f'<section class="section"><h2>{escape(heading)}</h2><div class="cards">{"".join(_record_card(record, base) for record in section_records)}</div></section>'
+    (output / "system.html").write_text(_page("How Atlas is built", system_html, base, "system.html"), encoding="utf-8")
 
     groups: list[str] = []
     for kind in KIND_DIRS:
