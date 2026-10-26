@@ -771,7 +771,7 @@ This 15-root census excludes a preserved duplicate checkout inside the project: 
 | Vapor-Installer | 5 | 1,332 | Setup/role and service-start boundary selected; current UI and provisioning paths not exhaustive. |
 | Steam Entrypoint | 5 | 1,036 | Direct Play/chooser routing, App-root inference, required-setup gate, persistent selection, `default` documentation split, Linux Pressure Vessel and Windows `cmd` adapters, and append-only log path reviewed; live Steamworks settings and target runtime unverified. |
 | Vapor-Examples | 8 | 1,318 | July–October wheel/example transition traced; current authored graph compared with hardcoded Cargo composition; every artifact and release payload not audited. |
-| Platform Server container | 31 | 3,055 | Docs/deploy/backup/restore and service orchestration scripts selected; remaining scripts need full pass. |
+| Platform Server container | 31 | 3,055 | Deploy/recovery orchestration now mapped per file against July–October history; five-service deploy versus three-service backup/restore/docs, unlocked manual deploy, and toolchain bypass are source-confirmed. Remaining operational scripts and live VPS state remain unreviewed. |
 | Diagnostics Server | 1 | 747 | Focused cross-service review of Client transport, consent/schema, redaction, quota, export and server routes; no upload/runtime behavior exercised. |
 | Docs Server | 1 | 423 | Sole server source and six repository files reviewed; current-tree upload/serve/export, archive bounds and publication race traced. No live site/render test. |
 | Homepage Server | 1 | 86 | Current routes/page bodies cross-checked with README, Caddy routing, vertical-slice scope and stale deployment status; no live site check. |
