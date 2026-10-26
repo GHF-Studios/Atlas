@@ -103,6 +103,6 @@
     })
     .catch(() => {
       count.textContent = "Search unavailable";
-      results.textContent = "The record index could not be loaded. Use the Structure view to browse records.";
+      results.textContent = "The record index could not be loaded. Use Connections to follow the authored record links.";
     });
 })();

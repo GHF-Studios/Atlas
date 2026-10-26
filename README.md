@@ -37,12 +37,12 @@ The current site explains Atlas itself and preserves a separate historical
 audit snapshot. Its vocabulary and sample records remain provisional. Atlas
 currently has no server, accounts, online editing, discussion system, issue
 synchronization, multi-repository ingestion, or automatic interpretation of
-commits. The brand returns to the home entrypoint. Search is the primary record
-lookup tab, with a sub-tab for each record kind; Structure is subordinate to
-Search. Timeline is a separate date-based view, and How it works is a separated
-system reference. Questions are a record kind, not a parallel product area.
-The preserved audit and JSON export are secondary references. See the [site
-information architecture](knowledge/topics/atlas-site.md)
+commits. Its three primary views are **Search** (find records by text and
+kind), **Connections** (follow authored typed links), and **Timeline** (dated
+events). Questions are a record kind, not a parallel product area. Relation
+labels are shown as authored; their vocabulary and semantics remain open. How
+it works, the preserved audit, and JSON export are contextual references. See
+the [site information architecture](knowledge/topics/atlas-site.md)
 and the [scope record](knowledge/topics/atlas-scope.md).
 
 `atlas.json` is the current machine-readable read model. It contains the

@@ -15,7 +15,7 @@ Atlas has one authoritative authored set: this Git repository. Each knowledge re
 
 The validator checks the structure it can establish mechanically: record parsing, IDs, kind placement, claim labels, dates, record references, parent cycles, and source-file existence. It cannot establish truth, owner approval, the meaning of an undocumented relation, or whether a human explanation is good.
 
-The generator derives several read views from those records: HTML pages for orientation and browsing, a chronological view of dated events, and `atlas.json` for tools. A generated page is not a second source of truth. The JSON graph is a projection of each record's parent and relation fields, not a separately edited database.
+The generator derives three primary read views from those records: Search for text and kind lookup, Connections for traversing directed typed links, and a chronological view of dated events. Record pages, system reference, archive, and `atlas.json` support those views. A generated page is not a second source of truth. The JSON graph is a projection of each record's parent and relation fields, not a separately edited database. Connections currently shows those labels literally; the relation vocabulary has not been formalized or validated.
 
 ## How to inspect a claim
 

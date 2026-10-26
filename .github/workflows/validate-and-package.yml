@@ -18,7 +18,7 @@ jobs:
       - name: Validate knowledge records
         run: python3 tools/atlas.py validate
       - name: Check browser script syntax
-        run: node --check site/assets/search.js
+        run: node --check site/assets/search.js && node --check site/assets/connections.js
       - name: Run Atlas tests
         run: python3 -m unittest discover -s tests
       - name: Build static site

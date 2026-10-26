@@ -299,10 +299,9 @@ def _base_url(value: str) -> str:
 
 
 def _page(title: str, content: str, base: str, active: str = "") -> str:
-    # The brand is the home/entrypoint. Search and Timeline are the primary
-    # knowledge views; record types and the Structure sub-view live under
-    # Search. System reference is kept visually separate from those views.
-    links = [("Search", "search.html"), ("Timeline", "timeline.html")]
+    # The brand is the home/entrypoint. Search, Connections, and Timeline
+    # serve distinct primary reading tasks; system reference remains separate.
+    links = [("Search", "search.html"), ("Connections", "connections.html"), ("Timeline", "timeline.html")]
     nav = "".join(
         f'<a href="{base}{route}"{(" aria-current=\"page\"" if active == route else "")}>{label}</a>'
         for label, route in links
@@ -320,6 +319,7 @@ def _page(title: str, content: str, base: str, active: str = "") -> str:
   <title>{escape(title)} · Atlas</title>
   <link rel="stylesheet" href="{base}assets/style.css">
   <script defer src="{base}assets/search.js"></script>
+  <script defer src="{base}assets/connections.js"></script>
 </head>
 <body>
   <header class="site-header"><a class="brand" href="{base}index.html" aria-label="Atlas start"><span class="brand-mark">A</span><span>Atlas<small>GHF Studios · Start</small></span></a><nav aria-label="Knowledge views">{nav}</nav>{system_link}</header>
@@ -444,6 +444,7 @@ def build_site(root: Path, output: Path, base_url: str = "/", source_revision: s
     (output / "records").mkdir(exist_ok=True)
     shutil.copyfile(root / "site/assets/style.css", output / "assets/style.css")
     shutil.copyfile(root / "site/assets/search.js", output / "assets/search.js")
+    shutil.copyfile(root / "site/assets/connections.js", output / "assets/connections.js")
 
     # A typed and queryable export; chronology is a projection over dated events.
     payload = {
@@ -459,7 +460,7 @@ def build_site(root: Path, output: Path, base_url: str = "/", source_revision: s
     home_record_ids = ("atlas-product", "knowledge-model", "atlas-scope")
     home_records = [by_id[key] for key in home_record_ids if key in by_id]
     home = f'''<section class="hero"><p class="eyebrow">GHF STUDIOS · ATLAS</p><h1>A place to understand how the work fits together.</h1><p class="lead">Atlas connects explanations, decisions, questions, evidence, work, and dated events. It is being built to make a large body of knowledge navigable and honest about what is known.</p></section>
-<section class="section"><div class="section-heading"><div><p class="eyebrow">ONE RECORD SET · TWO PRIMARY VIEWS</p><h2>Start with what you need</h2><p>Search finds records by meaning and kind; the timeline arranges dated events.</p></div></div><div class="intro-grid"><article class="panel"><p class="eyebrow">FIND AND FILTER</p><h2>Search</h2><p>Search all records, then narrow to topics, questions, decisions, evidence, events, or workstreams. Follow parent groupings in Search’s Structure sub-view; open a record to inspect its cross-links.</p><p><a href="{base}search.html">Search Atlas →</a></p></article><article class="panel"><p class="eyebrow">DATED EVENTS</p><h2>Timeline</h2><p>See only events with authored dates. The current timeline is intentionally sparse.</p><p><a href="{base}timeline.html">View the timeline →</a></p></article></div></section>
+<section class="section"><div class="section-heading"><div><p class="eyebrow">ONE RECORD SET · THREE PRIMARY VIEWS</p><h2>Start with what you need</h2><p>Find a record, follow what it connects to, or see what happened over time.</p></div></div><div class="intro-grid"><article class="panel"><p class="eyebrow">FIND AND FILTER</p><h2>Search</h2><p>Search all records, then narrow by kind. Questions are one record type among several.</p><p><a href="{base}search.html">Search Atlas →</a></p></article><article class="panel"><p class="eyebrow">FOLLOW RELATIONSHIPS</p><h2>Connections</h2><p>Start from a record and follow its authored links to other records. Relation labels and direction are shown as entered.</p><p><a href="{base}connections.html">Explore connections →</a></p></article><article class="panel"><p class="eyebrow">DATED EVENTS</p><h2>Timeline</h2><p>See only events with authored dates. The current timeline is intentionally sparse.</p><p><a href="{base}timeline.html">View the timeline →</a></p></article></div></section>
 <section class="section"><div class="section-heading"><div><p class="eyebrow">ATLAS DESCRIBES ITSELF FIRST</p><h2>What Atlas is</h2><p>The product’s purpose lives in the same linked record set Atlas is built to explain.</p></div></div><div class="cards">{''.join(_record_card(record, base) for record in home_records if record.id == "atlas-product")}</div></section>
 <aside class="notice"><strong>One source, several views.</strong> The pages above are projections over linked records, not separate stores of knowledge. Automated checks establish structure, not truth or owner approval. <a href="{base}system.html#claim-basis">How to read the labels</a>.</aside>'''
     (output / "index.html").write_text(_page("Home", home, base, "index.html"), encoding="utf-8")
@@ -482,12 +483,11 @@ def build_site(root: Path, output: Path, base_url: str = "/", source_revision: s
         for kind in configured_kinds
     )
     search_body = f'''<section class="page-intro"><p class="eyebrow">KNOWLEDGE · SEARCH</p><h1>Search</h1><p>Search every record, then filter by its kind. Questions are one record type among several, not a separate knowledge system.</p><p><a href="{base}system.html#record-model">What do these record types mean?</a></p></section>
-<nav class="secondary-nav" aria-label="Knowledge tools"><a href="{base}search.html" aria-current="page">Search records</a><a href="{base}structure.html">Structure</a></nav>
 <section class="search-page" aria-label="Search Atlas records"><label for="atlas-search">Search titles and record text</label><input id="atlas-search" type="search" placeholder="Try a topic, question, decision, or source…" autocomplete="off"><div class="search-subtabs" role="tablist" aria-label="Filter by record type"><button type="button" role="tab" id="kind-all" aria-controls="atlas-search-results" aria-selected="true" tabindex="0" data-kind="all">All records</button>{kind_buttons}</div><p id="atlas-search-count" class="search-count" aria-live="polite">Loading records…</p><div id="atlas-search-results" role="tabpanel" aria-labelledby="kind-all" aria-live="polite"></div></section>'''
     (output / "search.html").write_text(_page("Search", search_body, base, "search.html"), encoding="utf-8")
 
     system_sections = [
-        ("Product and model", ("atlas-product", "atlas-system", "knowledge-model", "timeline-is-a-view", "current-site-is-disposable-bootstrap")),
+        ("Product and model", ("atlas-product", "atlas-system", "knowledge-model", "timeline-is-a-view", "connections-is-a-primary-view", "current-site-is-disposable-bootstrap")),
         ("Authored data and generation", ("atlas-authoring", "atlas-generator", "atlas-validation")),
         ("Published experience", ("atlas-site", "atlas-search-and-export", "atlas-publishing")),
         ("Boundaries and open design", ("atlas-scope", "entrypoint-review")),
@@ -502,28 +502,39 @@ def build_site(root: Path, output: Path, base_url: str = "/", source_revision: s
     system_html += '<section class="section" id="claim-basis"><h2>How to read a claim label</h2><p>A label records the kind of basis attached to a claim. It is not a universal confidence score, and passing structural checks does not make a claim true. The status definitions are in the <a href="' + base + 'system.html#claim-status">record model table</a>.</p></section>'
     (output / "system.html").write_text(_page("How Atlas works", system_html, base, "system.html"), encoding="utf-8")
 
-    children: dict[str, list[Record]] = {}
-    roots: list[Record] = []
-    for record in records:
-        parent_id = record.metadata.get("parent")
-        if isinstance(parent_id, str):
-            children.setdefault(parent_id, []).append(record)
-        else:
-            roots.append(record)
-
-    def tree_item(record: Record) -> str:
-        descendants = sorted(children.get(record.id, []), key=lambda item: item.title.casefold())
-        nested = "<ul>" + "".join(tree_item(child) for child in descendants) + "</ul>" if descendants else ""
-        return f'<li><div class="tree-node">{_record_link(record, base)} <small>{escape(record.kind)} · {escape(record.claim_status.replace("-", " "))}</small></div>{nested}</li>'
-
-    hierarchy = '<section class="section" id="hierarchy"><h2>Parent hierarchy</h2><p>Parent links show containment or explanatory grouping. Cross-links appear on each record page; dates are a separate view.</p><ul class="tree">' + "".join(tree_item(record) for record in sorted(roots, key=lambda item: item.title.casefold())) + "</ul></section>"
-
-    map_body = '<section class="page-intro"><p class="eyebrow">SEARCH · STRUCTURE</p><h1>Structure</h1><p>Follow parent groupings here. Open a record to inspect its cross-links; use Search records for direct lookup and type filters.</p></section><nav class="secondary-nav" aria-label="Search views"><a href="' + base + 'search.html">Search records</a><a href="' + base + 'structure.html" aria-current="page">Structure</a></nav>' + hierarchy
-    (output / "structure.html").write_text(_page("Structure", map_body, base, "search.html"), encoding="utf-8")
+    graph = _graph_json(records)
+    relation_types = sorted({edge["type"] for edge in graph["edges"]})
+    record_options = "".join(
+        f'<option value="{escape(record.id, quote=True)}">{escape(record.title)} · {escape(record.kind)}</option>'
+        for record in sorted(records, key=lambda item: (item.title.casefold(), item.id))
+    )
+    relation_options = "".join(
+        f'<option value="{escape(relation_type, quote=True)}">{escape(relation_type)}</option>'
+        for relation_type in relation_types
+    )
+    connection_rows = []
+    for edge in graph["edges"]:
+        source = by_id[edge["source"]]
+        target = by_id[edge["target"]]
+        source_focus = f'{base}connections.html?record={escape(source.id, quote=True)}'
+        target_focus = f'{base}connections.html?record={escape(target.id, quote=True)}'
+        connection_rows.append(
+            f'<li class="connection-row" data-source-id="{escape(source.id, quote=True)}" '
+            f'data-target-id="{escape(target.id, quote=True)}" data-relation-type="{escape(edge["type"], quote=True)}">'
+            f'<div class="connection-edge"><span class="connection-node"><a href="{base}records/{escape(source.id, quote=True)}.html">{escape(source.title)}</a>'
+            f'<small>{escape(source.kind)}</small></span><span class="relation" aria-label="authored relation">{escape(edge["type"])}</span>'
+            f'<span class="connection-arrow" aria-hidden="true">→</span><span class="connection-node"><a href="{base}records/{escape(target.id, quote=True)}.html">{escape(target.title)}</a>'
+            f'<small>{escape(target.kind)}</small></span></div><div class="connection-actions">'
+            f'<a href="{source_focus}">Focus {escape(source.title)}</a><a href="{target_focus}">Focus {escape(target.title)}</a></div></li>'
+        )
+    connections_body = f'''<section class="page-intro"><p class="eyebrow">KNOWLEDGE · CONNECTIONS</p><h1>Connections</h1><p>Start from a record and follow its links. Each arrow follows the direction authored in Atlas, including parent links; relation labels are displayed as written and do not imply that the vocabulary is finalized.</p></section>
+<section class="connection-controls panel" aria-label="Filter connections"><label for="connection-record">Focus on a record</label><select id="connection-record"><option value="">All records</option>{record_options}</select><label for="connection-type">Relation type</label><select id="connection-type"><option value="">All relation types</option>{relation_options}</select><label for="connection-direction">Direction from focused record</label><select id="connection-direction"><option value="both">Both directions</option><option value="outgoing">Outgoing</option><option value="incoming">Incoming</option></select><p id="connection-count" class="search-count" role="status">{len(connection_rows)} {"link" if len(connection_rows) == 1 else "links"}</p></section>
+<p id="connection-empty" class="empty-state" hidden>No links match these filters. Try another record or relation type.</p><ul id="connection-results" class="connection-list" aria-label="Record relationships">{"".join(connection_rows)}</ul>'''
+    (output / "connections.html").write_text(_page("Connections", connections_body, base, "connections.html"), encoding="utf-8")
 
     events = timeline_records(records)
     if events:
-        timeline_body = f'<section class="page-intro"><p class="eyebrow">DATED EVENTS · {len(events)} RECORDED</p><h1>Timeline</h1><p>This view contains only events with dates. It is generated from event records and remains independent of the Structure view.</p></section><ol class="timeline">'
+        timeline_body = f'<section class="page-intro"><p class="eyebrow">DATED EVENTS · {len(events)} RECORDED</p><h1>Timeline</h1><p>This view contains only events with dates. It is generated from event records and remains independent of record relationships.</p></section><ol class="timeline">'
         timeline_body += "".join(f'<li><time datetime="{escape(str(_toml_scalar(event.metadata["date"])), quote=True)}">{escape(str(_toml_scalar(event.metadata["date"])))}</time>{_record_card(event, base)}</li>' for event in events)
         timeline_body += "</ol>"
     else:
@@ -566,7 +577,7 @@ def build_site(root: Path, output: Path, base_url: str = "/", source_revision: s
         record_source_url = _source_url(record_path, revision)
         authored_at = _source_link(record_path, revision, record_path) if record_source_url else f'{escape(record_path)} <span class="status">(working tree; no fixed Git revision)</span>'
         connections = relation_html + "".join(inbound)
-        record_body = f'''<section class="page-intro"><p class="eyebrow">{escape(record.kind.replace('-', ' ').upper())} · {escape(record.id)}</p><h1>{escape(record.title)}</h1><div class="badges">{"".join(details)}</div></section><article class="record-body">{render_markdown(record.body)}</article><section class="section"><h2>Connections</h2>{parent}<ul>{connections or '<li>No linked records yet.</li>'}</ul></section><section class="section"><h2>Sources</h2><ul>{source_html or '<li>No source path listed.</li>'}</ul><p class="source-path">Authored at {authored_at}</p></section>'''
+        record_body = f'''<section class="page-intro"><p class="eyebrow">{escape(record.kind.replace('-', ' ').upper())} · {escape(record.id)}</p><h1>{escape(record.title)}</h1><div class="badges">{"".join(details)}</div></section><article class="record-body">{render_markdown(record.body)}</article><section class="section"><h2>Connections</h2><p><a href="{base}connections.html?record={escape(record.id, quote=True)}">Open the Connections view focused on this record →</a></p>{parent}<ul>{connections or '<li>No linked records yet.</li>'}</ul></section><section class="section"><h2>Sources</h2><ul>{source_html or '<li>No source path listed.</li>'}</ul><p class="source-path">Authored at {authored_at}</p></section>'''
         (output / "records" / f"{record.id}.html").write_text(_page(record.title, record_body, base), encoding="utf-8")
     return []
 
