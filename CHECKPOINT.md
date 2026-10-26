@@ -72,3 +72,8 @@ The projectile/health slice records the scale-aware spawn path, direct transform
 ## October 26 — Health presentation source pass
 
 The follow-up traced player and world health bars back through Health, USF ownership and split-peer resolution, then compared the current projection/cache with its September extraction and October cleanup history. The HUD explicitly assumes a first local Player; world bars reconcile every eligible semantic Health manifestation each frame, without producer-side distance/frustum selection, and defer cache cleanup while no player camera exists. The paired-visual recovery added in `d806e3d` is retained as a sound local invariant. Latest path reach is 800/913 focused, 714/913 cross-reference, and 1,001/1,540 all-file; accepted baselines remain separate and unreconciled. No runtime or tests were run.
+
+
+## October 26 — Engine UI foundation source pass
+
+The current UI root centralizes shared text and panel tokens but no reusable layout/control kit. Adoption is partial (including a locally styled flight HUD), z-order combines named 0/100/110 layers with literal 1,840–20,000 values, and both font roles still use Bevy defaults; a bundled engine font was not found. The `Stage 6` comment has no matching Markdown definition in the checkout. Latest path reach is 802/913 focused, 716/913 cross-reference, and 1,003/1,540 all-file. These are provisional reach counts only; accepted baselines remain separate. No UI/runtime test was performed.
