@@ -58,3 +58,8 @@ A targeted refinement of the existing recovery finding checked Registry's route 
 ## October 26 — Vapor-CLI source citation reconciliation
 
 The CLI source pass added direct path reach for the remaining 31 implementation-review and 38 cross-reference gaps within Vapor-CLI; its 48 executable-source units now have path citations in both documents. The fresh mechanical counts are 792/913 focused source citations and 696/913 cross-reference citations, with 121 and 217 files still uncited on those separate tracks. The broader all-file inventory recount is 993/1,540. All figures are raw path reach, remain unreconciled against the accepted 568/437/791 baseline, and are not semantic completion. Per-file dispositions remain 19/913 for each source track and 36/1,540 for each all-file track.
+
+
+## October 26 — diagnostics and USF ownership contracts
+
+The next source slice refined the Loo-Cast diagnostics/USF sections with direct module citations and recorded a best-effort telemetry boundary: bounded emitter failures are returned to callers but diagnostics publication ignores them. It also clarified typed snapshot cadences, inline-only ECS memory estimates, and the distinction between manifestation ownership and constituency. The latest mechanical path counts now read 796/913 focused, 704/913 cross-reference, and 997/1,540 broader inventory. Accepted baselines (568/437/791) remain unreconciled; the citation counts are reach only. The Loo-Cast source worktree already had a modified `Cargo.lock`; it was preserved and not edited.
