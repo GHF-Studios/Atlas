@@ -63,3 +63,8 @@ The CLI source pass added direct path reach for the remaining 31 implementation-
 ## October 26 — diagnostics and USF ownership contracts
 
 The next source slice refined the Loo-Cast diagnostics/USF sections with direct module citations and recorded a best-effort telemetry boundary: bounded emitter failures are returned to callers but diagnostics publication ignores them. It also clarified typed snapshot cadences, inline-only ECS memory estimates, and the distinction between manifestation ownership and constituency. The latest mechanical path counts now read 796/913 focused, 704/913 cross-reference, and 997/1,540 broader inventory. Accepted baselines (568/437/791) remain unreconciled; the citation counts are reach only. The Loo-Cast source worktree already had a modified `Cargo.lock`; it was preserved and not edited.
+
+
+## October 26 — Loo-Cast combat source pass
+
+The projectile/health slice records the scale-aware spawn path, direct transform motion, same-scale endpoint containment scan, split-peer filter, semantic hit-to-Health conversion, and the gaps between `DamageableBounds`, collision geometry, and impact effects. The endpoint-only algorithm exposes a source-confirmed tunneling condition for sufficiently large displacement; no gameplay failure was reproduced. The focused review and cross-reference now reach 798/913 and 711/913 source paths, and the all-file citation reach is 999/1,540. The accepted 568/437/791 baselines remain unreconciled and separate.
