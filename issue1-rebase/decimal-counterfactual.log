@@ -1,0 +1,13 @@
+BEFORE REBASE (refresh=false)
+position=Vec3(100.0, 0.0, 0.0) collider_aabb=ColliderAabb { min: Vec3(94.995, -0.505, -5.005), max: Vec3(105.005, 0.505, 5.005) }
+downward query at x=100: Some(1.5)
+downward query at x=0: None
+AFTER PRODUCTION REBASE
+position=Vec3(0.0, 0.0, 0.0) collider_aabb=ColliderAabb { min: Vec3(94.995, -0.505, -5.005), max: Vec3(105.005, 0.505, 5.005) }
+downward query at x=100: None
+downward query at x=0: None
+passive S1 canonical X: before=100m after=200m; local X stays=10
+AFTER NEXT FRAME / FIXED PHYSICS
+position=Vec3(0.0, 0.0, 0.0) collider_aabb=ColliderAabb { min: Vec3(-5.005, -0.505, -5.005), max: Vec3(5.005, 0.505, 5.005) }
+downward query at x=100: None
+downward query at x=0: Some(1.5)

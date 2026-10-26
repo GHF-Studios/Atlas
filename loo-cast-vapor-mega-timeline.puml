@@ -1,0 +1,621 @@
+@startgantt
+title Loo-Cast → Vapor: chronological history and repo-family evolution
+Project starts the 2021-01-01
+
+printscale monthly
+
+legend left
+  |= Mark | Meaning |
+  | <color:#9b59b6>Remembered</color> | Owner recollection; no source artifact yet |
+  | <color:#2e86c1>Observed</color> | Dated commit, repository tree, or preserved design record |
+  | <color:#27ae60>Owner direction</color> | Explicitly stated desired semantics; not proof of implementation |
+  | <color:#e67e22>Interpretation</color> | Causal reading of the evidence, confidence varies |
+  | <color:#c0392b>Mismatch</color> | Current code/organization still diverges from the stated model |
+  Full commit-by-commit index: loo-cast-vapor-history-timeline.md
+  Narrative and evidence notes: loo-cast-vapor-origin-and-intent.md
+endlegend
+
+-- Before the repositories: remembered origin, evidence boundary --
+-- Owner recollection: Loo-Cast begins early/mid-2021; pre-Git evidence not yet located --
+[Remembered origin (owner says early/mid-2021; not independently verified)] lasts 6 months
+
+-- Loo-Cast Legacy: Unity game, data authoring, and the first modding pressure --
+-- 29109ac3 is the repo shell; 922b9c84 adds the full 793-blob Unity snapshot hours later --
+[Substantial Unity game snapshot enters Git: 170 C# files, scenes, prefabs and assets (29109ac3 → 922b9c84)] starts 2022-06-07 and ends 2022-06-07 is colored in #2e86c1
+-- GitHub’s 300-entry file view was capped; recursive trees confirm 793 blobs and source-level startup/linkage --
+-- 9d78bbfb on June 13 is a small scene/profile/editor-state update, despite its subject --
+[Scene and editor-state revision, not initial import (9d78bbfb)] happens 2022-06-13 is colored in #2e86c1
+-- 2022: modular data, ScriptableObjects, editor drawers, gameplay growth, Steam build --
+[Editable/modular game data and editor workflows] starts 2022-06-13 and ends 2022-12-31 is colored in #2e86c1
+-- June 20–21: typed data is added before the complete construction/update path is connected --
+[Station XP-drop data and typed initializer are not reached by the generic station path (6858d9ee → 2f4bc463)] starts 2022-06-20 and ends 2022-06-21 is colored in #c0392b
+[Health rewrite bypasses the HUD setter and replaces serialized kill events (2f4bc463)] happens 2022-06-21 is colored in #c0392b
+-- Jul 31: an empty Core/Object/Component and Data/RuntimeData taxonomy is tried, then removed in the next model pass --
+[Generic data taxonomy is scaffolding with disconnected consumers and initialization contracts] happens 2022-07-31 is colored in #c0392b
+-- Aug 3–6: generic bases are added, removed, and replaced by a new DataReference/Variable split --
+[Runtime data extends the generic taxonomy; domain assets retain mutable state after the taxonomy rollback] happens 2022-08-03 is colored in #e67e22
+[Generic Core/Data bases are deleted; component-owned ScriptableObject setup and new value wrappers remain incomplete] starts 2022-08-05 and ends 2022-08-06 is colored in #c0392b
+-- Aug 17: data snapshots lead to asset-lifecycle JSON saves, not a shared save service; Dec 14 removes the tree --
+[JSON persistence is coupled to ScriptableObject lifecycle and Application.dataPath, then removed (3f654f42 → 0bf0ba93 → fd6be1b6)] starts 2022-08-17 and ends 2022-12-14 is colored in #e67e22
+-- Oct–Nov: inventory upgrades are tried, partially repaired, then several patches are explicitly reverted --
+[Item ownership and upgrade experiment; partial rollback] starts 2022-10-20 and ends 2022-11-11 is colored in #e67e22
+-- Nov 15–25: Game/save slots and a hierarchical chunk world are prototyped; observer ends as one synchronous startup sweep --
+[Save-slot and chunk-world prototype; save path and streaming incomplete] starts 2022-11-15 and ends 2022-11-25 is colored in #e67e22
+-- December: worker queues, synchronous observer loading and coroutine/GPU density generation coexist --
+[Split generation pipeline; shader layout and sampling defects visible in source] starts 2022-12-01 and ends 2022-12-31 is colored in #e67e22
+-- Dec 14: persisted assets are removed; save/load is explicitly not delivered on this branch --
+[Persistent-data tree deliberately removed (fd6be1b6)] happens 2022-12-14 is colored in #c0392b
+
+-- 2023: modding is explicit; engine extraction and architectural experiments --
+-- d62a53a4 mod framework; 9d31582b GUDS plan; fad054e4 identifier system --
+[Mod framework, data-system plan, stable identity pressure] starts 2023-01-01 and ends 2023-03-31 is colored in #2e86c1
+-- January: reset action and cancellation pass expose unsafe ownership boundaries --
+[Unconfirmed project-data deletion and broken request cancellation] happens 2023-01-01 is colored in #e67e22
+-- February: fixed manager list, incomplete lifecycle flags and unusable BigFloat sketch --
+[Handwired lifecycle graph and early scale-math failure] happens 2023-02-01 is colored in #e67e22
+-- March: registries, identity, resource and data taxonomies expand; persistence ownership duplicates, then resets --
+[Logical data and stored resource split is sketched, but both initially own recursive persistence] starts 2023-03-01 and ends 2023-03-21 is colored in #e67e22
+[Concrete Data serializer throws; interface direction changes without a demonstrated conversion pipeline] happens 2023-03-14 is colored in #c0392b
+[Large identity/data taxonomy and manual registration are reduced in repeated framework resets] starts 2023-03-20 and ends 2023-03-31 is colored in #e67e22
+-- 2176ae0a: Base Mod move; author describes building the chair while sitting on it --
+[Base Mod / engine foundation built in use (2176ae0a)] starts 2023-02-03 and ends 2023-04-30 is colored in #2e86c1
+-- 941b2010 deliberately clears game code/assets so engine work can proceed --
+[Gameplay cleared to isolate engine work (941b2010)] happens 2023-04-12 is colored in #2e86c1
+[Engine mockup separates metadata/state/logic, then changes Enemy to components/submodules the next day] starts 2023-04-10 and ends 2023-04-11 is colored in #e67e22
+-- May–June: mutable data graph becomes universal hierarchy; path APIs expand, stub, and are deleted --
+[Data, metadata and hierarchy contracts churn (selected code path review)] starts 2023-05-01 and ends 2023-06-30 is colored in #e67e22
+[Registry data/metadata is called out for deletion in source, then removed in the next day's patch] starts 2023-05-18 and ends 2023-05-19 is colored in #27ae60
+[Typed File/Folder/Object path APIs land with empty duplicate methods and contradictory root/absolute parsing] happens 2023-06-08 is colored in #c0392b
+-- July: hierarchy inspector, Entity–Logic–Data, custom ECS, lifecycle and serialization overlap --
+[Parallel runtime models accumulate adjacent responsibilities] starts 2023-07-01 and ends 2023-07-31 is colored in #e67e22
+-- July: BigDecimal is replaced by BigInteger/BigVec2Int for an early nested Universe prototype --
+[Large-coordinate Universe prototype; float proximity remains] happens 2023-07-20 is colored in #e67e22
+-- August: Unity modding branch merges, then the Unity project is replaced by Rust/Bevy --
+[Unity-to-Rust project reset, not a direct port (52dc4a7f)] happens 2023-08-21 is colored in #c0392b
+[Unity mod-framework merge is discarded by the reset 13m42s later; no Unity runtime/assets survive] happens 2023-08-21 is colored in #c0392b
+[Rust cleanup removes the first arcade loop, leaving player movement and menus] happens 2023-08-21 is colored in #e67e22
+[Background exit misses all nine spawned entities] happens 2023-08-22 is colored in #e67e22
+[Save-slot metadata is scanned and stored, but named load only confirms the record; world restore is absent (142e9cf5 → ddbab001)] happens 2023-08-25 is colored in #c0392b
+[Universe save/load is deleted within an hour; empty game-configuration and plugin-group scaffolds remain (7b388def)] happens 2023-08-25 is colored in #c0392b
+[Save→config→state→Universe “load” chain writes empty markers; folded into synchronous loading without payload (40850c07 → 7d98cf2a)] happens 2023-08-25 is colored in #c0392b
+[Player observer tracks 25 empty chunk markers; recursive loading remains TODO] happens 2023-08-30 is colored in #e67e22
+[Rust adds local/global chunk position types; loading still installs zeroed state] happens 2023-08-31 is colored in #e67e22
+-- Custom entity/data/logic, then ECS (87b8a852); scale, chunks, serialization, lifecycle --
+[Engine-model experiments, ECS, scale and serialization] starts 2023-04-01 and ends 2023-12-31 is colored in #2e86c1
+-- 94fe0fd5 removes bespoke commands in favor of Lua; console/runtime integration --
+[Runtime scripting shifts from custom commands toward Lua (94fe0fd5)] starts 2023-08-01 and ends 2023-12-31 is colored in #2e86c1
+-- Earliest located written USF seed (e19d4f2c); concept record, not a settled contract --
+[First USF prompt couples scale-specific model identity, event timing, DPM/ZLM detail generation, chunk residency and save-locked rules] happens 2023-09-09 is colored in #27ae60
+-- Async chunk worker attempts do not yet execute the queued generation/load operations --
+[Chunk-worker lifecycle advances state without doing the work] starts 2023-09-01 and ends 2023-09-15 is colored in #e67e22
+-- October: chunk cluster gets staged load-state types without an exposed manager API --
+[Cluster states are private, payloads are placeholders, and manager operations are empty] happens 2023-10-01 is colored in #e67e22
+-- November: semantic source categories feel useful, but enforcement and documentation remain implicit --
+[Manual Rust file taxonomy makes semantic sections visible; subcategory rules stay undocumented] happens 2023-11-03 is colored in #e67e22
+-- Nov 6–30: three residency enums, identity encodings and request queues are repeatedly replaced --
+[Chunk/entity lifecycle splits into parallel placeholder states, then comments out its own operations] starts 2023-11-06 and ends 2023-11-30 is colored in #c0392b
+-- Nov: error returns and file decomposition arrive before constructor/signature integration is settled --
+[Recoverable errors and module splitting coexist with source-visible type-shape failures] starts 2023-11-07 and ends 2023-11-30 is colored in #c0392b
+
+-- December: GlobalUniverse moves identity lookup into callers and adds a one-shot operation API --
+[Borrowed chunk operations clarify ownership, but stale lookup types and callback dispatch do not compile together] starts 2023-12-08 and ends 2023-12-31 is colored in #c0392b
+-- Dec 8: root and child operations split; spawn changes a flag without issuing an ECS spawn --
+[Lifecycle vocabulary outpaces the runtime realization path] happens 2023-12-08 is colored in #e67e22
+
+-- Rust/Bevy and prototype succession --
+-- 9028dcea begins Rust crate split; build/linker and ownership friction follow --
+[Rust crates and engine/game separation] starts 2024-01-01 and ends 2024-05-31 is colored in #2e86c1
+-- Jan 13: first Cargo split still has a template-only BaseMod and a case-mismatched workspace path --
+[Crate boundary is declared, but the BaseMod contract and Linux path are not ready] happens 2024-01-13 is colored in #c0392b
+-- Jan 16: BaseMod gains an Engine dependency, while old player/local chunk paths are commented out as TODOs --
+[Crate dependency is added by disabling old chunk/entity operations before replacement is integrated] happens 2024-01-16 is colored in #c0392b
+-- Jan 19–20: a first build/stage script repeatedly changes path ownership, then references undefined names --
+[The managed build need is visible, but ad-hoc staging cannot reliably build and launch the workspace] starts 2024-01-19 and ends 2024-01-20 is colored in #c0392b
+-- Jan 22: custom managers duplicate lifecycle code; a worker wires children to root through locked trait objects --
+[Manager startup self-deadlocks while children initialize their locked root dependency] happens 2024-01-22 is colored in #c0392b
+-- Jan 31: native mod loader exports Rust trait objects through C ABI and drops the library handle after registration --
+[Native mod discovery has unresolved ABI, dependency-order and code-lifetime ownership] happens 2024-01-31 is colored in #c0392b
+-- Jan 31: Lua runs one hard-coded snippet on an unobserved worker; Engine becomes rlib while mod stays cdylib --
+[Lua is present as an experiment, but scripting results and shared Engine ownership are unresolved] happens 2024-01-31 is colored in #e67e22
+-- Feb 7: a custom UI object graph is added outside the declared module tree; Bevy UI remains active --
+[Bespoke UI begins as an unregistered scaffold beside the running UI] happens 2024-02-07 is colored in #e67e22
+-- Feb 12: the module is included, but its manager methods are empty and no plugin installs it --
+[UI scaffold enters compilation without becoming an active UI runtime] happens 2024-02-12 is colored in #c0392b
+-- Feb 19: Player startup stops registering the local Universe; the local processor still uses removed state inputs and direct global operations --
+[Universe command boundary has no complete consumer wiring] happens 2024-02-19 is colored in #c0392b
+-- Feb 17–19: old direct operations are restored, then the Player spawn path is commented out during command injection --
+[Command API appears before its consumers replace the direct operation path] starts 2024-02-17 and ends 2024-02-19 is colored in #e67e22
+-- Feb 20: InfoHierarchy moves into its own module, but mutations remain in GlobalUniverse and parent/child Arcs are bidirectional --
+[Hierarchy ownership is centralized in name but not yet in mutation; root removal can strand descendants] happens 2024-02-20 is colored in #c0392b
+-- March–April: command proc-macro parses declarations, extracts meaning, then generates Rust; extraction is removed --
+[Authored Rust DSL/codegen pipeline explored, then narrowed] starts 2024-03-01 and ends 2024-04-30 is colored in #e67e22
+-- Mar 16: broad command grammar appears while its proc-macro parser has no implementation --
+[Command syntax is sketched before parser and generator work] happens 2024-03-16 is colored in #c0392b
+-- Mar 21: Assets/Files modules arrive with empty serializers and an imported asset macro absent from the derive crate --
+[Static asset vocabulary arrives without a complete declaration-to-output path] happens 2024-03-21 is colored in #c0392b
+-- Apr 7–9: extracted metadata grows before inconsistencies and plain-String span errors are corrected --
+[Compiler-like stages still have mismatched semantic inputs and source-level errors] starts 2024-04-07 and ends 2024-04-09 is colored in #c0392b
+-- May cleanup removes BaseMod/macros and Engine Game/Player/UI/Savegame; default Bevy main precedes a new chunk sandbox --
+[Codegen/mod boundary withdrawn in prototype reset] happens 2024-05-01 is colored in #c0392b
+-- May: registry-retained world IDs and loaded ECS entities become separate concerns, but synchronization stays manual --
+[Registry identity meets temporary ECS realization] starts 2024-05-02 and ends 2024-05-31 is colored in #e67e22
+-- Mk0 directly maps coordinates to live entities; Mk1 adds eviction but its registered coordinates have no saved payload --
+[Residency becomes bounded before persistence exists] happens 2024-05-03 is colored in #e67e22
+-- June: conversion is replaced by upgrade code; registry rename clears all IDs and request-map removal leaves callers ill-typed --
+[Scheduled upgrade path has a destructive registry predicate and unresolved request APIs] starts 2024-06-01 and ends 2024-06-30 is colored in #c0392b
+-- Mk0-Mk10 spans May 2024 through April 2025; checkpoints are resets and reversals, not releases --
+[Prototype sequence: engine shape repeatedly reconsidered] starts 2024-05-01 and ends 2025-04-30 is colored in #2e86c1
+-- July: event IDs become request IDs, then actor request payloads begin moving into registries --
+[Request identity is renamed before stored-request execution is integrated] starts 2024-07-01 and ends 2024-07-31 is colored in #e67e22
+-- August: Lua composes Rust primitives beside a separate typed Operation prototype --
+[Host/script composition is sketched; erased registries and broad World access remain] starts 2024-08-01 and ends 2024-08-31 is colored in #e67e22
+-- Aug 14: the Lua entry script uses `ops` before its initializer; Rust adds mlua without a loader --
+[Lua composition proposal is not executable or connected to the host] happens 2024-08-14 is colored in #c0392b
+-- August save_* names remove live registry references; they do not persist entity or actor payloads --
+[Lifecycle naming claims more than the entity/actor save bodies implement] happens 2024-08-03 is colored in #c0392b
+-- September: process-global request/execute/respond queue and RON chunk strings; ownership and module layout reset --
+[Generic operations grow while world authority, durable storage, and wiring remain incomplete] starts 2024-09-01 and ends 2024-09-30 is colored in #e67e22
+-- Sep 6–9: Load/Unload and Save/Unsave appear, but success callbacks, durable storage and lock-safe transitions are absent --
+[Chunk serialization is implemented in pieces, with source-level callback and self-deadlock defects] starts 2024-09-06 and ends 2024-09-09 is colored in #c0392b
+-- Sep 30: shared command traits and domain modules reorganize operations without closing persistence --
+[Chunk operations move under the domain module, while facade TODOs and lifecycle defects remain] happens 2024-09-30 is colored in #c0392b
+-- October: a static/dynamic path hierarchy is proposed as the owner of registries, commands, operations and phases --
+[Locking hierarchy names an authority model before traversal and access enforcement work] starts 2024-10-01 and ends 2024-10-31 is colored in #c0392b
+-- November: typed path bindings and six lifecycle phases coexist with TODO traversal and erased command dispatch --
+[Procedural hierarchy expands faster than its executor] starts 2024-11-01 and ends 2024-11-30 is colored in #c0392b
+-- Nov 30: lifecycle phases pivot to insert/remove hooks, but consumers still implement removed trait methods --
+[Lifecycle interface migration is source-inconsistent and hierarchy execution remains stubbed] happens 2024-11-30 is colored in #c0392b
+-- December: the hierarchy engine is archived; chunk streaming and Lua task composition return in a smaller prototype --
+[Chunk ownership reset with Lua tasks; retry state is fragmented] starts 2024-12-01 and ends 2024-12-31 is colored in #e67e22
+-- Dec 14–19: task scripts are present, but active engine wiring and syntax do not match the declared Lua runtime --
+[Lua task files are disconnected from the active engine; scripts are not valid Lua 5.4 as written] starts 2024-12-14 and ends 2024-12-19 is colored in #c0392b
+-- January: action buffers centralize some work, but retries and per-frame cost remain unresolved --
+[Chunk actions gain a budget; lifecycle and completion remain incomplete] starts 2025-01-01 and ends 2025-01-31 is colored in #e67e22
+-- Jan 9–13: Mk5 adds an unscheduled manager candidate while the plugin retains the removed retry path --
+[Chunk ownership migration is split between an incomplete candidate and source-inconsistent scheduled code] starts 2025-01-09 and ends 2025-01-13 is colored in #c0392b
+-- February–March: workflows span ECS/async/render; macros take over generated stage code --
+[Typed-looking staged workflows use erased IO and churn through event bridges] starts 2025-02-01 and ends 2025-03-31 is colored in #e67e22
+-- April: wait/setup/completion/failure become explicit; bounded channels and schedule ordering expose lifecycle assumptions --
+[Workflow lifecycle is clearer, but instance ownership and global channel lifecycle remain unresolved] starts 2025-04-01 and ends 2025-04-30 is colored in #c0392b
+-- May: chunk workflows batch real work, but queue removal precedes completion; captured async context gains invocation identity and lifecycle debt --
+[Chunk-action workflow integration and composite capture remain lossy/coarse-grained] starts 2025-05-01 and ends 2025-05-31 is colored in #e67e22
+-- June: intent resolution/commit stays incomplete; a custom tracing viewer starts, then forks into duplicate unfinished storage --
+[Action authority and observability split into separate incomplete experiments] starts 2025-06-01 and ends 2025-06-30 is colored in #c0392b
+-- July: logger tree and selection APIs churn; the console paints virtually but eagerly gathers unbounded history --
+[Typed trace paths outpace safe extraction and scalable log retention] starts 2025-07-01 and ends 2025-07-31 is colored in #e67e22
+-- August: Bevy migration, time ownership churn, and chunk-debug dock expand into an inspector workbench --
+[Inspector/workbench direction appears before time and editor contracts settle] starts 2025-08-01 and ends 2025-08-31 is colored in #e67e22
+-- September: USF scale moves from multiplying static types toward runtime scale and ChunkCoord; crate boundaries churn; multiplayer is deferred --
+[USF becomes explicit, but scale arithmetic and engine/mod loading contracts remain unsettled] starts 2025-09-01 and ends 2025-09-30 is colored in #c0392b
+-- Mk9 checkpoint deprioritizes multiplayer and names modding + USF as the next focus --
+[Modding and USF become explicit next focus] starts 2025-09-01 and ends 2026-03-31 is colored in #2e86c1
+-- October 2025–June 2026: glossary recovery, issue structure, and design authority are revisited --
+[Architecture vocabulary and historical design records accumulate] starts 2025-10-01 and ends 2026-06-29 is colored in #2e86c1
+-- October: nested Grid/Subgrid/Unit coordinates and camera-driven chart transitions; f32 conversion and transition ownership remain open --
+[Scale becomes coordinate hierarchy; precision and transition invariants remain unproven] starts 2025-10-01 and ends 2025-10-31 is colored in #c0392b
+-- November: render/camera ownership consolidates; transform projection stays schedule-sensitive, custom picking/readback remains experimental --
+[Logical/render synchronization and debug picking have no complete shared bridge yet] starts 2025-11-01 and ends 2025-11-30 is colored in #c0392b
+-- December: position equality normalizes nested charts; coord and render origin diverge; wrapping returns to local constants --
+[Spatial values gain names and equality while their update authority remains distributed] starts 2025-12-01 and ends 2025-12-31 is colored in #e67e22
+-- January 2026: Rhai hooks expose the temporary-capability idea, implemented through erased Rust lifetimes and runtime teardown conventions --
+[Temporary script access is prototyped; lifetime safety remains a runtime obligation] starts 2026-01-01 and ends 2026-01-31 is colored in #c0392b
+-- February: AccessCell and generated reflection attempt to generalize the bridge; unsafe ownership and parallel metadata paths remain --
+[Runtime borrow machinery and reflection expand before their contracts settle] starts 2026-02-01 and ends 2026-02-28 is colored in #c0392b
+-- March: finite Rust signatures become the execution boundary; Rhai begins registering typed USF content --
+[Script composition and typed USF data meet host-owned operations; broader contracts remain open] starts 2026-03-01 and ends 2026-03-31 is colored in #e67e22
+-- April: prototype evidence is demoted; USF direction and evidence authority are rewritten, while temporary math remains stubbed --
+[USF design reset and process rails begin; math facade is not operational] starts 2026-04-01 and ends 2026-04-30 is colored in #c0392b
+-- May: phase governance formalizes; Rust math abstractions continue to change without becoming a working foundation --
+[Process becomes explicit while the numeric experiment remains unsettled] starts 2026-05-01 and ends 2026-05-31 is colored in #e67e22
+-- June: raw owner answers, provenance labels, glossary corrections and architecture ownership are made explicit --
+[Intent and implementation evidence gain separate authority] starts 2026-06-01 and ends 2026-06-30 is colored in #2e86c1
+-- June 16: capability semantics are explicitly pressure-tested, not frozen --
+[One global acyclic graph and host-owned commit direction emerge; slot vocabulary and authority stay open] happens 2026-06-16 is colored in #e67e22
+[Follow-up answers define authored projections and automatic composition, while preserving unanswered boundaries] happens 2026-06-16 is colored in #e67e22
+[Phase 3 is redefined as a complete Vapor and Workshop path behind a tiny text demo; USF waits for Phase 4] starts 2026-06-16 and ends 2026-06-17 is colored in #2e86c1
+[Enginepack/Gamepack/Modpack and ExtensionMod inheritance become the provisional composition vocabulary] happens 2026-06-17 is colored in #2e86c1
+[Real Steam identity, Workshop install/download, and publish are all Phase 3 requirements] happens 2026-06-17 is colored in #2e86c1
+[Phase 3 acceptance expands into executable, composition, automated, manual and real-Steam proofs] happens 2026-06-22 is colored in #2e86c1
+-- Vapor becomes named and the semantic graph is designed --
+-- First verifiable named Vapor repositories/workspace; exact naming origin may be earlier --
+[Vapor name/repository family first verifiable in current audit] happens 2026-06-30 is colored in #2e86c1
+-- First Vapor commit adds Q&A batches 006–019 together; original discussion dates are absent --
+[Owner design questions preserved as a corpus; numbering is not a timestamp] happens 2026-06-30 is colored in #2e86c1
+-- July 3–4: flat source becomes a referee queue, with roadmap/glossary branches --
+[Open architecture becomes a structured set of dependent questions] starts 2026-07-03 and ends 2026-07-04 is colored in #2e86c1
+-- July 3 owner-supplied IDE reference shows project tree, editor, package graph, inspector and lifecycle actions --
+[Vapor SDK workbench screenshot becomes explicit IDE design evidence] happens 2026-07-03 is colored in #2e86c1
+-- July 2 Registry begins as Git-reviewed Steam publish authority data; manifest vocabulary changes within days --
+[Declarative Registry permission seed precedes its service API] starts 2026-07-02 and ends 2026-07-19 is colored in #2e86c1
+-- Aug–Sep: rewrite rationale becomes historical; focused docs establish normative owners and evidence states --
+[Rewrite doctrine and documentation ownership are made explicit] starts 2026-08-30 and ends 2026-09-12 is colored in #2e86c1
+[“Hello World on Steroids” proposes a tiny static Cargo composition proof and explicitly retires the then-universal Vapor capability model; the thread ends before implementation] happens 2026-08-30 is colored in #e67e22
+-- Sep 5: first local resolver treats Packagepack as its root; later same-day revision separates generic Content graph from playable composition --
+[First resolver corrects from Packagepack-only graph to generic Content plus typed pack projection] happens 2026-09-05 is colored in #2e86c1
+-- Vapor vocabulary: Packagepack, Enginepack, Gamepack, Modpack, Engine/Game/Mods/Crate --
+[Typed content graph takes shape; packs are manifests, content carries payload] starts 2026-07-01 and ends 2026-07-06 is colored in #27ae60
+-- July 1 toolchain pin lists Linux GNU and Windows MSVC; Windows GNU-LLVM arrives as a later shipping requirement --
+[Initial host/target contract does not match the eventual Windows runtime target] happens 2026-07-01 is colored in #e67e22
+-- Observed code: nine kinds in July; Library added Sep 6; renamed Crate in Oct 18 domain extraction --
+[Content-kind vocabulary evolves; Crate is the Rust static-code kind] starts 2026-07-01 and ends 2026-10-18 is colored in #2e86c1
+-- Vertical Slice 0: Terminal Engine + Hello World Game + Tiny Game Mod → Packagepack --
+[Vapor-Examples generates typed identity stubs; no static composition executable yet] starts 2026-06-30 and ends 2026-07-07 is colored in #e67e22
+-- Intended model: Vapor graph selects; Cargo resolves/builds static composition --
+[Static Rust composition proposed as distribution/modularity compromise] starts 2026-07-01 and ends 2026-07-10 is colored in #27ae60
+-- July 10: first wide CLI lifecycle prototype; 2,193-line module, local path tested, SteamUGC gaps explicit --
+[Content lifecycle breadth arrives before provider closure] happens 2026-07-10 is colored in #e67e22
+-- July 17: Engine uses dlopen/LoadLibrary to call a Game's Rust-ABI symbol; Windows target later follows GNU-LLVM --
+[Examples prototype dynamically loaded Rust Game libraries] happens 2026-07-17 is colored in #e67e22
+-- Sep 5: old reel runtime is removed; Engine gets explicit Game/Mod install closures in one process --
+[Examples reset from dynamic Rust ABI to hand-wired static composition call] happens 2026-09-05 is colored in #2e86c1
+-- Sep 6: Engine expands into Bevy ECS + Crossterm terminal runtime; Game and Mod register through Engine-owned sets --
+[Terminal Engine gains runtime lifecycle and a Game-to-Mod extension seam] happens 2026-09-06 is colored in #2e86c1
+[Terminal framebuffer counts characters, not Unicode display columns] happens 2026-09-06 is colored in #e67e22
+-- Sep 7: wheel-rules briefly loses its declared wheel-core Cargo edge while still importing it, then the edge returns --
+[Wheel API ownership and dependency declaration churn in adjacent revisions] happens 2026-09-07 is colored in #e67e22
+
+-- New Loo-Cast workspace and examples make the abstract graph concrete --
+-- New root workspace separates Engine, Game, Packagepack; game remains a thin adapter today --
+[Loo-Cast re-enters as Vapor-managed content workspace] starts 2026-07-07 and ends 2026-07-14 is colored in #2e86c1
+-- Sep 7 Legacy Alpha workspace returns under an ambiguous archive warning; root Cargo workspace is disabled --
+[Legacy Alpha revival is extensive in doctrine and scaffolding, while core_engine remains empty] happens 2026-09-07 is colored in #e67e22
+-- Sep 24: broken cached-context experiment is replaced by sparse context residency and direct gravity sampling --
+[USF simplifies field ownership, trading cache machinery for direct source queries] happens 2026-09-24 is colored in #c0392b
+-- Sep 30: worldgen proposal traverses S+35 to S0; October 2 design specifies proof-driven sparse voxel materialization --
+[Large procedural-world and compact-occupancy targets are documented, not yet implemented] starts 2026-09-30 and ends 2026-10-02 is colored in #27ae60
+-- Oct 6: 36-scale atlas and descriptive phenomenon evaluator use orthogonal spatial/temporal labels; outputs do not construct live worlds --
+[Worldgen prototype describes domain states but is disconnected from fixture/runtime] happens 2026-10-06 is colored in #e67e22
+-- Oct 8: 1,382-line evaluator is removed; deterministic construction facts and sparse authored atlas replace it --
+[Worldgen narrows to seeded construction provenance; procedural world chain remains absent] happens 2026-10-08 is colored in #c0392b
+-- Sep 19 removes the old shared render/collider grouping; Sep 29 restores grouping only for collision --
+[Collision representation changes from render-owned groups to one-to-one colliders, then collision-only 4x4x4 groups] starts 2026-09-19 and ends 2026-09-29 is colored in #e67e22
+-- Sep 30: collision no longer depends on presentation runtime; demanded rigid presentation waits for matching collision revision --
+[Collision readiness becomes an explicit presentation gate, without runtime completeness proof] happens 2026-09-30 is colored in #2e86c1
+-- Oct 17: Packagepack becomes the binary and statically Cargo-links Engine + Game; the standalone Engine binary is removed --
+[One hand-authored Packagepack proves the executable-composition seam] happens 2026-10-17 is colored in #2e86c1
+-- Oct 20: workspace declares Linux/Windows targets and distinct line-table/full-debug profiles --
+[Target and debug-cost intent becomes explicit in metadata] happens 2026-10-20 is colored in #2e86c1
+-- Hello World, Terminal Engine, Tiny Game Mod and later wheel-game proof composition --
+[Examples become non-default integration content] starts 2026-06-30 and ends 2026-10-24 is colored in #2e86c1
+[Examples alternate project/workspace envelopes; seeded Rust stubs become user-owned] starts 2026-07-02 and ends 2026-07-07 is colored in #e67e22
+-- Current code mismatch: much game behavior remains in engine crate --
+[Engine/Game ownership boundary still mismatched in source] happens 2026-10-24 is colored in #c0392b
+-- Oct 21: Packagepack binary directly Cargo-links Engine, Game and Mod; one focused test checks mod registration --
+[Packagepack-owned compile-time example composition] happens 2026-10-21 is colored in #2e86c1
+-- This example hardcodes Cargo edges; generic Vapor graph-to-executable generation remains unproven --
+[Generic semantic graph composition still open] happens 2026-10-21 is colored in #c0392b
+-- Oct 21–22: GNU archive names recognized; installed Packagepacks retain dependency ownership after unsubscribe --
+[Cross-target realization and composition-owned cleanup rules] starts 2026-10-21 and ends 2026-10-22 is colored in #2e86c1
+-- Partial installation retention and live cross-platform cleanup remain unverified --
+[Ownership edge cases and Steam cleanup need proof] happens 2026-10-22 is colored in #c0392b
+-- Oct 21: Engine/Game manifests declare reusable Rust libraries; the shown Packagepack still uses local Cargo paths --
+[Reusable-artifact declaration precedes demonstrated generic realization] happens 2026-10-21 is colored in #e67e22
+-- Oct 21: asset/config lookup gains an explicit installed Engine root while source fallback remains --
+[Composed runtime assets become root-aware] happens 2026-10-21 is colored in #2e86c1
+
+-- Client, launcher/studio, CLI, installer and Steam distribution --
+-- Vapor shared core starts; product and protocol repos split by experiments and names --
+[Shared Vapor contracts and first frontends] starts 2026-06-30 and ends 2026-07-07 is colored in #2e86c1
+-- July 4: app root removes bundled Engine/Game submodules; default content should be acquired --
+[First-party content removed from app root; content becomes external/default] happens 2026-07-04 is colored in #2e86c1
+-- July 18 onward: Installer bootstrap; later setup roles, toolchain, promotion/uninstall --
+[Installer and role/toolchain lifecycle] starts 2026-07-18 and ends 2026-10-24 is colored in #2e86c1
+-- July 18 starts with Vapor.toml app-root check; July 19 corrects it to App.vapor.toml --
+[Installer root marker corrected from Vapor.toml to App.vapor.toml] happens 2026-07-19 is colored in #2e86c1
+-- July 20 removes Git and Registry checkout from player bootstrap --
+[Player bootstrap drops source/developer tools] happens 2026-07-20 is colored in #2e86c1
+-- July 20: player path shifts away from Git; native Steam entrypoint and Windows launch issues --
+[Player launch moves toward Steam/provider delivery] starts 2026-07-15 and ends 2026-08-15 is colored in #2e86c1
+-- Workshop, typed catalog, subscriptions, source vs built artifacts, compositions --
+[Workshop and composition lifecycle repeatedly integrated] starts 2026-07-15 and ends 2026-10-24 is colored in #2e86c1
+-- July 23: Platform Server and VPS deployment services begin --
+[Platform service family begins] starts 2026-07-23 and ends 2026-10-24 is colored in #2e86c1
+-- July 24: restricted GitHub trigger requests VPS-owned deploy; public smoke checks remain optional --
+[VPS deploy trigger is automated with bounded public smoke coverage] happens 2026-07-24 is colored in #2e86c1
+-- July 24: one automatic root-only backup is recorded; restore rehearsal is still open --
+[Periodic state export gets one recorded run, but no restore proof] happens 2026-07-24 is colored in #2e86c1
+-- July 25: restore validator accepts a regular file as the required state directory --
+[Restore preflight has a destructive failure path for malformed state roots] happens 2026-07-25 is colored in #c0392b
+-- July 25: local API-funded planning harness grows to source-aware profiles, then is deleted in pre-alpha simplification --
+[API swarm remains an external planning experiment; tool and versioned contracts are removed] starts 2026-07-25 and ends 2026-07-25 is colored in #e67e22
+-- Docs publication briefly gains immutable releases and rollback, then returns to a single mutable current tree --
+[Docs API releases and rollback are introduced, then removed] starts 2026-07-25 and ends 2026-10-22 is colored in #e67e22
+-- Oct 20: docs bundle index and VPS-local token upload path; owner later confirms 412 files accepted --
+[Docs transport works, while current live status and rendered Markdown fallback remain unverified] happens 2026-10-20 is colored in #e67e22
+-- Five-minute Platform Server auto-deploy builds the server; docs bundle rebuild/upload remains separate --
+[Server code deployment does not prove current docs publication] happens 2026-10-20 is colored in #e67e22
+-- Docs contract says atomic replacement; two-rename implementation has a possible request gap and late error ambiguity --
+[Docs tree promotion is rollback-capable, not an atomic reader-visible swap] happens 2026-10-20 is colored in #e67e22
+-- Sep 7: Registry-Server implements source topology and provider-account reads, not typed Workshop catalog --
+[Registry implementation is narrower than later accepted catalog authority] happens 2026-09-07 is colored in #e67e22
+-- Oct 22: target boundary assigns typed Workshop catalog to Registry; endpoint/API implementation is still absent --
+[Registry catalog authority is accepted but not implemented] happens 2026-10-22 is colored in #e67e22
+-- Oct 22: four server repos add Workspace.vapor.toml, while deployment still invokes host cargo directly --
+[Server workspace metadata exists before Vapor-managed deployment] happens 2026-10-22 is colored in #e67e22
+-- Oct 9: 64-file spatial pass wires fixed-step proposed sweeps to semantic voxel refinement before canonical-flight commit --
+[Canonical high-speed collision path is integrated for one controlled flight/voxel provider] happens 2026-10-09 is colored in #2e86c1
+-- The new radial TTC/braking supervisor warns but does not consume collision results or apply braking --
+[Safety telemetry and collision response remain separate owners] happens 2026-10-09 is colored in #e67e22
+-- Oct 9 also connects persistent throttle, manual attitude rates, three cycling camera modes, and telemetry HUD; runtime feel is unverified --
+[Flight controls and telemetry HUD gain a real path, while camera selection remains a single cycle] happens 2026-10-09 is colored in #e67e22
+-- Oct 9 plan supersedes orthogonal temporal labels with future coupled space-time scale; canonical time remains deferred --
+[Owner-directed coupled space-time model is not present in the 71-spatial-slice implementation] happens 2026-10-09 is colored in #e67e22
+-- Editor grouping uses a semantic relationship without transform parenting; persistence and richer editing remain absent --
+[Non-transforming editor groups are introduced as a narrow hierarchy facility] happens 2026-10-09 is colored in #2e86c1
+-- Oct 19: local cloc wrapper covers Game, Packagepack, and Engine directories only --
+[Line-count helper is added, not comprehensive build/cache ownership] happens 2026-10-19 is colored in #7f8c8d
+-- Sep: Client/Platform roots and product repos renamed/reorganized; SDK dissolved --
+[Repository lifecycle: rename, consolidate, split by responsibility] starts 2026-09-01 and ends 2026-10-14 is colored in #2e86c1
+-- Sep 15: Core adds machine-integration uninstall plus explicit app-data and Superworkspace purge options --
+[Typed destructive operations exist in Core; Installer never exposes the user's danger-zone workflow] happens 2026-09-15 is colored in #2e86c1
+-- Sep 15: source-tree purge checks origin, worktree cleanliness, branch/tag publication; later preflight is called transactional --
+[Current guard fetches and prunes refs, matches origin by URL suffix, then deletes sequentially without rollback] happens 2026-09-15 is colored in #c0392b
+-- Oct 14: GUI repo appears; Launcher/Studio/IDE/Installer/Shell roles are disentangled --
+[Frontends become separate product concepts over one client direction] starts 2026-10-14 and ends 2026-10-24 is colored in #2e86c1
+-- Oct 14: SDK authoring CLI is nested under vapor sdk; broad typed grammar still sends unmatched variants to a stub --
+[SDK CLI vocabulary exceeds its implemented dispatcher] happens 2026-10-14 is colored in #e67e22
+-- Oct 14 host initially embeds modes; Oct 21 chooser and distinct product binaries; Oct 23 IDE semantics/LSP; Installer uses service for role only --
+[GUI products split; IDE grows bounded semantic and language-server infrastructure; Installer bootstrap remains split across Core/tools/service] starts 2026-10-14 and ends 2026-10-23 is colored in #e67e22
+-- Oct 17–19: Studio-owned service prototype is replaced by shared Client service --
+[Studio operations cross a local service boundary, then move to shared Client ownership] starts 2026-10-17 and ends 2026-10-19 is colored in #2e86c1
+-- Oct 19: 74-file shift moves CLI dispatch, content/workspace/publish/profiling operations behind the Client service --
+[Shared service becomes a broad execution owner] happens 2026-10-19 is colored in #2e86c1
+-- Oct 18–25 source check: Provider, Application, Service and SDK still depend on broad vapor_core; Installer and developer CLI paths bypass the service --
+[Service extraction is substantial but not yet the universal facade] starts 2026-10-18 and ends 2026-10-25 is colored in #e67e22
+-- One active-operation slot still rejects overlap; asynchronous requests do not yet mean queued work --
+[Service scheduling remains serialized and incomplete] happens 2026-10-19 is colored in #e67e22
+-- Same commit: Pack template is metadata-only but launch requires Packagepack binary; build/package/link stages do not close --
+[Template, build selector, packager and launch contracts diverge] happens 2026-10-19 is colored in #c0392b
+-- Explicit owner target: one local client service/API powers CLI, GUI, future language tooling; current coverage still needs audit --
+[Shared local service is the target and an implemented boundary, not yet proven complete] starts 2026-10-01 and ends 2026-10-24 is colored in #2e86c1
+-- Current mismatch: product roles, startup, service lifetime, logs and cross-platform flows remain uneven --
+[Client/service and workflow coherence still incomplete] happens 2026-10-24 is colored in #c0392b
+-- Latest CLI source: regular shell uses Client, but vapor sdk still executes SDK Core directly --
+[The one-service facade boundary is incomplete] happens 2026-10-23 is colored in #c0392b
+-- Oct 22: Vapor adds typed Workshop kind tags and host-neutral console records; Loo-Cast adopts record fields and Rhai vocabularies --
+[Console data and editor vocabulary are shared; command/runtime and tokenizer ownership remain local] happens 2026-10-22 is colored in #2e86c1
+-- Oct 22: service workspaces pin Rust 1.97, but the VPS deploy path runs raw Cargo --
+[Recorded Rust toolchain is not enforced by the server build] happens 2026-10-22 is colored in #c0392b
+-- Oct 22: installed App.vapor.toml and source Workspace.vapor.toml are separate root identities --
+[A stale app-root authoring selection is cleared, but Windows setup remains unverified] happens 2026-10-22 is colored in #e67e22
+-- Oct 22–23: Studio adds a bounded resizable dock and indexed virtual rows --
+[Console rendering is reused, while visual/runtime parity remains unverified] starts 2026-10-22 and ends 2026-10-23 is colored in #2e86c1
+
+-- Oct 21: Examples split a wheel roguelike into typed Engine/Game/Mod/Crate/Packagepack; focused source tests cover core run behavior --
+[Non-default terminal game becomes a modular typed composition] happens 2026-10-21 is colored in #2e86c1
+-- Same example graph receives private Workshop IDs; manifest references do not prove publication/acquisition --
+[Private Workshop graph identifiers are added without provider-closure proof] happens 2026-10-21 is colored in #e67e22
+-- Later that day: Packagepack owns the executable and manually Cargo-links Engine/Game/Mod; generic Vapor graph generation is not shown --
+[One runnable example is hand-composed at Cargo level] happens 2026-10-21 is colored in #2e86c1
+-- Afternoon lockfile change only reorders the same Packagepack entry and dependencies --
+[Lockfile refresh has no semantic dependency change] happens 2026-10-21 is colored in #7f8c8d
+-- Late Oct 21: six content manifests request public Workshop visibility and pin alpha constraints to 0.5.0 --
+[Wheel example changes from private test graph to intended public alpha content] happens 2026-10-21 is colored in #2e86c1
+-- Manifest visibility is not remote Steam publication evidence --
+[Public delivery remains independently unverified by the source diff] happens 2026-10-21 is colored in #e67e22
+
+-- Current intended direction: nested user capability levels and an owned IDE --
+-- Player → Composer → Developer → first-party developer; nested capability/UX boundaries --
+[Role ladder and deliberate product separation] starts 2026-10-20 and ends 2026-10-24 is colored in #2e86c1
+-- IDE vision: semantic artifact tree, Rust/Rhai, LSP, structured diagnostics, UI toolkit --
+[IDE and shared authoring/runtime tools remain a major designed workstream] starts 2026-10-20 and ends 2026-10-24 is colored in #2e86c1
+-- No evidence yet of a complete live-Rust-codegen sandbox or final IDE architecture --
+[Major design territory still open: scripting, codegen, semantic editor] happens 2026-10-24 is colored in #c0392b
+
+-- Oct 23: GUI adds bounded Rust/TOML/XML/Rhai semantic projections and Structure/Inspector/Problems views; source files remain authoritative --
+[IDE becomes a semantic workbench over authoritative files] happens 2026-10-23 is colored in #2e86c1
+-- Oct 23: one typed canonical-module creation action crosses service, protocol, application and IDE layers --
+[Canonical Rust module scaffolding crosses the client service] happens 2026-10-23 is colored in #2e86c1
+-- Parser maturity differs by domain; module conventions are scaffolded, not universally enforced or applied to existing code --
+[Semantic coverage and Rust organization enforcement remain partial] happens 2026-10-23 is colored in #e67e22
+-- Same day: bounded Rhai parser diagnostics and local Rust outlines supplement Rust Analyzer; stale parse results are discarded --
+[IDE combines local semantic projections with Rust Analyzer] happens 2026-10-23 is colored in #2e86c1
+-- Same day: shared diagnostic context is projected into console filters; producers still omit some correlation fields --
+[Diagnostic transport becomes structured while source/workspace correlation remains partial] happens 2026-10-23 is colored in #e67e22
+-- One IDE dialog/action covers every ContentKind; provider distinguishes metadata-only Packs from code-bearing Content --
+[Backend typed by kind; authoring task remains visually conflated] happens 2026-10-23 is colored in #e67e22
+-- Generic Engine scaffold is binary-only; basic-workspace Engine gets lib.rs plus main.rs --
+[Engine scaffold contract varies by authoring path] happens 2026-10-23 is colored in #e67e22
+-- Basic-workspace Engine's lib is Cargo-discovered but absent from its Vapor artifact declaration --
+[Engine implementation output is under-declared in one scaffold] happens 2026-10-23 is colored in #e67e22
+-- Neither scaffold path builds a Packagepack-owned final executable --
+[Static composition target remains unrealized in these generators] happens 2026-10-23 is colored in #c0392b
+-- IDE then links authored references and offers local compatible-source selection; advanced free-form selectors remain --
+[Authoring navigation connects to source projects but graph validation remains partial] happens 2026-10-23 is colored in #e67e22
+-- The same server result feeds separate IDE and Studio document models --
+[Shared mutation API; frontend reconciliation still duplicated] happens 2026-10-23 is colored in #e67e22
+
+-- Oct 16: Workshop browser is split into acquisition, search and subscription panels --
+[The UI gets clearer seams without changing Steam or catalog authority] happens 2026-10-16 is colored in #2e86c1
+-- Oct 21: Studio adds a content-kind dropdown represented as a query tag --
+[Vapor type names become discoverable in Browse, but remain tag-backed] happens 2026-10-21 is colored in #2e86c1
+-- Oct 22: Vapor threads ContentKind through domain, protocol, service and UGC adapter --
+[Typed API normalizes the request but still translates kind into Steam-required tags] happens 2026-10-22 is colored in #e67e22
+-- Oct 22: Studio preserves typed filter and adds local 10/20/50 slicing plus cross-page selection --
+[Browse gains deliberate page controls without a Registry catalog] happens 2026-10-22 is colored in #2e86c1
+-- Oct 22: subscription snapshots preserve Steam tags, but the subscriptions panel does not display or filter them --
+[Typed Browse and Subscriptions remain unequal product paths] happens 2026-10-22 is colored in #e67e22
+-- Oct 25 current-source review: subscription search uses ID/title/status and eagerly renders all matches --
+[Subscriptions have no kind filter or virtual-row policy; Browse tag failures remain unverified live] happens 2026-10-25 is colored in #c0392b
+-- Shared record schemas and indexed views span Vapor frontends; in-game F2 commands remain separate --
+[Shared console data does not yet unify command semantics] happens 2026-10-23 is colored in #e67e22
+-- Local untracked Oct 24 spec orders edge types, graph selection, pack variants, Packagepack artifact projections, examples --
+[Ten-kind content graph proposal; source/distribution boundary remains unresolved] happens 2026-10-24 is colored in #e67e22
+-- Oct 25 code cross-check: fixed role choice groups and recursive latest matching exist, but generic alternatives, feature solving and conflict-aware resolution do not --
+[Existing resolver is a precursor, not the complete selected graph model] happens 2026-10-25 is colored in #e67e22
+-- Current source: conflicts are checked against installed records during launch; generic candidate graph omits them --
+[Content conflict ownership remains split between authored records and runtime verification] happens 2026-10-25 is colored in #e67e22
+-- Oct 25: authoring accepts some targetless/optional mod relations that graph validation rejects; non-pack kind restrictions are not uniformly rechecked --
+[Content edge validity depends on which validation path assembled the graph] happens 2026-10-25 is colored in #c0392b
+
+-- Oct 25 source cross-check: one persisted workspace root is shared across clients; IDE roots and analyzer processes remain local/per-client --
+[File actions and operation diagnostics lack stable workspace identity across service clients] happens 2026-10-25 is colored in #c0392b
+-- Multi-workspace IDE tabs need workspace-scoped requests or an explicitly enforced single-workspace model --
+[Service workspace ownership is not yet aligned with multi-workspace IDE intent] happens 2026-10-25 is colored in #e67e22
+-- Open bypasses operation reservations; a mid-edit switch can turn a completed file write into a reported failure --
+[Workspace switch can hide a successful edit from its initiating frontend] happens 2026-10-25 is colored in #c0392b
+-- RunConfiguration executes its supplied root but reserves the service-selected root --
+[Current-workspace run can reserve the wrong workspace resource key] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 15–19: Steam discovery/subscription becomes a separate Vapor Library acquisition lifecycle --
+[Steam account state, cached content, installed composition and launch state remain distinct authorities] starts 2026-10-15 and ends 2026-10-19 is colored in #2e86c1
+-- Batch subscription aggregates per-item failures and can skip refreshing the subscription snapshot --
+[Partial Steam side effects can leave Vapor's displayed subscription projection stale] happens 2026-10-16 is colored in #c0392b
+-- Auto-Install ownership is added to acquired content and then rooted in subscribed/installed Packagepacks --
+[Dependency cleanup becomes a graph-owner lifecycle with cache and Steam side effects] happens 2026-10-19 is colored in #2e86c1
+-- These transitions cross Steam, cache/index, composition persistence and installed files without one durable transaction --
+[Retry/reconciliation semantics remain incomplete at cross-provider failure boundaries] happens 2026-10-19 is colored in #e67e22
+
+-- Oct 25 source cross-check: content-index lock is a create-new marker removed only by normal Drop --
+[A process crash can leave cache/index mutation permanently blocked until manual recovery] happens 2026-10-25 is colored in #c0392b
+-- Cache promotion can succeed before receipt or backup cleanup reports an operation failure --
+[Caller-visible error can follow an already activated cache update] happens 2026-10-25 is colored in #e67e22
+-- Workshop acquisition downloads items serially with a 20-minute timeout and no per-item progress --
+[Large batches can be extremely slow and opaque while reserving the whole Workshop account] happens 2026-10-25 is colored in #c0392b
+-- One 50-item request has a theoretical near-16h40m timeout bound; this is not measured runtime --
+[Bounded count does not provide a useful total latency bound] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 source cross-check: one packaging path copies authored project trees for all content kinds --
+[Manifest-only pack semantics and Steam upload allowlists are not enforced by the generic stager] happens 2026-10-25 is colored in #c0392b
+-- Registry's accepted typed catalog authority remains documentation-only in current service code --
+[Vapor-over-Steam semantic authority is a target boundary, not a deployed registry capability] happens 2026-10-22 is colored in #e67e22
+-- Fresh Client state still creates and activates a named default Composition; CLI dispatch now aliases default to selected --
+[Playable selection identity is partly corrected at launch but still duplicated in the initial durable state model] happens 2026-10-25 is colored in #c0392b
+-- The updated CLI overview calls default a compatibility alias, but its detailed command section and Launcher/Entrypoint docs still teach manifest-default behavior --
+[One launch contract remains contradictory inside the docs and across product repositories] happens 2026-10-25 is colored in #e67e22
+-- Five product binaries share one GUI host package and overridable mode router; Studio also layers its own palette --
+[Distinct Steam-launchable process images exist, while host code and mode dispatch remain shared] happens 2026-10-25 is colored in #e67e22
+-- Nested Vapor roadmap says glossary migration is active; parent Client planning-active has no assertions; no supersession link joins them --
+[Planning authority itself has conflicting current-state signals] happens 2026-10-25 is colored in #c0392b
+-- Current source audit: the in-game Rhai workbench executes a committed freecam scalar transform behind a live toggle; scratch is compile-only --
+[Rhai parser/executor exists as a narrow host contract; the typed capability graph and codegen lifecycle remain absent] happens 2026-10-25 is colored in #e67e22
+-- Nested Roadmap 06–09 pages lag their roots too: hashes/receipts exist, Workshop and graph validation exist, while Launcher CLI surface is absent --
+[Nested status claims collapse implemented slices and incomplete end-to-end contracts] happens 2026-10-25 is colored in #e67e22
+-- Oct 25 console cross-check: 512 game records vs 4,000 GUI records; visible-row virtualization still scans bounded history on filter changes --
+[Records and rendering converge, but game/Vapor command authority, completion, transport and history remain separate] happens 2026-10-25 is colored in #e67e22
+-- The Oct 22 shared-console design deferred common widgets; the owner's requested egui toolkit and preview workflow remain unplanned --
+[Shared UI toolkit ambition exceeds the delivered record-and-panel layer] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 23 semantic IDE: Rust declarations become addressable and module creation moves behind Client service --
+[Navigation and guarded scaffolding exist; canonical placement remains IDE-warning-only, not shared Rust governance] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 GUI-core cross-check: shared editor/console/panel/icon seeds, but frontend layout and UI preview remain open --
+[vapor_gui_core is a useful utility layer, not yet the broad reusable egui toolkit the owner wants] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 17 deletes the Engine binary and adds Packagepack main; Game adapter removes its temporary-housing caveat without moving the 158-file gameplay subtree --
+[Typed Engine/Game identities and static link exist; source ownership remains mixed] happens 2026-10-25 is colored in #c0392b
+-- Generic-looking Engine physics still schedules around a Game locomotion set; current workspace contains no separate Vapor Crate identity --
+[Source and schedule edges do not yet respect the declared reusable-capability boundary] happens 2026-10-25 is colored in #c0392b
+-- Oct 17 removes the selected Engine binary but leaves Workspace default run target unchanged; Oct 20 only adds profiles/target metadata --
+[Managed `vapor run` names a missing Cargo binary while Steam Packagepack launch is a separate successful path] happens 2026-10-25 is colored in #c0392b
+-- The Packagepack includes developer plugins; F2 opens the runtime editor without a Vapor role check, while the F3 overlay defaults off --
+[Player/composer/developer boundaries do not reach the in-game tool capability gate] happens 2026-10-25 is colored in #e67e22
+
+-- Steam EntryPoint pre-start and frontend connect-or-start both own service bootstrap; service exits after 15 idle seconds --
+[One shared service exists; lifetime is idle-based rather than Steam-session-bound] happens 2026-10-25 is colored in #e67e22
+-- Operation output carries typed frontend origin inferred from executable name; Game/Composition origin is absent --
+[Attribution exists but is not yet the requested end-to-end producer identity] happens 2026-10-25 is colored in #e67e22
+-- Current Windows host target includes gnullvm, but Core uninstall only removes the MSVC PATH entry --
+[Supported GNU-linked Windows installs can leave a stale user PATH entry after uninstall] happens 2026-10-25 is colored in #c0392b
+
+-- Oct 25 historical evidence cross-check: Sep 26 rebase reproducer versus current chart/collider response --
+[Old headless run reproduces stale child coordinates and static collider AABB after rebase] happens 2026-09-26 is colored in #c0392b
+[Sep 29/Oct 6 chart backend adds typed deltas and direct collider-tree updates/refits] starts 2026-09-29 and ends 2026-10-06 is colored in #2e86c1
+[Current source appears to address the narrow repro path; Earth/Moon reports were not replayed] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 output cross-check: managed Cargo joins the operation stream; progress updates at command boundaries --
+[Cargo JSON compiler diagnostics become structured operation output; output history is bounded with omission notice] happens 2026-10-25 is colored in #2e86c1
+[Long Cargo step can stream output while operation progress waits for the invocation to finish] happens 2026-10-25 is colored in #e67e22
+
+-- Sep 6 Core RustRover reconciliation and Oct 18 CLI repair contract conflict --
+[Core maintenance marks cargoProjects.xml and rust.xml obsolete; CLI ide repair writes them] happens 2026-10-25 is colored in #c0392b
+[Two project-local IDE setup commands can disagree about current state and mutate outside the service] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 Composer cross-check: catalog items can enter a package draft only through a same-workspace authored project --
+[Studio has a partial acquisition-to-composition bridge; pack-centric composition and Crate realization remain incomplete] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 IDE diagnostics: tested typed merge/filtering, but only build history has an aggregate cap --
+[Virtualized rows still rescan unbounded retained source diagnostics; large-workspace cost is unknown] happens 2026-10-25 is colored in #e67e22
+
+
+-- Oct 22 App-root repair distinguishes installed App from source Workspace, but only clears Client's stale authoring root --
+[Correct root markers do not unify Core, service and CLI workspace selection] happens 2026-10-25 is colored in #c0392b
+-- CLI honors VAPOR_WORKSPACE before Core active source; IDE and Workspace Open retain separate service selection paths --
+[Workspace identity is shared vocabulary over split selection state] happens 2026-10-25 is colored in #e67e22
+-- Direct service/Core open APIs accept arbitrary directories; CLI source open adds provider marker validation --
+[Workspace validation strength depends on the entry path] happens 2026-10-25 is colored in #e67e22
+
+
+-- Oct 14 absorbs SDK code into Vapor; Oct 19 routes primary CLI workflows through Client but leaves `vapor sdk` direct --
+[Shared SDK algorithms coexist with a second workspace/build route outside service orchestration] happens 2026-10-25 is colored in #e67e22
+-- `vapor sdk workspace sync` trusts manifest project paths when generating files; newer Client workspace parsing rejects absolute and parent components --
+[Legacy workspace generation has a conditional write-escape boundary] happens 2026-10-25 is colored in #c0392b
+-- Root publishing uses SDK Core from both service and SDK CLI; only the service path gains operation identity/output --
+[Shared function reuse does not make side-effect ownership uniform] happens 2026-10-25 is colored in #e67e22
+
+-- Package staging copies authored source except `.git`/`target`/`output` and adds declared target binaries/libraries; Workshop uploads that staged tree --
+[Current release bundles source and runtime outputs without source-revision provenance] happens 2026-10-25 is colored in #e67e22
+-- Example Packagepack manifests and Cargo linker dependencies are separately authored and manually aligned --
+[Pack graph validation does not itself generate the Rust link graph for arbitrary compositions] happens 2026-10-25 is colored in #c0392b
+-- Vapor book calls Packagepack metadata-only; the flagship and Wheel Salvage registered Packagepack projects are Cargo executable crates --
+[Manifest kind and source-project realization lack an explicit shared contract] happens 2026-10-25 is colored in #e67e22
+-- Oct 17 Loo-Cast executable root → Oct 20 Packagepack book says “metadata, not a Rust crate” → Oct 21 runnable example executable root --
+[Current docs retained an outdated Packagepack realization assumption] happens 2026-10-25 is colored in #c0392b
+-- SDK quick-start/content-authoring/Pack guides: July 4 outline stubs -> October 20 template/validate/deploy steps; Pack and Cargo link graphs stay manually aligned --
+[The procedural guide explains host-only smoke deployment but not how resolved Pack content becomes Cargo linker dependencies] happens 2026-10-26 is colored in #e67e22
+-- SDK content-authoring chapter teaches a generic Mod although the closed content enum separates EngineMod, GameMod and ExtensionMod --
+[The authoring reference flattens distinctions in the fixed ten-kind vocabulary] happens 2026-10-26 is colored in #c0392b
+-- Oct 20 book makes a separate durable Composition and flat Engine/Game slots normative; later owner direction rejects the duplicate player concept and asks for pack alternatives --
+[Current book guidance still teaches Composition as a second player-facing object and the resolver lacks alternative paths] happens 2026-10-26 is colored in #c0392b
+-- Same 103-file docs wave adds a publication placeholder guard, while current book pages still contain editorial prompts --
+[Exact stub markers are blocked; semantic accuracy and completeness are not certified] happens 2026-10-26 is colored in #e67e22
+
+-- Sep 19 cleanup splits the Loo-Cast Creative Menu into catalog/cursor/hotbar/layout modules; still a runtime playground inventory --
+[In-game “Creative” remains distinct from Vapor Composer/Creator content workflows] happens 2026-10-25 is colored in #e67e22
+-- Sep 19 extracts semantic item actions/catalog; Sep 21 adds action hints; Oct 6 groups six plugins, but only local Playground input publishes requests --
+[Item action messages are reusable inside the binary; AI/replay/network/mod adapters and Vapor content lifecycle remain absent] happens 2026-10-25 is colored in #e67e22
+-- Sep 22 constituency/control → Sep 29 collision queries → Sep 30 landing/disembark → Oct 7 visibility repair --
+[Current ship is a collision-gated single reference loop, not a content-authored vehicle lifecycle] happens 2026-10-25 is colored in #e67e22
+-- Oct 25 demand-planner check: predictive motion tube honors the set cap; stationary/view region walks truncate only after collection; cooperative pacing is non-preemptive --
+[Voxel demand has a returned-set limit but no limit on every synchronous planning traversal] happens 2026-10-25 is colored in #c0392b
+
+-- Oct 25 authored Earth arrival: bounded hull-aware slope search over current sphere; semantic placement precedes queued coverage admission --
+[Spawn policy is real; varied-terrain and collision-ready guarantees are not established by the current fixture] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 19 service extraction -> Oct 21 target/runtime work -> Oct 25 launch-path audit --
+[Play is service-routed; installed graph verification and executable provenance are still separate checks] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 role audit: one provisioning bundle for all non-player roles; operation profiles request narrower tools --
+[Role setup conflates workflow level, tool capability and host support] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 Studio Workshop audit: typed kind filter maps to Steam tags; browse is paged; subscriptions render eagerly --
+[Workshop filtering is implemented but not Registry-authoritative; subscription rows have no virtualized view] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 9 flight-safety supervisor, rechecked against current transition schedule --
+[Emergency now drops Cruise and captures velocity before collision; supervisor still does not steer or resolve contact] happens 2026-10-25 is colored in #e67e22
+
+-- Oct 25 Workshop snapshot audit: acquisition result is shared, but Studio completion side effects are per-window --
+[One client's Workshop acquisition can navigate every connected Studio to Library because the shared result has no action/client origin] happens 2026-10-25 is colored in #c0392b
+
+-- Oct 25 game-console pass: debugfly exists, while direct speed assignment bypasses the bounded logarithmic control path --
+[Characteristic-speed noclip exists; command pace is unbounded and command metadata carries no role scope] happens 2026-10-25 is colored in #c0392b
+
+-- Oct 25 Docs Server cross-check: mutable current-tree publication has no shared upload serialization --
+[Concurrent authorized uploads can race over the fixed previous-tree path; no runtime reproduction] happens 2026-10-25 is colored in #c0392b
+
+-- Oct 20 book index recognizes Launcher, Studio and IDE, but task routing offers a dedicated product guide only for Launcher --
+[Creator authoring, IDE work and required Installer setup lack corresponding book entrypoints] happens 2026-10-26 is colored in #e67e22
+-- Oct 20 f9f129e flat root -> 0e857af metadata-driven book entries -> a194167 authored task chooser that root does not consume --
+[Data-driven index misses reader routing; host-PATH mdBook fallback changes rendered output] happens 2026-10-26 is colored in #c0392b
+-- All 7 book SUMMARYs cover 105 content pages; the defect is cross-book routing, not missing internal page links --
+
+-- Oct 26 starter/docs-vs-launch contract review --
+[Basic-content starter documents playability but emits no Packagepack runtime; content deploy stages but does not compile] happens 2026-10-26 is colored in #c0392b
+[F2 caps record count but leaves command bytes and per-update dispatch unbounded] happens 2026-10-26 is colored in #c0392b
+[In-game Inspect separates metadata, widgets and owner-authorized edit requests; it remains Bevy-local] happens 2026-10-26 is colored in #e67e22
+[Editor inspection tests were removed during Rhai workbench modularization; no replacement was found] happens 2026-10-26 is colored in #c0392b
+-- A separate explicit build still cannot create the missing Packagepack linker root; source confirms, runtime not reproduced --
+[CLI root build/deploy/package/publish use service actions; embedded SDK commands retain a parallel direct path] happens 2026-10-26 is colored in #e67e22
+[Identity role administration works locally; accepted audience-introspection authorization remains unimplemented] happens 2026-10-26 is colored in #c0392b
+
+@enduml

@@ -1,0 +1,12 @@
+{
+  "repo": "/home/leslieghf/Vapor/Loo-Cast",
+  "head": "e14e928a1f4870a60c937009629ee4490b717437",
+  "source_sha256": {
+    "spacetime-engine/src/spatial/mod.rs": "8460592a5c8cdd14855d263f70f03f73b1f0c8014ea32e4056a3fdcab0a47b39",
+    "spacetime-engine/src/spatial/rebase/mod.rs": "fbb1a794e045988cb506a65fea2818fd2a10927f65d08afa7e5235ace626161b",
+    "spacetime-engine/src/spatial/position/mod.rs": "15f50fee8506b006e5fa5d2199eb048888cc47547913a96a3fc31c35d4b58a69",
+    "spacetime-engine/src/spatial/position/chunk_address/mod.rs": "c161b9821e00ffe82228c36d9bf015ac7bee2ec3e6f6705f5c6054b9035a1068",
+    "spacetime-engine/src/spatial/layer/mod.rs": "5653599aacb64f0926882979052810db52ab6dd5b1bfd383db705d6c481d7b5f",
+    "Cargo.lock": "198c6c23f35cff116c99edffad5effeb49e0035de016e5b6e9ff2231ea70b1d4"
+  }
+}
