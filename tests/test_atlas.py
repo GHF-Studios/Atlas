@@ -88,7 +88,7 @@ class AtlasRenderingTests(unittest.TestCase):
 
             result = subprocess.run(
                 [sys.executable, str(Path(__file__).resolve().parents[1] / "tools/atlas.py"),
-                 "build", "--root", str(root), "--output", str(output), "--base-url", "/Atlas/"],
+                 "build", "--root", str(root), "--output", str(output), "--base-url", "/atlas/"],
                 capture_output=True,
                 text=True,
             )
@@ -105,12 +105,14 @@ class AtlasRenderingTests(unittest.TestCase):
             self.assertIn("How Atlas works", home)
             self.assertIn("How Atlas is built", system)
             self.assertIn("Authored data and generation", system)
-            self.assertIn("/Atlas/timeline.html", home)
+            self.assertIn("/atlas/timeline.html", home)
             self.assertIn("Record types", map_page)
             self.assertIn("not independently confirmed", map_page)
             self.assertIn("Atlas bootstrap and audit preservation", timeline)
             self.assertIn('"id": "atlas"', data)
             self.assertEqual(1, payload["schema_version"])
+            self.assertEqual("/atlas/", payload["publication"]["base_path"])
+            self.assertEqual("https://vapor.ghf-studios.site/atlas/", payload["publication"]["public_url"])
             self.assertIn(
                 {"id": "audit-snapshot", "kind": "evidence", "claim_status": "historical-snapshot"},
                 payload["graph"]["nodes"],
@@ -119,7 +121,7 @@ class AtlasRenderingTests(unittest.TestCase):
                 {"source": "atlas-bootstrap", "type": "preserves", "target": "audit-snapshot"},
                 payload["graph"]["edges"],
             )
-            self.assertIn('/Atlas/atlas.json', home)
+            self.assertIn('/atlas/atlas.json', home)
             self.assertIn(
                 {"source": "atlas-bootstrap-workstream", "type": "parent", "target": "atlas"},
                 payload["graph"]["edges"],

@@ -408,6 +408,7 @@ def build_site(root: Path, output: Path, base_url: str = "/") -> list[Validation
     payload = {
         "schema_version": 1,
         "atlas": _toml_scalar(config.get("atlas", {})),
+        "publication": _toml_scalar(config.get("publication", {})),
         "graph": _graph_json(records),
         "records": [_record_json(record, root) for record in sorted(records, key=lambda item: (item.kind, item.title.casefold(), item.id))],
     }

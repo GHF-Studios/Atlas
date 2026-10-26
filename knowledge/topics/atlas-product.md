@@ -6,11 +6,12 @@ summary = "Atlas is a distinct GHF Studios product for understanding how the org
 claim_status = "owner-directed"
 parent = "atlas"
 relations = [{ type = "explains", target = "knowledge-model" }]
+sources = ["atlas.toml"]
 +++
 
 ## Product identity
 
-The owner identifies Vapor, Loo-Cast, and Atlas as three distinct GHF Studios products. Atlas is the highest-level product in the current product picture. That is an explicit product direction, not a claim inferred from repository structure.
+The owner identifies Vapor, Loo-Cast, and Atlas as three distinct GHF Studios products. Atlas is the highest-level product in the current product picture. That is an explicit product direction, not a claim inferred from repository structure. The product metadata and public URL configured in `atlas.toml` are implementation records of that direction, not independent evidence for it.
 
 Atlas exists to help people understand the products, their history, decisions, evidence, open questions, and future direction. Atlas is the product being built here; references to Vapor and Loo-Cast provide organizational context only. This bootstrap does not investigate or integrate either product.
 

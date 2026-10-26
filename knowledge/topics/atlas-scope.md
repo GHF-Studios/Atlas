@@ -5,12 +5,12 @@ title = "Atlas scope, current limits, and unknowns"
 summary = "Atlas is currently a Git-backed static knowledge site, without a server, online editing, issue sync, or multi-repository ingestion."
 claim_status = "source-verified"
 parent = "atlas"
-sources = ["README.md", "atlas.toml", ".github/workflows/pages.yml", "tools/atlas.py"]
+sources = ["README.md", "atlas.toml", ".github/workflows/validate-and-package.yml", "tools/atlas.py"]
 +++
 
 ## What exists in this bootstrap
 
-Atlas currently has a Git-backed set of Markdown records, a small TOML vocabulary, a Python validator and static-site builder, generated HTML and JSON, a basic browser search, tests, and a GitHub Pages workflow. The site includes home, map, timeline, questions, archive, and record-detail views.
+Atlas currently has a Git-backed set of Markdown records, a small TOML vocabulary, a Python validator and static-site builder, generated HTML and JSON, a basic browser search, tests, and a GitHub Actions build-and-package workflow. The site includes home, system guide, map, timeline, questions, archive, and record-detail views.
 
 ## What does not exist yet
 

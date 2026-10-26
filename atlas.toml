@@ -2,8 +2,14 @@
 id = "ghf-studios-atlas"
 title = "Atlas"
 organization = "GHF Studios"
-description = "A linked, versioned source for questions, decisions, evidence, work, and history."
+description = "GHF Studios' third product: a versioned knowledge system and its generated website."
 canonical_repository = "https://github.com/GHF-Studios/Atlas"
+
+[publication]
+public_url = "https://vapor.ghf-studios.site/atlas/"
+target = "GHF Studios Strato VPS"
+base_path = "/atlas/"
+deployment_state = "route-and-transfer-not-configured"
 
 [records]
 kinds = ["topic", "question", "decision", "evidence", "event", "workstream"]

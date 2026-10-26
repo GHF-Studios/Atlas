@@ -1,0 +1,30 @@
+name: Validate and package Atlas
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Atlas
+        uses: actions/checkout@v6
+      - name: Validate knowledge records
+        run: python3 tools/atlas.py validate
+      - name: Check browser script syntax
+        run: node --check site/assets/search.js
+      - name: Run Atlas tests
+        run: python3 -m unittest discover -s tests
+      - name: Build static site
+        run: python3 tools/atlas.py build --output _site --base-url /atlas/
+      - name: Upload VPS-ready static site
+        uses: actions/upload-artifact@v4
+        with:
+          name: atlas-static-site
+          path: _site

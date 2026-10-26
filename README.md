@@ -9,9 +9,8 @@ documented here before importing broader product knowledge.
 
 ## Start here
 
-- **Readers:** open the [Atlas homepage](https://ghf-studios.github.io/Atlas/),
-  then start with [Atlas as a product](knowledge/topics/atlas-product.md) or
-  the generated [system guide](https://ghf-studios.github.io/Atlas/system.html).
+- **Readers:** start with [Atlas as a product](knowledge/topics/atlas-product.md)
+  and the generated system guide at the intended [VPS address](https://vapor.ghf-studios.site/atlas/).
 - **Authors:** start with [`atlas.toml`](atlas.toml) and the typed Markdown
   records under [`knowledge/`](knowledge/).
 - **Developers:** run the commands below; the generator uses only Python’s
@@ -46,3 +45,12 @@ projection; `records` remain authoritative, and the graph projection is
 derived during each build. A `parent` field emits a `parent` edge, while each
 typed `relations` entry emits its declared edge. Consumers should check
 `schema_version` before relying on the export shape.
+
+## Hosting
+
+GitHub is Atlas’s versioned source and CI host; it does not host the production
+website. CI validates the records, builds the static files, and stores them as
+a workflow artifact. The intended public site is `https://vapor.ghf-studios.site/atlas/`
+on the GHF Studios Strato VPS. Server routing and file transfer still need to
+be configured; the URL is the intended destination, not a claim that this
+revision is already live there.
