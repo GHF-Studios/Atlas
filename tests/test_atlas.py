@@ -1,0 +1,73 @@
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from tools import atlas
+
+
+class AtlasValidationTests(unittest.TestCase):
+    def record(self, identifier, kind="topic", **metadata):
+        values = {
+            "id": identifier,
+            "kind": kind,
+            "title": identifier.replace("-", " ").title(),
+            "claim_status": "owner-directed",
+        }
+        values.update(metadata)
+        return atlas.Record(Path(f"knowledge/{kind}s/{identifier}.md"), values, "Body")
+
+    def test_rejects_duplicate_ids_and_dangling_relations(self):
+        first = self.record("atlas")
+        second = self.record("atlas")
+        linked = self.record("model", relations=[{"type": "about", "target": "missing"}])
+
+        errors = atlas.validate_records([first, second, linked])
+
+        self.assertIn("duplicate-id", {error.code for error in errors})
+        self.assertIn("missing-target", {error.code for error in errors})
+
+    def test_rejects_parent_cycles(self):
+        first = self.record("first", parent="second")
+        second = self.record("second", parent="first")
+
+        errors = atlas.validate_records([first, second])
+
+        self.assertIn("parent-cycle", {error.code for error in errors})
+
+    def test_does_not_invent_dates_for_undated_events(self):
+        dated = self.record("dated", kind="event", date="2026-10-26")
+        undated = self.record("undated", kind="event")
+
+        self.assertEqual([dated], atlas.timeline_records([dated, undated]))
+
+
+class AtlasRenderingTests(unittest.TestCase):
+    def test_markdown_html_is_escaped(self):
+        rendered = atlas.render_markdown("<script>alert(1)</script>")
+
+        self.assertNotIn("<script>", rendered)
+        self.assertIn("&lt;script&gt;", rendered)
+
+    def test_loads_toml_metadata_and_markdown_body(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            records = root / "knowledge/topics"
+            records.mkdir(parents=True)
+            (records / "atlas.md").write_text(
+                '+++\nid = "atlas"\nkind = "topic"\ntitle = "Atlas"\n'
+                'claim_status = "owner-directed"\n+++\n\nA map of knowledge.\n',
+                encoding="utf-8",
+            )
+
+            loaded, errors = atlas.load_records(root)
+
+        self.assertEqual([], errors)
+        self.assertEqual("atlas", loaded[0].id)
+        self.assertIn("A map of knowledge.", loaded[0].body)
+
+
+if __name__ == "__main__":
+    unittest.main()
