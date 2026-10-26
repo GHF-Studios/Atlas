@@ -776,7 +776,7 @@ This 15-root census excludes a preserved duplicate checkout inside the project: 
 | Docs Server | 1 | 423 | Sole server source and six repository files reviewed; current-tree upload/serve/export, archive bounds and publication race traced. No live site/render test. |
 | Homepage Server | 1 | 86 | Current routes/page bodies cross-checked with README, Caddy routing, vertical-slice scope and stale deployment status; no live site check. |
 | Identity Server | 15 | 4,302 | Focused source review now covers provider verifiers, browser state/session flow, role/root transitions, registered routes and downstream publishing boundary. Not a full route/error-path audit; no tests or runtime were performed. |
-| Registry Server | 3 | 724 | Seeded read model, startup membership reset, GET-only API, schema marker and Sept 15 topology change reviewed; no service/API or VPS run. |
+| Registry Server | 3 | 724 | Seeded read model, startup membership reset, GET-only API, non-migrating schema marker, and Sept 15 topology change reviewed. Persistent provider rows can retain renamed IDs; fresh in-memory test does not cover upgrades. No service/API or VPS run. |
 
 The table sums to 913 files and 195,403 lines. Counts use `git ls-files` plus non-ignored untracked files from each checkout, refreshed October 26; the Client and Platform parent repositories list submodule pointers rather than duplicating their child source. Current review depth varies sharply: the Shared Vapor and Loo-Cast roots contain most of the code, while this atlas still covers selected domains rather than every module. The active audit now maintains separate per-file current-state and history/intent dispositions, in addition to non-completion citation reach.
 
