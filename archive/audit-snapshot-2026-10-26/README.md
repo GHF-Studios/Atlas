@@ -18,7 +18,7 @@ The timeline diagram is available as [PlantUML](loo-cast-vapor-mega-timeline.pum
 
 ## Snapshot boundary
 
-The audit artifacts were copied from the ChatGPT project workspace on 2026-10-26. Their original contents are preserved in this commit. `CHECKPOINT.md` is a new orientation note that records the accepted progress baseline and the metric drift found while reviewing the snapshot. The archived installer/catalog script, issue-rebase notes, and mega-patch script are retained as inert reference files; they are not instructions to execute.
+The audit artifacts were copied from the ChatGPT project workspace on 2026-10-26. This directory now holds the latest selected workspace versions; the initial archived copies remain in the preceding Atlas commit. See [the preservation manifest](PRESERVATION.md) for the exact file list and boundary. `CHECKPOINT.md` is an orientation note that records the accepted progress baseline and metric drift found while reviewing the snapshot. The archived installer/catalog script, issue-rebase notes, and mega-patch script are retained as inert reference files; they are not instructions to execute.
 
 Source repositories were not copied or changed. The audit's claims must be read against the repository heads and evidence dates recorded inside the documents. Some Markdown links use the original author's local workspace paths; those links will not resolve on other machines, though the docs also include remote links where available.
 

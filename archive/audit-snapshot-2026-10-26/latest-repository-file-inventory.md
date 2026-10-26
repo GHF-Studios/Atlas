@@ -1,6 +1,6 @@
 # Latest repository file inventory
 
-**Observed:** 2026-10-26. This inventory enumerates 1,540 non-ignored files in the 15 checked-out Git repositories under `~/Vapor`, including non-code material. It includes tracked files and non-ignored untracked files; it excludes ignored/generated output and does not expand submodule gitlinks twice. The two untracked October 24 content-graph documents are included. The owner-accepted comparison baseline is **791 / 1,540** files path-cited. Historical mechanical recounts include 959 through 1,356; the detailed snapshots remain in [CHECKPOINT](CHECKPOINT.md). The latest recount, after the workflow-design crosswalk cited three previously uncited files, finds **1,359 / 1,540** exact literal or URL-encoded absolute-path mentions across 17 audit Markdown files. Recount methods have not been reconciled with the accepted 791 checkpoint; 1,359 is provisional navigation reach, not semantic completion.
+**Observed:** 2026-10-26. A previous citation-count recalculation used incorrect nested repository roots; the CSV and reach totals below were corrected against the actual checkout paths on this pass. The exact-path citation counts below were recalculated across all artifact Markdown files, excluding this inventory page itself; the CSV stores occurrences for the current documented checkout paths. This inventory enumerates 1,540 non-ignored files in the 15 checked-out Git repositories under `~/Vapor`, including non-code material. It includes tracked files and non-ignored untracked files; it excludes ignored/generated output and does not expand submodule gitlinks twice. The two untracked October 24 content-graph documents are included.
 
 | Measure | Count | Meaning |
 |---|---:|---|
@@ -8,11 +8,11 @@
 | Rust/Rhai/shell/Python source | 913 | The narrower code census tracked separately in [source coverage](latest-source-file-coverage.md) |
 | Markdown | 455 | Documentation, design, plans, operator records, READMEs and other Markdown |
 | TOML | 82 | Cargo, Vapor, tool, service and other TOML manifests/configuration |
-| Files with an exact literal or URL-encoded absolute path mention in the all-Markdown recount (unreconciled) | 1,359 | Provisional citation reach only; not comparable to the accepted baseline yet |
-| Files without such an exact mention in that recount | 181 | Provisional; grouped discussion does not count as per-file reach |
+| Files with an exact absolute path mention in the research artifacts | 944 | Citation reach only; not semantic-review completion |
+| Files without such an exact mention | 596 | No exact-path citation yet; grouped discussion does not count as per-file reach |
+| All-file current-state dispositions recorded per file | 36 / 1,540 | Explicit per-file status; citation reach does not prove review |
+| All-file history/intent reconciliations recorded per file | 36 / 1,540 | Separate per-file status; citation reach does not prove cross-reference |
 | Dirty or untracked files | 4 | Loo-Cast `Cargo.lock`; Vapor Installer UI formatting; two untracked Vapor content-graph documents |
-
-**The CSV retains row-level triage annotations, but no aggregate is reported for them:** those annotations were an exploratory bookkeeping layer, are uneven in granularity, and do not define progress or completion. The 1,359 figure above is only combined exact-path navigation reach.
 
 | Repository | Files | Markdown | TOML | Rust |
 |---|---:|---:|---:|---:|
