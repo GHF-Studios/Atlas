@@ -5,7 +5,7 @@ This is Atlas's **clickable folder tree**: the structure and its navigation are 
 - [What is Atlas?](README.md) — the repository introduction.
 - [How to use Atlas](00-start-here/README.md) — reading, writing, and navigation guidance.
 
-> **Scope:** This draft reflects the previously supplied v0.2 skeleton, without `_templates/`, plus the existing section READMEs. It may not exactly match your newer local changes. You can regenerate the tree from your actual Windows checkout with the included optional PowerShell script.
+> **Scope:** This tree matches the Atlas repository structure as of November 11, 2026. Keep it in sync when files or folders are added, moved, or removed.
 >
 > Many files are intentionally placeholders. A link means a document has a place in the structure, **not** that its content has been approved.
 

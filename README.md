@@ -10,6 +10,7 @@ Atlas covers GHF Studios as a whole, including Vapor, the Spacetime Engine, Loo 
 
 ## Where to Begin
 
+- [**Start Here**](00-start-here/README.md) — How to read, write, and navigate Atlas.
 - [**Foundations**](01-foundations/README.md) — Who we are, what we believe, and what we want to achieve.
 - [**Ecosystem**](02-ecosystem/README.md) — Our projects and how they relate to one another.
 - [**Products**](03-products/README.md) — The visions, designs, and technical knowledge of individual products.
