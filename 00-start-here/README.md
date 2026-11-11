@@ -16,15 +16,15 @@ You do not need to read or complete everything. Most files are intentionally pla
 
 ## Guides in this folder
 
-- [Reading Guide](reading-guide.md) — How to approach Atlas as a reader.
-- [Repository Map](repository-map.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
-- [Writing Guide](writing-guide.md) — How to start and structure a useful document.
-- [Knowledge Lifecycle](knowledge-lifecycle.md) — How knowledge is captured, reviewed, maintained, or retired.
-- [Document Statuses](document-statuses.md) — How to distinguish placeholders, drafts, established positions, and superseded material; this describes a document's state, not the process for changing it.
-- [Sources and Evidence](sources-and-evidence.md) — How to support claims and express uncertainty.
-- [Inbox](inbox.md) — A temporary holding place for material that has not found its home, not a task backlog.
-- [Contribution Process](contribution-process.md) — How people can propose, discuss, and review changes to Atlas documents.
-- [Unanswered Questions](unanswered-questions.md) — Unresolved questions about Atlas's own structure and practices, not open questions about every subject it documents.
+- [Reading Guide](reading-guide/README.md) — How to approach Atlas as a reader.
+- [Repository Map](repository-map/README.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
+- [Writing Guide](writing-guide/README.md) — How to start and structure a useful document.
+- [Knowledge Lifecycle](knowledge-lifecycle/README.md) — How knowledge is captured, reviewed, maintained, or retired.
+- [Document Statuses](document-statuses/README.md) — How to distinguish placeholders, drafts, established positions, and superseded material; this describes a document's state, not the process for changing it.
+- [Sources and Evidence](sources-and-evidence/README.md) — How to support claims and express uncertainty.
+- [Inbox](inbox/README.md) — A temporary holding place for material that has not found its home, not a task backlog.
+- [Contribution Process](contribution-process/README.md) — How people can propose, discuss, and review changes to Atlas documents.
+- [Unanswered Questions](unanswered-questions/README.md) — Unresolved questions about Atlas's own structure and practices, not open questions about every subject it documents.
 
 ## Working principle
 
@@ -34,4 +34,4 @@ An empty file can be a useful reminder. A speculative paragraph can be useful re
 
 ## Current reality
 
-As of November 2026, this navigation system is being designed, not operated as a mature documentation program. The guides above are mostly scaffolding. Nothing here mandates heavyweight reviews, approvals, or process for a pre-alpha, founder-led project. The goal is to make human authorship easier—not to make writing feel like paperwork.
+As of November 2026, Atlas is being designed rather than operated as a mature documentation program. These guides are proposals for human review, not evidence that their practices have been adopted. They do not establish heavyweight review or approval requirements for a pre-alpha, founder-led project. Their purpose is to make human authorship and review easier, not to make writing feel like paperwork.
