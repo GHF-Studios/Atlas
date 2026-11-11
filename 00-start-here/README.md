@@ -2,7 +2,7 @@
 
 > **Status:** Draft — intended for human review.
 
-Atlas is GHF Studios' human-maintained knowledge base. This folder is the **reading and writing guide** for Atlas: how to find information, capture ideas, distinguish evidence from intentions, and improve documents over time.
+Atlas is GHF Studios' human-maintained knowledge base: its Markdown is human-authored or receives substantial human review. This folder is the **reading and writing guide** for Atlas: how to find information, capture ideas, distinguish evidence from intentions, and improve documents over time.
 
 It is **not** the complete table of contents. That lives in the repository root: [Table of Contents](../TABLE_OF_CONTENTS.md).
 
@@ -17,14 +17,14 @@ You do not need to read or complete everything. Most files are intentionally pla
 ## Guides in this folder
 
 - [Reading Guide](reading-guide.md) — How to approach Atlas as a reader.
-- [Repository Map](repository-map.md) — Why topics live where they do.
+- [Repository Map](repository-map.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
 - [Writing Guide](writing-guide.md) — How to start and structure a useful document.
-- [Knowledge Lifecycle](knowledge-lifecycle.md) — How notes become reviewed knowledge.
-- [Document Statuses](document-statuses.md) — How to distinguish placeholders, drafts, established positions, and superseded material.
+- [Knowledge Lifecycle](knowledge-lifecycle.md) — How knowledge is captured, reviewed, maintained, or retired.
+- [Document Statuses](document-statuses.md) — How to distinguish placeholders, drafts, established positions, and superseded material; this describes a document's state, not the process for changing it.
 - [Sources and Evidence](sources-and-evidence.md) — How to support claims and express uncertainty.
-- [Inbox](inbox.md) — Where unorganized thoughts and knowledge gaps can land initially.
-- [Contribution Process](contribution-process.md) — How people can propose and review changes.
-- [Unanswered Questions](unanswered-questions.md) — Questions about Atlas itself that still need decisions.
+- [Inbox](inbox.md) — A temporary holding place for material that has not found its home, not a task backlog.
+- [Contribution Process](contribution-process.md) — How people can propose, discuss, and review changes to Atlas documents.
+- [Unanswered Questions](unanswered-questions.md) — Unresolved questions about Atlas's own structure and practices, not open questions about every subject it documents.
 
 ## Working principle
 
