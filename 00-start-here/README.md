@@ -10,7 +10,7 @@ It is **not** the complete table of contents. That lives in the repository root:
 
 ## Book-like ordering (direction)
 
-Child folders should have numeric prefixes that establish their order among siblings. The intended sequence should make the whole Atlas straightforward to assemble as one mdBook. This is a structural goal; many nested folders do not yet follow it consistently.
+Child folders should have numeric prefixes that establish their order among siblings. The intended sequence should make the whole Atlas straightforward to assemble as one [mdBook](https://rust-lang.github.io/mdBook/). This is a structural goal; many nested folders do not yet follow it consistently.
 
 ## Your first three stops
 
