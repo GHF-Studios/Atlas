@@ -1,10 +1,10 @@
 # Atlas
 
-**Atlas is the knowledge base of GHF Studios.**
+**Atlas is being built as the definitive, human-reviewed record of GHF Studios' understanding.**
 
-It is a human-authored collection of our ideas, visions, philosophies, decisions, designs, technical knowledge, and history.
+Its Markdown is human-authored or receives substantial human review. It brings together the studio's ideas, intentions, decisions, designs, evidence, open questions, and history. Proposals and unknowns belong here when clearly identified; appearing in Atlas does not make a claim true or a proposal adopted.
 
-Its purpose is to preserve and organize our understanding of what we're building, why we're building it, and how everything fits together.
+Atlas preserves and organizes what the studio understands about what it is building, why, and how its parts fit together. For implementation details, source code and other primary sources remain authoritative; Atlas should cite and explain them, not replace them.
 
 Atlas covers GHF Studios as a whole, including Vapor, the Spacetime Engine, Loo Cast, and our broader ambitions.
 
