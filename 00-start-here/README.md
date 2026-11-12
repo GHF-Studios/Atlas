@@ -22,15 +22,15 @@ You do not need to read or complete everything. Most topic pages now contain sho
 
 ## Guides in this folder
 
-- [Reading Guide](reading-guide/README.md) — How to approach Atlas as a reader.
-- [Repository Map](repository-map/README.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
-- [Writing Guide](writing-guide/README.md) — How to start and structure a useful document.
-- [Knowledge Lifecycle](knowledge-lifecycle/README.md) — How knowledge is captured, reviewed, maintained, or retired.
-- [Document Statuses](document-statuses/README.md) — How to distinguish placeholders, drafts, established positions, and superseded material; this describes a document's state, not the process for changing it.
-- [Sources and Evidence](sources-and-evidence/README.md) — How to support claims and express uncertainty.
-- [Inbox](inbox/README.md) — A temporary holding place for material that has not found its home, not a task backlog.
-- [Contribution Process](contribution-process/README.md) — How people can propose, discuss, and review changes to Atlas documents.
-- [Unanswered Questions](unanswered-questions/README.md) — Unresolved questions about Atlas's own structure and practices, not open questions about every subject it documents.
+- [Reading Guide](01-reading-guide/README.md) — How to approach Atlas as a reader.
+- [Repository Map](02-repository-map/README.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
+- [Sources and Evidence](03-sources-and-evidence/README.md) — How to support claims and express uncertainty.
+- [Document Statuses](04-document-statuses/README.md) — How to distinguish placeholders, drafts, established positions, and superseded material; this describes a document's state, not the process for changing it.
+- [Knowledge Lifecycle](05-knowledge-lifecycle/README.md) — How knowledge is captured, reviewed, maintained, or retired.
+- [Writing Guide](06-writing-guide/README.md) — How to start and structure a useful document.
+- [Contribution Process](07-contribution-process/README.md) — How people can propose, discuss, and review changes to Atlas documents.
+- [Inbox](08-inbox/README.md) — A temporary holding place for material that has not found its home, not a task backlog.
+- [Unanswered Questions](09-unanswered-questions/README.md) — Unresolved questions about Atlas's own structure and practices, not open questions about every subject it documents.
 
 ## Drafting principle (proposal)
 

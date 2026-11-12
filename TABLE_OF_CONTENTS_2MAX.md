@@ -6,15 +6,15 @@ Folders link to their README. For the complete tree, see the [full Table of Cont
 <pre>
 <a href="README.md">Atlas/</a> — GHF Studios Knowledge Base
 ├── <a href="00-start-here/README.md">00-start-here/</a> — Atlas Reading and Writing Guide
-│   ├── <a href="00-start-here/contribution-process/README.md">contribution-process/</a> — Proposing Atlas Changes
-│   ├── <a href="00-start-here/document-statuses/README.md">document-statuses/</a> — Document Status Labels
-│   ├── <a href="00-start-here/inbox/README.md">inbox/</a> — Unsorted Notes and Links
-│   ├── <a href="00-start-here/knowledge-lifecycle/README.md">knowledge-lifecycle/</a> — How Knowledge Changes
-│   ├── <a href="00-start-here/reading-guide/README.md">reading-guide/</a> — How to Read Atlas
-│   ├── <a href="00-start-here/repository-map/README.md">repository-map/</a> — Where Topics Belong
-│   ├── <a href="00-start-here/sources-and-evidence/README.md">sources-and-evidence/</a> — Sources and Evidence
-│   ├── <a href="00-start-here/unanswered-questions/README.md">unanswered-questions/</a> — Questions About Atlas
-│   └── <a href="00-start-here/writing-guide/README.md">writing-guide/</a> — Writing Atlas Documents
+│   ├── <a href="00-start-here/01-reading-guide/README.md">01-reading-guide/</a> — How to Read Atlas
+│   ├── <a href="00-start-here/02-repository-map/README.md">02-repository-map/</a> — Where Topics Belong
+│   ├── <a href="00-start-here/03-sources-and-evidence/README.md">03-sources-and-evidence/</a> — Sources and Evidence
+│   ├── <a href="00-start-here/04-document-statuses/README.md">04-document-statuses/</a> — Document Status Labels
+│   ├── <a href="00-start-here/05-knowledge-lifecycle/README.md">05-knowledge-lifecycle/</a> — How Knowledge Changes
+│   ├── <a href="00-start-here/06-writing-guide/README.md">06-writing-guide/</a> — Writing Atlas Documents
+│   ├── <a href="00-start-here/07-contribution-process/README.md">07-contribution-process/</a> — Proposing Atlas Changes
+│   ├── <a href="00-start-here/08-inbox/README.md">08-inbox/</a> — Unsorted Notes and Links
+│   └── <a href="00-start-here/09-unanswered-questions/README.md">09-unanswered-questions/</a> — Questions About Atlas
 ├── <a href="01-foundations/README.md">01-foundations/</a> — Purpose, Beliefs, and Direction
 │   ├── <a href="01-foundations/assumptions/README.md">assumptions/</a> — Working Assumptions
 │   ├── <a href="01-foundations/convictions/README.md">convictions/</a> — Convictions
