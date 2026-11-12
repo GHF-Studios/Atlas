@@ -2,9 +2,15 @@
 
 > **Status:** Draft — intended for human review.
 
-Atlas is GHF Studios' human-maintained knowledge base: its Markdown is human-authored or receives substantial human review. This folder is the **reading and writing guide** for Atlas: how to find information, capture ideas, distinguish evidence from intentions, and improve documents over time.
+Atlas is being built as the definitive, human-reviewed record of GHF Studios' understanding. Its Markdown is human-authored or receives substantial human review. It includes established understanding alongside clearly labeled proposals and unknowns; appearing in Atlas does not make a claim true or a proposal adopted. Source code and other primary sources remain authoritative for implementation details.
+
+This folder is the **reading and writing guide** for Atlas: how to find existing information, capture new ideas, distinguish evidence from intentions, and improve documents over time.
 
 It is **not** the complete table of contents. That lives in the repository root: [Table of Contents](../TABLE_OF_CONTENTS.md).
+
+## Book-like ordering (direction)
+
+Child folders should have numeric prefixes that establish their order among siblings. The intended sequence should make the whole Atlas straightforward to assemble as one mdBook. This is a structural goal; many nested folders do not yet follow it consistently.
 
 ## Your first three stops
 
@@ -26,11 +32,11 @@ You do not need to read or complete everything. Most topic pages now contain sho
 - [Contribution Process](contribution-process/README.md) — How people can propose, discuss, and review changes to Atlas documents.
 - [Unanswered Questions](unanswered-questions/README.md) — Unresolved questions about Atlas's own structure and practices, not open questions about every subject it documents.
 
-## Working principle
+## Drafting principle (proposal)
 
 **Write something imperfect, label it accurately, and improve it when you learn more.**
 
-An empty file can be a useful reminder. A speculative paragraph can be useful research. Neither should be mistaken for an approved decision or verified implementation.
+An empty file can be a useful reminder. A speculative paragraph can be useful research. But, still, neither should be mistaken for an approved decision or verified implementation.
 
 ## Current reality
 
