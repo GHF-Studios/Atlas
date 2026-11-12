@@ -1,7 +1,6 @@
 # Architecture
 
-> **Status:** Draft — current code architecture and intended system boundaries should be kept distinct.
-
-Explain how Spacetime Engine's reusable simulation domains, runtime configuration, authored assets, tooling, and Loo Cast adapters fit together. Use the source map in the Engine README as the current entry point, and cite implementation when describing behavior.
-
-Keep product vision and speculative world-generation research separate from implemented architecture.
+- `SpacetimeEnginePlugin`: reusable engine wiring
+- `EngineApp`: alias for Bevy `App`; host/window/logging is application policy
+- Vapor resolves Engine/Game roles; Rust API is not a universal ABI
+- ECS entities: runtime storage/manifestation, not automatically semantic identity

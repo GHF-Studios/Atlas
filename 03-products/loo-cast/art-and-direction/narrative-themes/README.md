@@ -1,7 +1,6 @@
 # Narrative Themes
 
-> **Status:** Draft — themes and their intended treatment are unresolved.
-
-Explore the questions, tensions, and ideas Loo Cast may address through its world and play. Distinguish a recurring theme from plot, lore, satire, or a statement about what the product currently contains.
-
-Keep authored world facts in World and Content when they become canonical.
+- Historical owner-intent lead: social commentary/parody · creative tool · science/teaching universe
+- These are later first-person synthesis, not validated research findings or a settled current script
+- Current game workspace contains no complete narrative corpus
+- [Historical reconstruction](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-origin-and-intent.md)

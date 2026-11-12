@@ -1,7 +1,6 @@
 # Security by Design
 
-> **Status:** Draft — guidance, not proof of security review.
-
-Describe how engineering work considers trust boundaries, least privilege, input validation, secrets, dependency risk, and safe failure behavior. Link to threat models and product-specific security decisions.
-
-Operations owns live service hardening; organizational legal or privacy policy belongs in Organization.
+- Platform docs separate Steam OpenID identity from Steamworks publishing authority
+- Root/SSH/deployment controls use distinct credentials and explicit approval paths
+- Recovery archive can contain plaintext secrets; storage/access is a material security boundary
+- Security implementation requires current contract review

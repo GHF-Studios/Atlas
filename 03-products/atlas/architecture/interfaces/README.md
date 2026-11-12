@@ -1,7 +1,6 @@
 # Interfaces
 
-> **Status:** Draft — document the current source and publication interfaces.
-
-Describe how readers navigate the Markdown repository, how folders resolve to their README pages, how explicit TOC links point to destinations, and how the publication system receives a repository revision.
-
-Keep the live web route and deployment contract with Platform Server. This topic records Atlas's side of the interface and any limits it imposes.
+- Human navigation: folder links in [Table of Contents](../../../../TABLE_OF_CONTENTS.md)
+- Folder entry resolves to `README.md`; separate README row is intentionally omitted
+- Authoring interface: Markdown + Git review
+- Publication interface: static site at `/atlas/` per Platform contract

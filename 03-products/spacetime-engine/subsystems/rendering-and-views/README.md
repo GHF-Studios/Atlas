@@ -1,7 +1,6 @@
 # Rendering and Views
 
-> **Status:** Draft — separate presentation from canonical world state.
-
-Describe how views observe and render engine state, including view frames and demand where implemented. Make clear which data is presentation or materialization and which data is canonical simulation state.
-
-Do not treat a rendered manifestation as semantic authority without an explicit contract.
+- View/frame contracts and Bevy rendering shape local presentation
+- Voxel realization and authored geometry have runtime presentation paths
+- Rendering is manifestation, not semantic authority
+- No full generated-world pipeline claim

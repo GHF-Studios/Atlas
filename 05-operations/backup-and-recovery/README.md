@@ -1,7 +1,6 @@
 # Backup and Recovery
 
-> **Status:** Draft — recovery design must follow each service's state owner.
-
-Describe what data can be reconstructed from source and what mutable state must be backed up, exported, validated, and restored. Keep backup inventory, recovery objectives, procedures, and drill evidence distinct.
-
-The Platform Server docs describe service-by-service and whole-system recovery as goals; verify each capability before treating it as operational.
+- Platform composes state export/recovery; services own state semantics
+- State-only owner USB path verified 2026-11-09
+- Older full-host/schema-v2 secret-bearing design superseded for new archives
+- Clean-host restore remains open

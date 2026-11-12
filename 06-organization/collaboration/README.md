@@ -1,7 +1,5 @@
-# Collaboration Practices
+# Collaboration
 
-> **Status:** Draft — describe internal working agreements without inventing process.
-
-Collect how people communicate, coordinate, resolve conflict, onboard, and give feedback within GHF Studios. Keep the practices lightweight and explicit about who they apply to.
-
-External community participation belongs in Ecosystem; Atlas document contribution procedures belong in Start Here.
+- Owner-provided PRE-ALPHA policy: decisive progress · preserve unrelated work/data · targeted validation
+- Policy discourages mandatory PR/review/compatibility overhead absent clear benefit
+- Atlas-specific review preferences are more cautious and remain topic/task scoped

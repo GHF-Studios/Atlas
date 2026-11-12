@@ -1,7 +1,5 @@
-# Status Terms
+# Status Conventions
 
-> **Status:** Draft — planning work statuses, distinct from document status labels.
-
-Define terms for the status of initiatives, proposals, risks, and milestones, including what evidence moves work from one status to another. Keep the vocabulary small and meaningful.
-
-Document maturity belongs in Start Here/Reference; product implementation status belongs with each product and should be dated.
+- Planning state ≠ document status ≠ product maturity ≠ deployment state
+- Current phase term PRE-ALPHA is owner-provided; transition must be explicit
+- Issue labels alone may be inconsistent; include dated evidence/source

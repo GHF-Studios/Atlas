@@ -1,7 +1,5 @@
 # Purpose
 
-> **Status:** Draft — product purpose for human review.
-
-Explain why Loo Cast exists as a composed interactive product and what experience or possibility it aims to offer. Distinguish this product purpose from the reusable purpose of Spacetime Engine.
-
-Do not describe a complete experience until a playable product and its intended audience are established.
+- Product intent: systemic space/simulation game with extensible world/rules
+- Broader tool/teaching/social commentary aims appear in later owner-intent note
+- Current playable purpose and target audience need owner confirmation

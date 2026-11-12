@@ -1,7 +1,5 @@
 # Reference
 
-> **Status:** Draft — Atlas-specific reference material only.
-
-Use this branch for product-specific constraints, vocabulary, and source references needed to understand Atlas. Shared documentation conventions and cross-studio indexes belong in the Reference section.
-
-Keep each child only when it adds Atlas-specific lookup value rather than duplicating a shared reference.
+- Repository-local navigation: [full TOC](../../../TABLE_OF_CONTENTS.md) · [1MAX](../../../TABLE_OF_CONTENTS_1MAX.md) · [2MAX](../../../TABLE_OF_CONTENTS_2MAX.md)
+- Source repositories and historical records remain external authorities
+- Glossary/source indexes are proposed; duplication with project docs is an open risk

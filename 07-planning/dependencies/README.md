@@ -1,7 +1,5 @@
-# Work Dependencies
+# Dependencies
 
-> **Status:** Draft — dependencies should be explicit and evidence-based.
-
-Record which outcomes or tasks depend on other work, external providers, decisions, or resources. Distinguish a hard blocker from a preferred sequence and identify the owner of each dependency.
-
-Technical runtime dependencies belong in Engineering or product architecture.
+- Current Alpha v0.5 phase depends on clean reinstall/recovery foundation and existing user workflows
+- Issue dependency graph is separate from roadmap ordering
+- Record blockers from source tracker; avoid manual duplicate graph

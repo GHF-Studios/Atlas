@@ -1,7 +1,6 @@
 # Information Architecture
 
-> **Status:** Draft — the repository structure is still under review.
-
-Explain how Atlas groups topics, how folder depth communicates relationships, and how readers move between the hierarchy and cross-links. Record the trade-offs of grouping, duplication, and depth.
-
-The canonical structure is visible in the TOC. Do not invent a second taxonomy here; use this topic to explain decisions about the one that exists.
+- Hierarchy: 00 Start Here · 01–09 topical sections · nested topic folders
+- TOC doubles as graph/tree; folders link directly to README
+- Cross-section duplication and granularity remain open review questions
+- Full and depth-limited TOC views require coordinated updates

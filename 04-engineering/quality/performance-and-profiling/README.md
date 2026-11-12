@@ -1,7 +1,5 @@
 # Performance and Profiling
 
-> **Status:** Draft — performance conclusions require repeatable measurements.
-
-Record workload, hardware, configuration, build mode, profiler, measurements, and trade-offs. Distinguish an optimization hypothesis from a measured change and include correctness constraints.
-
-Do not compare results collected under materially different conditions without explanation.
+- Engine optional Tracy/Chrome instrumentation; Devtools consumes managed Tracy
+- Existing code adjusts Bevy light clustering for sparse current scenes
+- No benchmark baseline/performance budget verified

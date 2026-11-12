@@ -1,7 +1,5 @@
 # Module Boundaries
 
-> **Status:** Draft — boundary guidance for cross-product engineering.
-
-Describe how to assign responsibilities to modules and avoid cycles, hidden state sharing, and ambiguous ownership. A module boundary should make changes and failures easier to reason about.
-
-Use product-specific architecture pages for the actual module map.
+- Client domain/application/provider/service split separates policy from effects/host
+- Engine modules separate semantic spatial state from ECS/presentation/devtools
+- Platform service repos own handlers/state; Platform composes process/recovery operation

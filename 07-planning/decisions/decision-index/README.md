@@ -1,7 +1,5 @@
 # Decision Index
 
-> **Status:** Draft — index active decision work only.
-
-List current or pending planning decisions with owner, affected work, and link to the record. Exclude settled historical decisions unless they are still relevant to an active proposal.
-
-Keep formal authority and decision rights in Organization.
+- No complete Atlas decision register located
+- Source decisions appear in dated specs, active policy, manifests, and commits
+- Add canonical owner/date/status links before duplicating records

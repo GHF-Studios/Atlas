@@ -1,7 +1,7 @@
 # Authority and Ownership
 
-> **Status:** Draft — boundaries and authority are not established here.
-
-Describe how authority, stewardship, and ownership cross product or service boundaries in the wider ecosystem. Name the kind of authority being discussed and its scope; do not infer rights from technical access alone.
-
-Studio roles and governance belong in Organization. Keep this topic only for cross-system or external relationships that those records do not cover, and link to the canonical owner.
+- **Source ownership:** each repository owns its code and local contracts
+- **Vapor Registry:** machine-readable authority for Vapor identities, first-party Steam metadata, permission grants
+- **Steamworks:** final enforcement of Steam permissions; Registry is a pre-check/governance source
+- **Platform Registry service:** current source-topology inventory; typed content catalog/release decisions remain target work
+- **Open:** distinguish technical access · product authority · legal ownership

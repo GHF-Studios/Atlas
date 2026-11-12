@@ -1,5 +1,7 @@
 # Historical Source Index
 
-An index of primary and secondary sources used to reconstruct project and organizational history.
-
-For each source, record date, provenance, preservation location, and limitations. Distinguish contemporaneous records from later recollections.
+- Legacy Loo-Cast commits (public GitHub; selected diff review)
+- Current histories: Loo-Cast · Vapor Client/submodules · Platform Server/services · Registry
+- Atlas audit snapshot `874a24a`
+- Vapor Client planning-intake corpus: imported glossaries/raw captures; register labels source authority as none, some unprocessed
+- Owner recollection/unversioned note: secondary evidence with provenance limits

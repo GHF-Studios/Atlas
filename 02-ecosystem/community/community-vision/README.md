@@ -1,7 +1,6 @@
-# Vision
+# Community Vision
 
-> **Status:** Draft — an aspiration, not a forecast or commitment.
-
-Describe what a healthy, useful community across the ecosystem might look like and what people could do there. State whose needs the vision serves and what remains uncertain.
-
-Keep product-specific community features in their product sections and compare this aspiration with the evidence in [Current State](../community-current-state/README.md).
+- **Candidate future:** creators discover, share, adapt, and discuss compatible content
+- **Evidence status:** aspiration, not current service capability
+- **Dependencies:** catalog/release authority · trust/moderation · creator workflow · support ownership
+- **Open:** whose needs are prioritized and what should remain outside platform scope

@@ -1,7 +1,6 @@
 # Creative Philosophy
 
-> **Status:** Draft — scope for review; this is not an adopted creative doctrine.
-
-Explore the ideas that shape what GHF Studios wants its creative work to feel like and make possible. The child topics are lenses for discussion, not claims that every project must express them.
-
-Keep product-specific art direction and design in each product's section. Use this topic for shared creative beliefs only when they genuinely apply across projects; otherwise let the product documents speak for themselves.
+- Topics: emergence/causality · authorship · consequences · critique · scientific curiosity
+- Evidence: recurring Loo-Cast/Vapor design themes; not studio doctrine
+- Product-specific expression stays with its product
+- [Historical origin/intent reconstruction](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-origin-and-intent.md)

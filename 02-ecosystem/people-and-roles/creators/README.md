@@ -1,7 +1,6 @@
 # Creators
 
-> **Status:** Draft — creator scope and activity are unverified.
-
-Describe people who make, adapt, or publish work connected to the ecosystem, and how their needs may differ from those of players, developers, or operators.
-
-Keep concrete creator tools and permissions with the relevant product and community policy. Do not imply a creator platform exists unless verified.
+- **Vapor target actor:** assembles existing content; Developer authors source/builds reusable libraries
+- **Studio surface:** Vapor Studio supports local project registry, manifest editing, composition preview
+- **Not established:** mature public creator ecosystem or broad creator adoption
+- **Source:** [Vapor Studio](https://github.com/GHF-Studios/Vapor-Studio/blob/94d45ad/README.md)

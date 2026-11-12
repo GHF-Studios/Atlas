@@ -1,7 +1,6 @@
 # Creator Economy
 
-> **Status:** Draft — no creator marketplace or payment model is established here.
-
-Explore the relationships among creators, audiences, platforms, compensation, and the value created by community contributions. Distinguish possible models from features or arrangements that exist today.
-
-Product-specific commerce belongs with the product. Legal, licensing, and attribution commitments belong in Organization and should be linked rather than inferred here.
+- **Current evidence:** no payment, revenue-share, or creator payout system found in reviewed repos
+- **Existing analogues:** Steam Workshop visibility/subscription concepts; do not infer compensation
+- **Open:** ownership · attribution · monetization · platform fees · tax/legal treatment
+- **Route:** licensing and responsibility decisions belong in Organization

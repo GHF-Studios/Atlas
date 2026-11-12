@@ -1,7 +1,6 @@
-# Overview
+# Architecture Overview
 
-> **Status:** Draft — current product map, not a complete feature inventory.
-
-Vapor separates shared runtime and client operations from user-facing apps, platform operations, identity, registry authority, and distribution services. Local user state, application releases, typed content, compositions, and build snapshots have distinct owners.
-
-Use the component map and domain-contract references for exact ownership and current implementation status.
+- Source workspace → role-specific content manifests → build/package artifacts
+- Local Client service → shared CLI/Studio/GUI workflows and durable local state
+- Steam locator → Vapor Home → selected frontend or game launch
+- Platform Server → independent remote services and human-approved operations

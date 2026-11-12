@@ -1,7 +1,5 @@
-# Team Identity
+# Identity and Team
 
-> **Status:** Draft — describe the current team without implying a larger organization.
-
-Record how GHF Studios understands its team, working relationships, and shared identity. Separate current people and roles from future staffing aspirations.
-
-Use Organization's current-state snapshot for dated facts and Foundations for enduring studio identity.
+- Atlas/root and repos identify GHF Studios; founder-led informal structure described in current source policy
+- No verified roster, legal entity record, or full ownership map in checked roots
+- Do not infer team roles from Git authorship alone

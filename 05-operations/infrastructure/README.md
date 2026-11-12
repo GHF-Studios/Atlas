@@ -1,7 +1,6 @@
-# Infrastructure
+# Infrastructure Inventory
 
-> **Status:** Draft — operational inventory should be sourced from current provider and host records.
-
-Map the infrastructure that runs studio services: hosts, providers, environments, capacity, cost, and network topology. Separate observed deployed resources from plans.
-
-This branch is the home for operational host/environment inventories; Reference may link to them but should not maintain a competing authoritative list.
+- Latest live report: one primary VPS, independent services, Caddy; timestamp 2026-11-09
+- Newer source includes enrolled nodes/host telemetry and typed remote operations (Nov 9–10)
+- No current evidence that fleet features are deployed or a second host is enrolled
+- Owner USB recovery copy; hosting account is separate recovery layer

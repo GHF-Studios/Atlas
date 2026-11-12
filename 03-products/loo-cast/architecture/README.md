@@ -1,7 +1,6 @@
 # Architecture
 
-> **Status:** Draft — distinguish the composed product from its three content artifacts.
-
-Describe how the Loo Cast experience is composed from Spacetime Engine, Loo Cast Game, and Loo Cast Packagepack, and how each artifact relates to Vapor. The workspace registers these as sibling projects; the Packagepack references the other two by Vapor identity and links them into the runnable executable.
-
-Keep source implementation in the Loo-Cast workspace and engine code. This page explains the product boundary, not Cargo dependency details alone.
+- Three registered projects: Spacetime Engine · Loo-Cast Game · Loo-Cast Packagepack
+- Packagepack manifest selects Engine and Game by Vapor IDs; executable links both Rust crates
+- Game crate installs Engine gameplay/developer plugins; current behavior is not isolated in a complete Game library
+- Steam product boundary: Packagepack executable/manifest; Vapor runtime remains separately installed

@@ -1,7 +1,5 @@
-# Build and Release Engineering
+# Build and Release
 
-> **Status:** Draft — cross-product build practice; service deployment is separate.
-
-Describe how source becomes validated, versioned, packaged, and released artifacts across products. Keep reproducible build inputs and artifact provenance visible.
-
-Engineering owns building and release packaging; Operations owns deployment and live service operation; Planning owns proposed timing.
+- Source workspace builds → staged artifacts → explicit review/publish paths
+- Vapor app release · Steam Packagepack · Workshop item · Build Snapshot are distinct artifact channels
+- GitHub CI evidence is repo/commit-specific; deployment/publication separate

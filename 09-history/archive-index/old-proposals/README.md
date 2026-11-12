@@ -1,5 +1,5 @@
 # Old Proposals
 
-An index of preserved proposals that were superseded, abandoned, or left unresolved.
-
-Retain original dates and authorship where known. Explain later outcomes with links; do not present an old proposal as an adopted decision.
+- Previous Atlas snapshot preserves Vapor ecosystem architecture plans, crosswalks, glossary corpus maps, and product workflow designs
+- Old plans establish historical intent only
+- [Audit snapshot](https://github.com/GHF-Studios/Atlas/tree/874a24a/archive/audit-snapshot-2026-10-26)

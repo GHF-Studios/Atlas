@@ -1,7 +1,5 @@
 # Manifests
 
-> **Status:** Draft — manifest roles and fields must follow their schema owners.
-
-Describe the role-specific metadata files that identify Vapor content, package composition, app source, and distribution allowlists. Do not treat all manifest files as one schema or let a client assertion override server-owned authority.
-
-Link to each manifest contract and version rather than copying fields into Atlas.
+- Workspace manifest explicitly registers projects; nested manifests are not recursively guessed
+- Role manifest owns content role/metadata; workspace registry owns membership
+- Package/deployed manifest records actual staged runtime outputs

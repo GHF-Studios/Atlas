@@ -1,7 +1,5 @@
 # Subsystems
 
-> **Status:** Draft — component map follows the current `src` modules.
-
-Describe the major Engine subsystems and their responsibilities from source: diagnostics, ECS, physics, rendering/views, runtime configuration, scripting/reflection, spatial state, voxel materialization, and world generation.
-
-Use this as a navigation map, not as evidence that every subsystem is complete or stable.
+- Modules: config · console · devtools · diagnostics · ECS · game · geometry · input focus · physics · portal · procedural assets · reconstructible · spatial · thermal · UI · USF · view · voxel · worldgen
+- `src/lib.rs` is fuller than the older README source map
+- Module presence ≠ maturity/integration

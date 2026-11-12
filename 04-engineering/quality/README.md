@@ -1,7 +1,5 @@
-# Software Quality
+# Quality
 
-> **Status:** Draft — quality means evidence appropriate to the product's risks and stage.
-
-Describe how GHF Studios assesses correctness, reliability, maintainability, performance, and user-visible behavior across products. Distinguish automated evidence from manual observations and untested assumptions.
-
-Product-specific validation constraints belong with the product and its source repository.
+- Verification differs by repo: unit/integration checks · CI · scene/manual validation · live operational checks
+- Engine disables autotests/doctests; behavior needs scene inspection
+- No shared acceptance threshold or quality target set

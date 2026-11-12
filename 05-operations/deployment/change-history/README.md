@@ -1,7 +1,5 @@
 # Change History
 
-> **Status:** Draft — deployment history should be owner-sourced and bounded.
-
-Record deployed revisions, environment, approver, outcome, and relevant operation IDs so an operator can understand what changed. Separate source commits from deployments that actually completed.
-
-Do not duplicate Git history or expose unbounded sensitive request data.
+- Status records include deployed composition and pending/failed requests as-of timestamp
+- Distinguish pending · approved · dispatched · deployed · failed/reconciled
+- Latest report 2026-11-09; not present-state evidence

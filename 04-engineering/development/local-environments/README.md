@@ -1,7 +1,5 @@
 # Local Environments
 
-> **Status:** Draft — setup guidance should be tested on actual supported systems.
-
-Record how a contributor prepares a local environment, required tools, configuration, and cleanup behavior. Separate project setup from Vapor's managed developer environment.
-
-Do not publish secrets or machine-specific assumptions as shared configuration.
+- Vapor Home owns local runtime/tools/state; developer toolchain provisioned explicitly
+- Reconciliation via toolchain install/repair; feature commands do not silently install
+- Target/platform behavior varies; clean-machine evidence needed

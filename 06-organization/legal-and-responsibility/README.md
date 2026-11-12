@@ -1,7 +1,5 @@
-# Legal Responsibility
+# Legal and Responsibility
 
-> **Status:** Draft — this section is not legal advice or evidence of compliance.
-
-Organize legal and accountability topics that require authoritative sources and appropriate review. Each page must state jurisdiction and date where relevant, identify the responsible decision-maker, and distinguish verified obligations from questions.
-
-Do not invent legal conclusions or imply compliance from the existence of a topic folder. Seek qualified advice for consequential interpretations.
+- No root LICENSE file found in the five checked repositories; package/assets may have separate terms
+- Homepage service includes legal/contact surface; current legal text not reviewed here
+- No legal conclusions; verify jurisdiction, ownership, licensing, privacy, and accessibility with authoritative records

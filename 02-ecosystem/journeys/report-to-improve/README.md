@@ -1,7 +1,6 @@
-# Report-to-Improvement
+# Report to Improve
 
-> **Status:** Draft — proposed feedback path; no response process is verified.
-
-Trace how a report or observation could reach the responsible people, be assessed, and inform a change or explanation. Record response ownership and feedback closure as open questions until evidenced.
-
-Do not duplicate an established incident process or product issue tracker; link to the actual destination where one exists.
+- **Potential flow:** report issue/diagnostic → triage → reproduce → fix → communicate outcome
+- **Observed components:** opt-in Diagnostics service/report tooling; Git issues and repository history
+- **Unverified:** unified player-facing report path and response commitment
+- **Open:** privacy, consent, retention, feedback closure

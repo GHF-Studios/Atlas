@@ -1,7 +1,5 @@
 # Onboarding
 
-> **Status:** Draft — no onboarding flow is established here.
-
-Describe how a new player could understand the controls, goals, and uncertainty of the experience without overwhelming explanation. Separate first-run setup from in-game learning.
-
-Record tested comprehension and versioned flow details when a playable build exists.
+- No current player onboarding flow documented in Loo-Cast workspace
+- Steam locator can route to separately installed Vapor Home; this is setup, not game onboarding
+- Open: first-play instructions · setup failures · recovery path

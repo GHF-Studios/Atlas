@@ -1,7 +1,5 @@
 # Metrics
 
-> **Status:** Draft — metric definitions and collection are not established here.
-
-Describe operational measurements with unit, labels, source, aggregation, and retention. Distinguish resource metrics from product outcomes or user analytics.
-
-Do not infer a performance or reliability target from a metric's existence.
+- Nov 9 source adds per-service telemetry; host-first work adds bounded process inventory and remote node telemetry
+- Source feature presence ≠ deployed fleet/dashboard/alert coverage
+- No service SLO/metric target inventory reviewed

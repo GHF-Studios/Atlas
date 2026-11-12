@@ -1,7 +1,6 @@
-# Shared Product Constraints
+# Shared Constraints
 
-> **Status:** Draft — no portfolio-wide constraint set is approved here.
-
-Record constraints that genuinely apply across multiple products, with their source, scope, and exceptions. Link to a canonical legal, operational, or engineering rule instead of copying it.
-
-Keep a product-specific limitation with that product. A repeated folder name alone does not make its contents a shared constraint.
+- Current shared themes: Rust/Cargo workspaces · explicit content identities · human approval for privileged release/deploy
+- Steam Packagepack and Vapor Home have separate roots/lifecycles
+- No single cross-product compatibility/support policy found
+- Link to owner contract instead of copying its full rules

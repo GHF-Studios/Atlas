@@ -1,7 +1,5 @@
-# Product and Studio Roadmaps
+# Roadmaps
 
-> **Status:** Draft — roadmaps are dated planning views, not promises.
-
-Show intended outcomes and sequencing for each product or studio-wide effort, with time horizon, confidence, dependencies, and last-updated date. Link to initiative details and current product evidence.
-
-Do not duplicate the portfolio catalogue, Engineering maturity criteria, or actual deployment status.
+- Current product roadmaps/specs are repository-owned and may age independently
+- Vapor documentation roadmap lists chapters; active chapter status needs current confirmation
+- Roadmap order is dependency order, not delivery schedule

@@ -1,7 +1,6 @@
 # Command Model
 
-> **Status:** Draft — describe the current grammar from the CLI reference.
-
-Explain how commands map to Vapor Client operations, how arguments and results are represented, and which commands are terminal-specific. Keep exact syntax and examples in the CLI's command reference.
-
-Do not assume every shared operation is exposed by every frontend.
+- Commands route to shared service/domain operations where applicable
+- Content commands distinguish source workspace from app-root installed runtime material
+- `source open` selects workspace; `content package` builds/stages declared content
+- [Command reference](https://github.com/GHF-Studios/Vapor-CLI/blob/2fb894a/crates/vapor_cli/docs/commands.md)

@@ -1,7 +1,5 @@
-# Philosophy
+# Engineering Philosophy
 
-> **Status:** Draft — engineering beliefs for discussion, not standards.
-
-Explore how GHF Studios approaches software quality, complexity, feedback, and long-term maintenance. Explain the practical consequences of each belief and acknowledge trade-offs.
-
-Concrete rules belong in Standards; product-specific architecture belongs with each product.
+- Observed design emphasis: explicit boundaries · typed contracts · semantic ownership · reproducible toolchains
+- Complexity and maturity vary sharply between repos/modules
+- Candidate values ≠ adopted studio engineering principles

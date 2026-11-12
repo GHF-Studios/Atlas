@@ -1,7 +1,5 @@
 # Components
 
-> **Status:** Draft — component boundaries span the client and service repositories.
-
-Index the principal Vapor applications, shared client capabilities, installer, and platform services. The component map should identify ownership and link to each component's source documentation.
-
-Do not treat similarly named components as one executable or one service without verifying their repository boundary.
+- Current client components listed under `Vapor-Client` submodules/workspaces
+- Remote components: independently deployed Platform services + Registry authority repo
+- Link owner READMEs for behavior; not a second component specification

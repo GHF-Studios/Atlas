@@ -1,7 +1,5 @@
 # Dependency Management
 
-> **Status:** Draft — dependency policies and lockfiles are repository-specific.
-
-Describe how dependencies are selected, pinned, updated, audited, and removed. Consider license, target support, maintenance, build reproducibility, and transitive effects.
-
-Link to each repository's manifest and lockfile; Atlas is not a second dependency inventory.
+- Rust/Cargo lockfiles and pinned workspace/submodule revisions define builds
+- Platform Build Cache validates lock/toolchain identity; no shared compiler cache selected
+- Review source/config before inferring update or compatibility status

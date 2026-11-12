@@ -1,7 +1,5 @@
 # SSH
 
-> **Status:** Draft — access methods and grants are security-sensitive.
-
-Describe how operators obtain, scope, approve, and revoke SSH access, and which systems record active grants. Keep credentials and private key material in approved secret storage, never in Atlas.
-
-Link to the emergency-access runbook for operational steps and to Organization for role authority.
+- Root SSH key: break-glass access distinct from Identity temporary SSH flow
+- Temporary access uses short-lived, single-use request and audited grant
+- Keep private key outside backup/source; root SSH worked 2026-11-09

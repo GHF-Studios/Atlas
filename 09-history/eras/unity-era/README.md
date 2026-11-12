@@ -1,5 +1,5 @@
 # Unity Era
 
-Historical material about projects and prototypes associated with Unity.
-
-Record what can be verified from repositories, artifacts, and dated accounts. This label describes a period of work, not necessarily a formal organization-wide phase.
+- June 2022 first large Legacy snapshot: ~793 blobs, ~238k lines added in second initial commit
+- Snapshot included scenes, prefabs, ~170 C# scripts, player/combat/UI/world systems
+- Git source evidence; Unity build/playability not verified by that tree alone

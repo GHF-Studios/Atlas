@@ -1,7 +1,5 @@
 # Large Refactors
 
-> **Status:** Draft — large changes need explicit scope and reviewable boundaries.
-
-Describe how to constrain AI-assisted refactors by subsystem, expected behavior, protected user work, and review checkpoints. Separate mechanical edits from changes to architecture or product behavior.
-
-Preserve dirty files and user-authored content; verify file moves, link updates, and scope before considering the refactor complete.
+- Recent source history contains multi-repository boundary changes and architecture redesigns
+- Require scoped goal, dependency/order map, source-of-truth check, recovery point, reviewable diffs
+- No universal studio refactor protocol found

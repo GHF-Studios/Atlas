@@ -1,7 +1,5 @@
 # Release Readiness
 
-> **Status:** Draft — no universal release checklist is established here.
-
-Describe the evidence needed to decide whether a particular artifact is ready for a particular audience and target. Consider validation, provenance, compatibility, recovery, and known limitations.
-
-Readiness is product- and release-specific; do not equate a maturity label with an approved release.
+- Require target-specific validation · artifact inventory/provenance · signing/authority · rollback/recovery
+- Release preview ≠ upload; approved request ≠ completed deployment
+- No unified release readiness checklist adopted

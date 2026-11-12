@@ -1,7 +1,5 @@
 # Experiences
 
-> **Status:** Draft — role-oriented outcomes, separate from component and workflow inventories.
-
-Describe what Vapor should enable for creators, developers, operators, and players. An experience spans components and steps; use Workflows for a specific end-to-end procedure and Components for implementation ownership.
-
-Keep target experience promises distinct from current capabilities and tested outcomes.
+- Player · creator · developer · operator experiences have separate frontends/workflows
+- Shared local service aims to keep semantic actions/results consistent
+- Current UI bundles/implementation gaps remain; see owning product READMEs

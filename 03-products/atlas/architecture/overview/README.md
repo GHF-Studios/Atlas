@@ -1,7 +1,7 @@
-# Overview
+# Architecture Overview
 
-> **Status:** Draft — architectural summary for human review.
-
-Summarize Atlas's source-first model: people edit Markdown in the repository, folder structure provides topic boundaries, navigation links expose the tree, and a separate service may publish a static reading view.
-
-Link to the detailed component, interface, and lifecycle topics rather than repeating their contracts here.
+- Source: Markdown tree in this repository
+- Navigation: full TOC + depth-limited views
+- Publication: source built to static tree by Platform Server pipeline
+- No Atlas-owned mutable service/database
+- **Open:** whether shallow TOCs remain worth maintaining manually

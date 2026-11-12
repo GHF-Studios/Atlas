@@ -1,7 +1,6 @@
 # Source of Truth
 
-> **Status:** Draft — identify authority before asking tools to summarize it.
-
-Explain how engineers locate the authoritative source for code, configuration, API contracts, runtime state, and deployment status. Generated output and stale plans must not override current source or observed evidence.
-
-Use the repository map and product source indexes to identify owners; verify revision and date when state can change.
+- Code/config/manifests: owning repo
+- Product intent: current reviewed decision/contract; historical plans are evidence of earlier intent
+- Deployment/runtime: dated operational evidence, not source tree alone
+- Cross-repo synthesis: Atlas links to owners

@@ -1,7 +1,5 @@
 # Discovery and Science
 
-> **Status:** Draft — distinguish fictional discovery from scientific claims.
-
-Explore how observation, investigation, and explanation may support the Loo Cast experience. State what players can learn, what evidence they can inspect, and where the simulation intentionally simplifies reality.
-
-Factual scientific claims should be sourced; game mechanics belong with the Game artifact.
+- Possible creative aim: exploration and science-oriented universe
+- Current source: explicit Sun/Earth/Moon Celestial Fixture; no generated galaxy/ecology/atmosphere claimed
+- Separate scientific inspiration from validated physical modeling

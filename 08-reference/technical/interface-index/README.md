@@ -1,5 +1,6 @@
 # Interface Index
 
-An index of meaningful interfaces between studio systems, including APIs, command surfaces, and user-facing boundaries.
-
-Identify the owning component and link to its current contract. Mark planned interfaces as proposed rather than implemented.
+- Vapor Client: typed commands/snapshots/events/failures/revisions + IPC
+- Platform: service HTTP APIs; Identity authorization for protected routes
+- Loo-Cast: Vapor role manifests + Rust Engine/Game install interface
+- Contracts are repo/version scoped

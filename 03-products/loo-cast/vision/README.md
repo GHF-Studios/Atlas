@@ -1,7 +1,6 @@
 # Vision
 
-> **Status:** Draft — aspiration, not a description of the current product.
-
-Describe the future Loo Cast experience the studio hopes to make possible, including what the player may do, understand, or create. Mark assumptions and distinguish product vision from engine research.
-
-The present content workspace is described as placeholders; do not write vision as if it were a completed game.
+- Candidate vision: expansive systemic universe, exploration, reusable/extensible creative systems
+- Later owner note also frames Loo-Cast as commentary/parody and science/teaching space
+- 2021 beginnings: owner recollection only; first verified Legacy Git history June 2022
+- [History reconstruction](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-origin-and-intent.md)

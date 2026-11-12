@@ -1,7 +1,5 @@
 # Runtime Configuration
 
-> **Status:** Draft — current loading order is documented by the Engine README.
-
-Describe the typed Engine configuration path. `EngineConfigPlugin` loads compiled defaults, then `assets/config/engine.ron`, then typed runtime overrides.
-
-Document validation, precedence, and failure behavior from source; distinguish local configuration from product content.
+- `EngineConfigPlugin`: typed Engine policy
+- Precedence: compiled defaults → `assets/config/engine.ron` → typed runtime overrides
+- Not one global Vapor configuration surface

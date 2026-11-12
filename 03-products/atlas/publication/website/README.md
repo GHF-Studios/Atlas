@@ -1,7 +1,6 @@
 # Website
 
-> **Status:** Draft — the published reading surface is separate from the source.
-
-Describe the desired website experience for browsing Atlas while keeping the Markdown repository authoritative. Record verified routes and behavior only when checked against the active deployment.
-
-The current publication contract serves a built Atlas site under `/atlas/`; deployment state and operational evidence belong in Platform Server documentation.
+- Published route: `/atlas/` on Platform Server's public domain per source contract
+- Output: static build from Atlas repo; no mutable Atlas state
+- Current live version/date: unverified by this source review
+- [Publication contract](https://github.com/GHF-Studios/Vapor-Platform-Server/blob/65ade3c/docs/atlas-publication-contract.md)

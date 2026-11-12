@@ -1,7 +1,7 @@
 # Product Relationships
 
-> **Status:** Draft — dependencies and shared ownership are not verified here.
-
-Describe how products or projects relate: shared components, dependencies, data exchange, or one product's role within another. Distinguish a technical dependency from portfolio classification or organizational ownership.
-
-Use the [product map](../product-map/README.md) for the catalogue and [system boundaries](../system-boundaries/README.md) for responsibility edges.
+- **Loo Cast:** Engine + Game content selected by a Packagepack
+- **Vapor:** runtime/tooling composing and delivering content; separate from Loo-Cast Steam product
+- **Platform:** independent services support identity, docs, artifacts, registry, diagnostics, operations
+- **Registry:** source repo defines authority; Platform hosts a distinct Registry service
+- **Evidence:** local repository manifests/readmes; release/deployment state varies

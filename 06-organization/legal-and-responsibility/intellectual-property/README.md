@@ -1,7 +1,5 @@
 # Intellectual Property
 
-> **Status:** Draft — ownership and rights claims require source evidence and legal review.
-
-Track the origin, ownership, license, and permissions relevant to studio software, names, assets, and contributions. Separate repository custody from legal ownership and distinguish third-party rights from studio-created work.
-
-Do not make legal conclusions from a folder name or commit history alone.
+- Repository presence/commit authorship does not establish complete rights to all assets/content
+- No consolidated ownership/assignment record located in checked repo roots
+- Review legacy assets · third-party libraries · commissioned/AI-assisted materials separately

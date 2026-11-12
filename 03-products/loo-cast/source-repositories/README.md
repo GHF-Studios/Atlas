@@ -1,7 +1,6 @@
 # Source Repositories
 
-> **Status:** Draft — source relationship is based on the current workspace README.
-
-The `Loo-Cast` repository is the first-party workspace that registers three sibling content projects: `spacetime-engine`, `loo-cast-game`, and `loo-cast-packagepack`. Their role manifests describe how the content is composed.
-
-Prototype terminal-game code and small proof-of-concept examples are described as living in `Vapor-Examples`, outside this workspace. Use the Reference repository index for canonical repository details.
+- Canonical current workspace: [GHF-Studios/Loo-Cast](https://github.com/GHF-Studios/Loo-Cast/tree/598e98c)
+- Historical Unity repository: Loo-Cast-Legacy; earlier audit uses selected GitHub trees/diffs, not a current local checkout
+- Vapor Client: composition/runtime/Steam locator
+- Do not treat all legacy artifacts as preserved or current

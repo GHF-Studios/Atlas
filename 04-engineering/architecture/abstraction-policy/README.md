@@ -1,7 +1,5 @@
 # Abstraction Policy
 
-> **Status:** Draft — proposed guidance, not a rule against abstractions.
-
-Describe when a reusable abstraction earns its maintenance cost, what evidence should precede it, and how to avoid hiding important domain behavior behind generic layers.
-
-Apply the policy to concrete product code and record exceptions with their reason.
+- Current code includes reusable Engine/Vapor domains plus explicit product adapters
+- Favor abstraction only where a concrete second use/ownership boundary exists
+- Repository presence/roadmap scope does not prove reuse is successful

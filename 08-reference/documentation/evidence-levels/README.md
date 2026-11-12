@@ -1,5 +1,7 @@
 # Evidence Levels
 
-Describes how Atlas distinguishes direct evidence, sourced claims, informed interpretation, recollection, and unresolved claims.
-
-Use plain-language attribution in documents. This page proposes a shared vocabulary; it does not certify any claim or replace links to the underlying evidence.
+- **Current implementation:** source/config/manifest evidence at a revision
+- **Observed operation:** dated build/runtime/deployment result
+- **Documented direction:** contract/spec/plan; implementation unverified unless separately shown
+- **Remembered/inferred:** label source and uncertainty
+- [Atlas source guidance](../../../00-start-here/sources-and-evidence/README.md)

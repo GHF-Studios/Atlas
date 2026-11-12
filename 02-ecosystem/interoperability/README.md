@@ -1,7 +1,6 @@
-# Cross-System Interoperability
+# Interoperability
 
-> **Status:** Draft — no interoperability contract is established here.
-
-Describe compatibility expectations that allow distinct systems to exchange data or work together: formats, identifiers, versions, protocols, and failure behavior where relevant.
-
-An integration says which systems are connected; an integration point says where a connection could occur. This topic concerns the constraints that make such connections compatible.
+- **Observed target:** content identities/manifests connect projects across workspaces and client workflows
+- **Current constraint:** stable Vapor vocabulary and version/dependency compatibility rules
+- **Unverified:** third-party implementations or broad cross-platform compatibility
+- **Open:** external format/API promises and migration policy

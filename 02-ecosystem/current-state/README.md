@@ -1,7 +1,7 @@
 # Current State
 
-> **Status:** Draft — no verified ecosystem snapshot is recorded here yet.
-
-Provide a dated overview of what ecosystem pieces exist, how they currently connect, and what evidence supports that picture. Label unknowns and distinguish live capabilities from plans.
-
-Use the [overview](../overview/README.md) to explain the model, not to repeat this snapshot. Detailed status remains with each product or operational service.
+- **Source repos checked:** Atlas · Loo-Cast · Vapor-Client · Platform Server · Registry (2026-11-12)
+- **Connected path:** Loo-Cast content manifests → Vapor source/package tooling → Steam depot preview
+- **Client:** standalone runtime/install boundary still in progress
+- **Platform:** independent service/operations slice; deployment evidence dated 2026-11-09
+- **Registry:** topology/identity authority; typed content catalog not yet implemented

@@ -1,5 +1,5 @@
 # Reversals
 
-Decisions or directions that were later reversed, including the evidence and circumstances around the change.
-
-Describe each side fairly and distinguish explicit reversal from gradual drift or an abandoned proposal.
+- 2022 Unity data/editor refactors repeatedly revised and partly restored after integration instability
+- 2023 chunk/save/generation designs changed ownership and worker models; prior audit found incomplete/disconnected revisions
+- Treat each source revision separately; no runtime proof from diff alone

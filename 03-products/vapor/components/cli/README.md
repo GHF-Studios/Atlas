@@ -1,7 +1,6 @@
-# Command-Line Interface
+# CLI
 
-> **Status:** Draft — component role grounded in the Vapor-CLI README.
-
-Vapor-CLI owns the interactive shell, command grammar, and terminal output. Reusable operations live in Vapor Client; SDK authoring commands are available through `vapor sdk` in the same process.
-
-The shipped terminal binary remains `vapor`. Exact command behavior belongs in the CLI command reference.
+- Terminal facade owns command grammar and terminal output
+- Reusable operations live in Vapor; SDK commands available through `vapor sdk`
+- Shipped terminal binary: `vapor`
+- [CLI README](https://github.com/GHF-Studios/Vapor-CLI/blob/2fb894a/README.md)

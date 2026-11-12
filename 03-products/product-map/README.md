@@ -1,7 +1,6 @@
-# Product Portfolio Map
+# Product Map
 
-> **Status:** Draft — catalogue inclusion and terminology need review.
-
-Provide a concise index of the studio's products and major projects with links to their product homes. State what qualifies for inclusion and distinguish a product, an enabling platform, a reusable engine, a game, and the knowledge base.
-
-Use Ecosystem for cross-product relationships and capabilities; use this page for portfolio membership and navigation.
+- Current Atlas entries: Atlas · Loo Cast · Spacetime Engine · Vapor
+- Spacetime Engine: nested source under Loo-Cast; separate technical/product page retained for navigation
+- Ecosystem product-map and Reference product-index overlap this list
+- Inclusion rule not yet agreed

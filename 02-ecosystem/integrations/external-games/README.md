@@ -1,7 +1,5 @@
 # External Games
 
-> **Status:** Draft — no external game integration is verified here.
-
-Describe concrete connections between the studio's ecosystem and external games, including their purpose and status where known. Separate a potential partnership or idea from a working integration.
-
-Game-specific compatibility or implementation details belong in the relevant product repository and should be linked as evidence.
+- **Current example:** Loo-Cast Packagepack is a Vapor-composed product, not an external game integration
+- **Broader external-game adapter:** no shipped integration verified in reviewed repositories
+- **Open:** supported game interfaces · distribution boundaries · ownership

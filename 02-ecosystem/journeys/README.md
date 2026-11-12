@@ -1,7 +1,5 @@
 # Journeys
 
-> **Status:** Draft — these are proposed paths, not evidence of implemented flows.
-
-Map end-to-end journeys that cross people, products, or services. For each, identify the starting need, handoffs, outcome, and points where ownership or status is unknown.
-
-Keep an individual product's interface flow in its product section. Retain this cross-ecosystem map only where a journey genuinely spans multiple parts.
+- **Mapped flows:** build→distribute · create→publish · discover→play · play→create · report→improve
+- **Evidence status:** mixed; some local workflows implemented, end-to-end product journeys remain partial
+- **Method:** identify actor · handoff · owning system · observed blocker per step

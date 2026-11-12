@@ -1,7 +1,6 @@
 # Product Map
 
-> **Status:** Draft — catalogue and relationship model need review.
-
-Show the studio's products and major projects as distinct entries with links to their authoritative homes. Define what qualifies for inclusion and avoid duplicating each product's purpose or current state.
-
-If this is a catalogue, make it the single portfolio map and link to it from Reference. If it instead maps relationships, clarify that distinction and use a separate canonical index.
+- **Portfolio entries:** Atlas · Vapor · Spacetime Engine · Loo Cast
+- **Relationship nuance:** Spacetime Engine is a reusable subsystem within the Loo-Cast product workspace, not an independent product repository
+- **Current sources:** Atlas · Loo-Cast · Vapor-Client; service platform and Registry support ecosystem operation
+- **Open:** project vs product inclusion rule; avoid duplicating 03-products and Reference index

@@ -1,7 +1,6 @@
-# Capabilities
+# Capability Map
 
-> **Status:** Draft — map and scope need review.
-
-Map capabilities the overall ecosystem may provide and show which products or services contribute to them. Distinguish a user or creator capability from the component that implements it.
-
-Keep this as a capability view, not a second product catalogue or relationship map. Product-specific features belong in product sections; the portfolio index belongs in Reference.
+- **Present components:** Loo-Cast content workspace · Spacetime Engine · Vapor Client/tools · Platform services · Registry manifest
+- **Implemented pathways:** source-workspace validation/package preview · local install/content operations · product-specific Steam staging
+- **Partial/target:** community catalog/publishing authority · native build lifecycle · cross-product player/creator experience
+- **Source anchors:** [Vapor Client](https://github.com/GHF-Studios/Vapor-Client/blob/2c7e534/README.md) · [Platform](https://github.com/GHF-Studios/Vapor-Platform-Server/blob/65ade3c/README.md)

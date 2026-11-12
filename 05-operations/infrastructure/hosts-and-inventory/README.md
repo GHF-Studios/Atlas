@@ -1,7 +1,5 @@
 # Hosts and Inventory
 
-> **Status:** Draft — host details belong in an access-controlled source where needed.
-
-Inventory hosts, operating system, region, role, service placement, capacity, and recovery dependencies. Link to the provider's authoritative resource record and date verification.
-
-Do not store passwords, private keys, or unnecessary sensitive identifiers in Atlas.
+- Primary VPS documented; exact host identity may be sensitive
+- Provider account · root access · Caddy/systemd · service state · USB recovery
+- No second build/recovery host verified

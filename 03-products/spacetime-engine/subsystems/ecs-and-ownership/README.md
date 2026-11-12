@@ -1,7 +1,6 @@
 # ECS and Ownership
 
-> **Status:** Draft — ownership rules must be tied to concrete ECS relationships.
-
-Explain the reusable ECS infrastructure and how entity relationships determine ownership, lifetime, and access. Preserve the Engine's stated rule that world membership owns lifetime without inheriting runtime transforms.
-
-Use source examples to distinguish semantic ownership from transform or view hierarchy.
+- ECS: runtime entity/component storage and relationships
+- Semantic identity distinct from runtime manifestation
+- World membership owns lifetime without inheriting transforms
+- Verify ownership edges; ECS identity alone is insufficient

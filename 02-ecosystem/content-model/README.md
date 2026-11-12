@@ -1,7 +1,7 @@
 # Content Model
 
-> **Status:** Draft — cross-product meaning and ownership need review.
-
-Describe shared concepts for representing, identifying, and relating content across products, if such shared concepts are needed. Make ownership and compatibility boundaries explicit.
-
-This is not the home for Loo Cast's actual world, lore, or content definitions; those belong with Loo Cast. Avoid a generic model unless more than one system genuinely uses it.
+- **Vapor vocabulary:** Engine · Game · EngineMod · GameMod · ExtensionMod · Crate · Enginepack · Gamepack · Modpack · Packagepack
+- **Observed contracts:** role-specific manifests · stable identities · dependencies/conflicts · pack composition
+- **Composition:** selects/combines existing content; ordinary Composer does not author constituent Rust source
+- **Boundary:** runtime content kinds ≠ Cargo crates ≠ Steam depot layout
+- **Source:** [Vapor Client content docs](https://github.com/GHF-Studios/Vapor-CLI/blob/2fb894a/crates/vapor_cli/docs/content.md)

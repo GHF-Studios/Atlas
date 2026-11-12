@@ -1,7 +1,6 @@
-# Docs Server
+# Documentation Service
 
-> **Status:** Draft — service role and Atlas publication must remain separate.
-
-Vapor Docs Server owns uploaded or generated documentation artifacts and version/current pointers. Atlas is built from its own Git source and served as a separate static tree at `/atlas/`; it does not pass through the Docs service.
-
-Keep route, validation, and retention details in the Docs publication contract.
+- Docs Server serves current docs and accepts authorized static-tree publication
+- Uploaded docs tree is stateful and exportable
+- Atlas is a separate static publication path; do not conflate `/docs/` with `/atlas/`
+- [Docs Server README](https://github.com/GHF-Studios/Vapor-Docs-Server/blob/25be739/README.md)

@@ -1,7 +1,6 @@
-# Lifecycle
+# Ecosystem Lifecycle
 
-> **Status:** Draft — lifecycle stages and ownership are not agreed here.
-
-Explore how ecosystem elements may be proposed, introduced, maintained, changed, or retired, and who is affected at each point. Do not duplicate product maturity stages unless ecosystem-level transitions answer a different question.
-
-Product release stages belong in the agreed maturity vocabulary; actual roadmap dates belong in Planning.
+- **Observed lifecycle pieces:** source project registration → validate/build/package → stage/review → explicit publication/depot action
+- **Separate lifecycle:** player acquisition/install/update/repair via Vapor Client service
+- **Authority:** product manifests own content metadata; Steam/Registry own different external authority boundaries
+- **Open:** ecosystem-wide lifecycle and transition vocabulary not agreed

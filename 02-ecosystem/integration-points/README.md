@@ -1,7 +1,6 @@
 # Integration Points
 
-> **Status:** Draft — distinction from the integration catalogue needs review.
-
-Use this topic for places where one system can connect to, extend, or exchange information with another, whether or not a concrete integration exists yet. State the boundary and expected interaction without claiming an implementation.
-
-The [integrations catalogue](../integrations/README.md) should record concrete connections and their status. If the two topics cannot maintain those distinct jobs, consolidate them.
+- **Known edges:** Loo-Cast ↔ Vapor content identities · Vapor ↔ Steam/Workshop · services ↔ Identity · Platform ↔ independent service processes
+- **Useful contract fields:** owner · input/output · identity · failure behavior · version/status
+- **Current risk:** design docs often describe target contracts; compare each with current code
+- **Navigation:** product-specific API detail belongs with owning product/service

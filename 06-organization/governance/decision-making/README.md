@@ -1,7 +1,5 @@
-# Decision Making
+# Decision-Making
 
-> **Status:** Draft — decision process should match the studio's scale.
-
-Describe how a decision is framed, who is consulted, who decides, how dissent is handled, and where the result is recorded. Distinguish reversible choices from decisions with legal, financial, or architectural consequences.
-
-Historical decisions belong in History; active proposals belong in Planning.
+- Decisions appear in owner direction · repository contracts · specs · manifests · commits
+- PRE-ALPHA policy: phase transitions explicit; not inferred from version alone
+- No universal studio decision forum or approval matrix located

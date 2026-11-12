@@ -1,7 +1,5 @@
-# Operational Runbooks
+# Runbooks
 
-> **Status:** Draft — runbooks should be executable, scoped, and safe to follow.
-
-Provide verified procedures for routine and emergency operations, with prerequisites, authority, expected result, rollback, and sensitive-data handling. State the environment and revision the procedure was checked against.
-
-Do not use a runbook as a substitute for a deployment design or incident record.
+- Candidate procedures: first/routine deploy · service failure · host loss · emergency access · credential rotation
+- Platform `deploy/scripts` contains executable procedures
+- Source command ≠ authorization for real execution; verify prerequisites/rollback/post-check

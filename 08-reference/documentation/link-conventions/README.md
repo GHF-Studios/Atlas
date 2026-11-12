@@ -1,5 +1,6 @@
 # Link Conventions
 
-Explains how Atlas links to local pages, repositories, source files, releases, and external references.
-
-Prefer stable, specific destinations and useful link text. Note when a link points to a moving branch, an external service, or a source that may disappear.
+- Atlas internal: relative links to folder README or owned file
+- Cross-repository facts: versioned GitHub file/commit links where possible
+- Operational state: link dated report, include observation date
+- Recheck destinations after renames; full TOC currently 565 valid links

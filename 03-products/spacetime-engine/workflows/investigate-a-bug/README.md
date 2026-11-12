@@ -1,7 +1,6 @@
 # Investigate a Bug
 
-> **Status:** Draft — workflow should follow observed behavior and preserve evidence.
-
-Record a reproducible scene, revision, configuration, and expected-versus-observed result before changing the Engine. Identify the owning subsystem and the smallest mechanism that explains the mismatch.
-
-For behavior issues, preserve scene evidence and record the runtime observation because automated test targets and doctests are disabled.
+- Reproduce in relevant scene; record exact revision/runtime evidence
+- Use diagnostics/devtools as observations, not semantic authority
+- Record configuration · view/demand · owner boundary
+- Source inspection alone does not prove behavior

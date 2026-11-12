@@ -1,7 +1,6 @@
 # Openness and Licensing
 
-> **Status:** Draft — no shared openness or licensing position is established here.
-
-Describe what may be shared with external participants, under which license or permission, and what remains closed or restricted. Separate current legal terms from future openness goals.
-
-Canonical legal and licensing guidance belongs in Organization. Link to it and keep this topic focused on the ecosystem implications for participation and reuse.
+- **Code evidence:** source repositories carry their own licenses/terms; inspect each repository
+- **Content rule:** an open source repository does not establish license of every authored asset
+- **Current Registry scope:** identity/Steam metadata/permissions, not complete content licensing catalog
+- **Open:** reuse and contribution terms across projects; canonical policy belongs in Organization

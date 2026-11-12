@@ -1,7 +1,6 @@
 # Knowledge Ownership
 
-> **Status:** Draft — stewardship model is not fully established.
-
-Explain how Atlas identifies responsibility for maintaining a topic and what happens when a steward changes or becomes unavailable. Ownership means stewardship of the document, not exclusive authority over the underlying idea.
-
-Organizational roles and decision rights belong in Organization; link to them when a topic needs a named owner.
+- Atlas: cross-project synthesis and navigation
+- Code/config/service contracts: owning source repositories
+- Decisions and current operational facts: dated authoritative records, linked rather than copied where possible
+- Ownership map remains a proposal

@@ -1,7 +1,7 @@
 # Acquisition and Distribution
 
-> **Status:** Draft — describes a topic area, not a current distribution channel.
-
-Record how people discover, obtain, install, and receive updates for the studio's products. Separate intended access from channels that are actually available, and date any current-state claims.
-
-This topic is about the ecosystem path from product to user. Build and release practices belong in Engineering; deployment and service operations belong in Operations.
+- **Delivery path:** Loo-Cast Packagepack via Steam depot; Nov 10 preview/package work present
+- **Publication status:** actual Steam upload/availability not verified
+- **Community content:** separate Steam Workshop acquisition/publication flows
+- **Vapor role:** local service owns acquisition/install lifecycle; Steam remains provider
+- **Sources:** [Loo-Cast delivery contract](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/README.md) · [Client README](https://github.com/GHF-Studios/Vapor-Client/blob/2c7e534/README.md)

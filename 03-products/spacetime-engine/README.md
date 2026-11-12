@@ -1,7 +1,8 @@
 # Spacetime Engine
 
-> **Status:** Draft — current description grounded in `spacetime-engine/README.md` in the Loo-Cast workspace.
-
-Spacetime Engine is a reusable Rust simulation/runtime engine used by Loo Cast. It is maintained as long-lived engine software rather than as a collection of prototypes, and currently uses Rust 2024 with Bevy ECS.
-
-The existing codebase contains real spatial, voxel, physics, configuration, tooling, and simulation systems, but it is not the complete general-purpose universe engine imagined by its broader vision. The Engine is a sibling content artifact in the Loo-Cast workspace; it is not a separate source repository there.
+- Rust 2024 + Bevy ECS simulation/runtime used by Loo Cast
+- Source: `Loo-Cast/spacetime-engine`; not a standalone repository
+- Modules: USF/spatial · voxel · physics · thermal · portal · geometry · ECS · worldgen · diagnostics/devtools
+- Fixture: explicit Sun/Earth/Moon; no generated galaxy/ecology/atmosphere claim
+- Cargo tests/doctests disabled; behavior changes require scene inspection
+- [Engine README](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/spacetime-engine/README.md) · [module map](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/spacetime-engine/src/lib.rs)

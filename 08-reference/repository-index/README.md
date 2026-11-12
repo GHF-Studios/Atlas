@@ -1,5 +1,6 @@
 # Repository Index
 
-An index of source repositories and their roles in the portfolio, linking to repository-owned documentation.
-
-Record known ownership and status carefully. A repository's presence does not establish that it is active, maintained, released, or authoritative for every related topic.
+- Current sibling roots: Atlas · Loo-Cast · Vapor-Client · Vapor-Platform-Server · Vapor-Registry
+- Vapor Client contains submodule/workspace repositories; Platform contains service repositories
+- Presence does not prove maintenance/release status
+- [Repository map](../../00-start-here/repository-map/README.md)

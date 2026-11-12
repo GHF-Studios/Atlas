@@ -1,7 +1,6 @@
 # Contributors
 
-> **Status:** Draft — no external contributor program is established here.
-
-Describe people who may contribute to more than one part of the ecosystem and the kinds of contribution they could make. Separate external participation from studio employment, ownership, or maintainer authority.
-
-Use [Community Participation](../../community/participation/README.md) for contribution pathways and Organization for internal roles.
+- **Observed contribution surface:** Git-hosted repositories; project-specific code/docs
+- **Unverified:** public contribution policy, review SLA, contributor onboarding
+- **Separate:** external contributors vs studio employees/owners/maintainers
+- **Open:** rights, attribution, accepted contribution types

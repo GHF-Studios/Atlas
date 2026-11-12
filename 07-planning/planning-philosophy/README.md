@@ -1,7 +1,5 @@
-# Principles
+# Planning Philosophy
 
-> **Status:** Draft — planning beliefs, not a project-management framework.
-
-Describe how GHF Studios wants to handle uncertainty, prioritization, commitment, and learning through plans. Explain what each principle changes in practice and what trade-off it accepts.
-
-Do not create heavyweight process that the current scale and work do not justify.
+- Owner policy: meaningful progress per time/AI usage; avoid process overhead without benefit
+- Explicit phase transitions; do not infer from version number alone
+- Validate the next useful vertical slice; keep proposed scope separate from done work

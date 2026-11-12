@@ -1,7 +1,6 @@
 # Full Uninstall
 
-> **Status:** Draft — exact removal behavior is safety-critical and must follow the installer contract.
-
-Document the explicit inventory and confirmation required for full Vapor erasure, the external helper that waits for the running installer to exit, and the state that is intentionally preserved.
-
-The Installer README says Steam game files and user-managed Rust/Cargo installations outside Vapor Home are preserved. Do not weaken or generalize this contract without source evidence.
+- `erase inventory`: enumerate exact Vapor-owned paths before deletion
+- `erase all`: requires explicit confirmation; helper waits for process exit before removing Vapor Home
+- Ordinary uninstall removes registration/integration while preserving Vapor Home and authored source
+- Verify current command contract before operational use

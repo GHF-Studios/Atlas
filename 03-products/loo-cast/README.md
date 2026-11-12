@@ -1,7 +1,7 @@
 # Loo Cast
 
-> **Status:** Draft — product boundary is grounded in the Loo-Cast workspace README.
-
-Loo Cast is a composed interactive product whose first-party content workspace currently contains three sibling artifacts: Spacetime Engine, Loo Cast Game, and Loo Cast Packagepack. The Packagepack composes the engine and game into the runnable product; the game artifact alone is not the top-level product.
-
-The workspace README describes these content projects as placeholders today. Prototype terminal-game code and small proof-of-concept examples live in `Vapor-Examples`, outside the first-party content workspace. This branch records the intended product and experience; source files and current behavior remain with their owning repositories.
+- **Product intent:** expansive systemic space/simulation game; current vision remains partly historical/owner-authored
+- **Current workspace:** Engine + Game + Packagepack sibling content projects
+- **Current code boundary:** Game crate is a thin plugin adapter; much playable/test composition currently lives under Engine `game`
+- **Current status:** repo calls all three first-party product content placeholders; no complete game claim
+- **Sources:** [Loo-Cast workspace](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/README.md) · [Engine map](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/spacetime-engine/README.md)

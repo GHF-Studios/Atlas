@@ -1,7 +1,6 @@
 # Glossary
 
-> **Status:** Draft — resolve Engine-specific meanings against source definitions.
-
-Define terminology whose meaning is specific to Spacetime Engine, such as canonical position, view frame, materialization, or demand, when those terms are established by the code. Link each definition to its authoritative module.
-
-Use a shared technical glossary for general Rust, Bevy, or physics terms.
+- **USF:** Universal Simulation Framework spatial-number algebra (`usf` module)
+- **Manifestation:** runtime representation; not necessarily semantic identity
+- **Demand:** spatial/view request influencing realization/materialization
+- **Celestial Fixture:** explicit Sun/Earth/Moon content sample

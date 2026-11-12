@@ -1,7 +1,5 @@
 # Accountable Authorship
 
-> **Status:** Draft — technical authorship practice, not an organization policy.
-
-Explain how an engineer remains accountable for a change when tools assist with drafting, code, or analysis. The engineer should understand the resulting behavior, own the decision to keep it, and be able to explain the evidence.
-
-Studio-wide attribution rules and legal questions belong in Organization; keep technical review expectations here.
+- Atlas content: human authorship or substantial human review required by owner direction
+- Code/commit authorship labels may not reflect actual AI assistance (historical repo commit notes)
+- Record reviewer/validation when material risk warrants; no universal attribution format agreed

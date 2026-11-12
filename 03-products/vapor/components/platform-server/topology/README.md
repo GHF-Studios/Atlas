@@ -1,7 +1,6 @@
-# Topology
+# Service Topology
 
-> **Status:** Draft — the current Registry topology catalog is not the target content catalog.
-
-Describe how repositories, source relationships, services, and deployment topology are currently represented and exposed. Identify which service owns each record and how visibility is controlled.
-
-Do not label source topology as a typed content catalog or infer a product release from a repository entry.
+- Production snapshot 2026-11-09: Platform + seven service units behind Caddy on primary VPS
+- Nov 10 source adds host-first/fleet operations and remote node telemetry; source capability ≠ deployed topology
+- Monolith remains documented alternate mode
+- Each service owns routes/state; Platform coordinates deployment/recovery

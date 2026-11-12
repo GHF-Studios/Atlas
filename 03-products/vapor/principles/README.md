@@ -1,7 +1,6 @@
 # Principles
 
-> **Status:** Draft — proposed product principles; accepted invariants belong in their contracts.
-
-Record rules of thumb that guide Vapor product decisions, such as keeping authority server-owned, preserving local build fallback, and making content provenance inspectable. Each principle should help choose among concrete alternatives.
-
-Do not duplicate operational runbooks or security standards.
+- One typed content vocabulary; frontends do not redefine domain policy
+- Explicit, inspectable lifecycle operations; no silent subscription→composition mutation
+- Human confirmation at privileged publishing/operations boundaries
+- Treat source, artifact, cache, and installed state as distinct

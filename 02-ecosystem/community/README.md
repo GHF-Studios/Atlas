@@ -1,7 +1,6 @@
-# Community and Creators
+# Community
 
-> **Status:** Draft — community scope and current participation are unverified.
-
-Describe the external people and groups who may create, share, use, or discuss work across the studio's ecosystem. Distinguish an intended community from an active one and support claims about participation with evidence.
-
-Internal team structure belongs in Organization. Product-specific community design belongs with the relevant product; this topic should retain only cross-product or shared community concerns.
+- **Potential participants:** players · creators · developers · contributors
+- **Current evidence:** Steam Workshop is an acquisition/publication integration in Vapor; no cross-studio community space or moderation program verified
+- **Ownership:** internal roles/governance → Organization; product community design → product page
+- **Open:** channels · participation paths · moderation/accountability · creator compensation

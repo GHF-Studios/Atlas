@@ -1,7 +1,5 @@
 # Developer Experience
 
-> **Status:** Draft — source workflow and build distribution have important gaps.
-
-Describe how a developer installs Vapor, opens a source workspace, validates and builds it, and uses shared tools. Vapor Client owns the standalone development environment; Platform's native-build lifecycle and worker-produced snapshots are not implemented.
-
-Keep local source builds available as the fallback and distinguish them from official signed snapshots.
+- Clean-room Developer toolchain reported ready 2026-11-11; managed tools under Vapor Home
+- Alpha v0.5 Developer quest/demo path implemented; Windows build and deployed CLI status observed
+- Linux-native build and owner-visible Launcher walkthrough remain pending; no tests run in workstream

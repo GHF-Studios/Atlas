@@ -1,7 +1,6 @@
 # Scope
 
-> **Status:** Draft — platform boundary grounded in the Vapor Client and Platform Server source descriptions.
-
-Vapor provides shared runtime and developer/player tools for generic Engines, Games, Mods, packs, authoring, validation, launching, and distribution, plus platform services for identity, operations, registry, and artifacts. User-facing apps live in separate repositories over the shared Client service.
-
-The Loo Cast game content, Steam's provider authority, and source repositories remain distinct from Vapor itself.
+- Local runtime/core · CLI/GUI/Studio/Installer · Steam locator
+- Typed content source/build/compose/acquire/install/launch workflows
+- Remote platform services are adjacent, separately deployed systems
+- Loo-Cast owns its game/Steam app payload

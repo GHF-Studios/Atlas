@@ -1,7 +1,6 @@
 # Operators
 
-> **Status:** Draft — operator roles and service responsibilities are unverified.
-
-Describe people responsible for running ecosystem services or deployments and what information they need to operate them. Distinguish studio operators from external hosting or service providers.
-
-Actual service ownership and runbooks belong in Operations; link to those records when identified.
+- **Observed responsibility:** owner-operated Platform Server deployment/recovery workflows
+- **Authority boundary:** human-approved operations API; root authorization for sensitive actions
+- **Service status:** deployment report dated 2026-11-09; not a live check
+- **Source:** [Platform Server docs](https://github.com/GHF-Studios/Vapor-Platform-Server/tree/65ade3c/docs)

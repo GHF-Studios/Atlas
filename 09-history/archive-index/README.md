@@ -1,5 +1,5 @@
 # Archive Index
 
-Navigation to preserved historical materials, including previous Atlas versions, old proposals, legacy repositories, and evidence registers.
-
-Archived material is evidence of what was recorded at a time, not automatically current guidance. Preserve provenance and avoid rewriting originals in place.
+- Atlas audit snapshot preserved in Git history at `874a24a` before live-tree reset
+- Includes origin/intent reconstruction · evidence atlas · semantic crosswalks · commit inventory · research timeline
+- Historical material is source, not current doctrine

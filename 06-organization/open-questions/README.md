@@ -1,7 +1,6 @@
 # Open Questions
 
-> **Status:** Draft — unresolved organizational questions.
-
-Collect questions about roles, governance, collaboration, accountability, and legal responsibility that affect the organization as a whole. Link to evidence, affected documents, and the person or role that can resolve each question.
-
-Keep product design questions with products and dated initiatives in Planning.
+- Who currently holds organizational/product/legal responsibilities?
+- Which owner-provided policies are adopted, scoped, or superseded?
+- What public licenses/asset rights apply across repos and legacy material?
+- What privacy/accessibility/legal notices are current?

@@ -1,5 +1,6 @@
 # Origins and Recollections
 
-First-person recollections about the origins of the studio and its projects, preserved with speaker and date where possible.
-
-Recollections are valuable evidence of memory and intent, but may not establish exact chronology or independently verified events. Keep attribution and uncertainty visible.
+- Owner recollection: Loo-Cast began around 2021, before Git
+- Later unversioned note described multiple intertwined aims: social critique · teaching/science · flexible game/tool
+- Creation date/history of that note unknown; not evidence of exact 2021 premise
+- [Evidence-limited reconstruction](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-origin-and-intent.md)

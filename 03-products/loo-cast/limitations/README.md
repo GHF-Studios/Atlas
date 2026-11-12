@@ -1,7 +1,6 @@
 # Limitations
 
-> **Status:** Draft — limitations should be dated and tied to evidence.
-
-Record constraints in the current Loo Cast product that affect what can be built, packaged, or experienced. Separate the content workspace's present placeholder state from Engine limitations and untested assumptions.
-
-Do not treat every unimplemented vision item as a defect; explain the consequence and relevant scope.
+- Loo-Cast Engine/Game/Packagepack labeled content placeholders in workspace README
+- Game crate is currently a thin plugin installer over Engine game adapters
+- Engine test/doctest targets disabled; scene behavior requires visual runtime observation
+- No build/runtime validation performed in this research pass

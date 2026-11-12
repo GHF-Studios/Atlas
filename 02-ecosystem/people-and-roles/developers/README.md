@@ -1,7 +1,6 @@
 # Developers
 
-> **Status:** Draft — audience boundaries are not validated here.
-
-Describe developers who build, extend, integrate with, or maintain parts of the ecosystem. Clarify whether each reference concerns studio engineers, external developers, or both.
-
-Internal engineering practice belongs in Engineering. Product-specific APIs and workflows belong with their product and source repository.
+- **Observed:** Rust/Cargo development across Vapor Client and Spacetime Engine
+- **Vapor target role:** owns source and builds content with managed toolchain
+- **Boundary:** internal engineering methods → Engineering; public APIs/commands → product repos
+- **Support status:** target platforms and workflows require per-repo verification

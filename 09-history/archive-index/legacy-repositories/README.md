@@ -1,5 +1,5 @@
 # Legacy Repositories
 
-An index of historical repositories and archived codebases that help explain earlier project states.
-
-Record repository identity and archival status from evidence. A legacy label does not establish that every branch or artifact is complete or preserved.
+- Loo-Cast-Legacy contains first verified Unity-era history; not checked out in current local workspace
+- Selected public GitHub trees/diffs were reviewed in prior Atlas audit
+- No full legacy file/asset provenance audit

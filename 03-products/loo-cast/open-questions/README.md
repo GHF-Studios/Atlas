@@ -1,7 +1,6 @@
 # Open Questions
 
-> **Status:** Draft — unresolved Loo Cast product questions.
-
-Collect open questions about the composed experience, content, player needs, and the relationship among Engine, Game, and Packagepack. Link to evidence and identify what decision or experiment would resolve each question.
-
-Do not duplicate Engine research questions or portfolio-level decisions.
+- Which Engine game adapters should move into the Loo-Cast Game crate?
+- What is the smallest currently runnable and repeatable player slice?
+- Which old Unity/Mk concepts remain intended?
+- Which world content is authored vs generated, and what is actually implemented?

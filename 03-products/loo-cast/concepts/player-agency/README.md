@@ -1,7 +1,5 @@
 # Player Agency
 
-> **Status:** Draft — no agency model is settled here.
-
-Explore which choices players should be able to make, what consequences they can understand, and where the product intentionally constrains action. Distinguish meaningful choice from the mere presence of options.
-
-Record actual input and simulation behavior with the source implementation.
+- Candidate concern: meaningful choices across exploration, tools, and persistent consequences
+- Current gameplay completeness and player control model unverified
+- No player research or accepted agency principles located

@@ -1,7 +1,5 @@
 # Restore Procedures
 
-> **Status:** Draft — procedures must follow service-owned import contracts.
-
-Document how to validate an archive, prepare a clean target, restore service state, rebuild derived output, and verify behavior. State what the procedure may overwrite and who can authorize it.
-
-Keep service-specific import steps with their source contract and compose them only in the Platform whole-system recovery procedure.
+- State-only and fresh-host recovery scripts exist in Platform repo
+- Dependencies: provider/root access · source pins · DNS/TLS · external auth readiness
+- Do not expose admin routes before origin/HTTPS/login checks

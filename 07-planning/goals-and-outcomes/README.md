@@ -1,7 +1,6 @@
 # Goals and Outcomes
 
-> **Status:** Draft — planning outcomes should have an owner and time horizon.
-
-Describe what planned work is intended to change, who benefits, and how progress or completion will be recognized. Keep outcomes distinct from tasks and enduring studio success criteria.
-
-Foundations owns enduring direction; Organization owns internal organizational goals; Planning owns time-bound work outcomes.
+- PRE-ALPHA foundation: clean reinstall/recovery on supported Windows/Linux
+- Alpha v0.5: integrated guided Player/Developer journeys across Vapor · Spacetime Engine · Loo Cast
+- First quest slice: install/launch Packagepack; Developer readiness + Wheel Salvage Demo
+- Windows evidence exists; Linux-native build/GUI review pending in Nov 11 workstream

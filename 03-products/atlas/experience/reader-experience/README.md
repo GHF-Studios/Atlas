@@ -1,7 +1,5 @@
 # Reader Experience
 
-> **Status:** Draft — intended outcomes, not validated user research.
-
-Describe how a reader should understand a page's purpose, status, evidence, and relationship to nearby topics without mistaking an empty placeholder for a settled fact.
-
-Record observed comprehension problems separately from assumptions about what readers need.
+- Navigation options: full tree · top-level view · one-level-deeper view · internal links
+- User preference: blue hyperlink appearance, readable titles, low visual noise
+- No rendered-site usability testing recorded

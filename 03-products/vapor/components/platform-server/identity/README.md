@@ -1,7 +1,6 @@
 # Identity
 
-> **Status:** Draft — service boundary grounded in accepted identity contracts.
-
-Identity owns account linkage, roles, authentication/session state, and access decisions. The accepted model anchors Vapor profiles to Steam and allows GitHub attachment for development/root authorization; Steam browser identity, Steamworks verification, Vapor roles, and publishing authority remain distinct.
-
-Other services should use Identity-issued authorization rather than inventing incompatible auth policy. Verify current routes and implementation before describing a production flow.
+- Steam-anchored player profile; optional linked GitHub identity
+- Roles/session/JWT authority for protected operations; SQLite state in initial VPS implementation
+- Root/developer privileges distinct from Steamworks publishing authority
+- [Identity policy](https://github.com/GHF-Studios/Vapor-Platform-Server/blob/65ade3c/docs/steam-authority-model.md)

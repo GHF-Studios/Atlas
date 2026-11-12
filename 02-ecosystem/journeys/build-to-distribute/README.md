@@ -1,7 +1,6 @@
-# Build-to-Distribution
+# Build to Distribute
 
-> **Status:** Draft — proposed journey; no end-to-end path is verified.
-
-Trace how a change or product build could become an artifact that reaches its intended audience. Mark boundaries between engineering, release, distribution, and operations, and identify evidence for any active step.
-
-Use this only for the cross-system journey; detailed build and deployment procedures belong in Engineering and Operations.
+- **Observed:** source `content package` builds Packagepack; root publish dry-run previews allowlisted Steam depots
+- **Release:** actual Steam upload is a distinct explicit action
+- **Constraint:** player depot contains executable/manifest/allowlisted sidecars, not development source or Vapor runtime
+- **Source:** [Loo-Cast delivery README](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/README.md)

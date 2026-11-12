@@ -1,5 +1,5 @@
 # External Resources
 
-An annotated directory of external specifications, documentation, services, and other sources that Atlas relies on.
-
-For each resource, identify its publisher and relevance. Distinguish primary sources from commentary, and record access or version limitations when they matter.
+- GitHub repositories/commit history · Steam/Steamworks · Rust/Cargo ecosystem are major external authorities
+- Provider docs/policies may change; cite direct source/version when claims depend on them
+- No curated external resource register found

@@ -1,7 +1,5 @@
 # Interfaces and Contracts
 
-> **Status:** Draft — contracts should live with their authoritative owner.
-
-Explain how components communicate, what each interface guarantees, and which errors, versions, or state transitions are part of the contract. Link to source schemas or service-owned documentation for exact details.
-
-Avoid maintaining parallel contract copies in Atlas.
+- Typed Client command/snapshot/event/failure/revision API shared by Rust and IPC
+- Cross-service auth/deploy/docs/diagnostics contracts documented in Platform repo
+- Contract presence does not prove all callers/targets are wired

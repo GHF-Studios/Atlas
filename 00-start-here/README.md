@@ -12,7 +12,7 @@ It is **not** the complete table of contents. That lives in the repository root:
 2. Open the [Table of Contents](../TABLE_OF_CONTENTS.md) to see **what Atlas covers**.
 3. Visit a section's `README.md` to understand **what belongs there and what is actually established**.
 
-You do not need to read or complete everything. Most files are intentionally placeholders: they name questions worth eventually answering, **not** policies already agreed upon.
+You do not need to read or complete everything. Most topic pages now contain short draft bullet notes for human review; treat them as research leads and tentative summaries, **not** approved policy or finished guidance. Some folders still hold structural placeholders.
 
 ## Guides in this folder
 

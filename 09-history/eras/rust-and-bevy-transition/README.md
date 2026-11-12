@@ -1,5 +1,6 @@
 # Rust and Bevy Transition
 
-Documents the transition of relevant software work toward Rust and Bevy, with dates and repository evidence where available.
-
-Do not assume a single clean migration or that all products share the same transition history. Link to commits, archives, and project-specific accounts.
+- Unity Legacy → Rust prototype/rewrite line; later Spacetime Engine uses Rust 2024 + Bevy ECS
+- 2024–early 2025 Mk prototypes include resets, not one linear release lineage
+- Current Engine source is nested under Loo-Cast repo; Engine/Game/Packagepack Vapor manifests added in 2026
+- [History caveats](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-origin-and-intent.md)

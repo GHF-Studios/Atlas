@@ -1,7 +1,5 @@
 # Licensing
 
-> **Status:** Draft — do not infer a license where none is stated.
-
-Record the license applied to each product or repository, its source, version, and relevant dependencies or assets. Distinguish source-code licensing, content licensing, trademarks, and provider terms.
-
-Use authoritative license files and legal review for unresolved or consequential questions.
+- No root LICENSE/COPYING file found in Atlas, Loo-Cast, Vapor Client, Platform Server, or Registry roots
+- Cargo dependencies and historical assets may have their own licenses
+- Do not infer public reuse rights; inventory per-repo/package/asset terms

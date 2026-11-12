@@ -1,7 +1,5 @@
 # Scales
 
-> **Status:** Draft — the role of scale in the product needs design and implementation evidence.
-
-Describe how changes in spatial, temporal, or organizational scale may affect play and interpretation. Distinguish a design concept from the Engine's coordinate and scale systems.
-
-Use Spacetime Engine documentation for actual scale representation and behavior.
+- Core technical theme: semantic positions across very different magnitudes
+- Current Engine includes USF scale/position types and bounded local runtime coordinates
+- Historical world-generation scale atlases are not the current scale contract

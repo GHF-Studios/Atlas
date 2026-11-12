@@ -1,7 +1,5 @@
 # Policy Lifecycle
 
-> **Status:** Draft — no formal policy lifecycle is adopted here.
-
-Describe how a policy is proposed, reviewed, approved, communicated, changed, and retired. Keep policy status distinct from technical implementation status.
-
-Use a proportionate process; do not assume a policy document is binding merely because it exists in Atlas.
+- Owner-provided PRE-ALPHA development policy exists; Atlas guides remain drafts
+- No general policy adoption/revision/retirement process located
+- Do not promote drafts through file placement alone

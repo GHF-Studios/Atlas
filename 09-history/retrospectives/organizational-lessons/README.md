@@ -1,5 +1,5 @@
 # Organizational Lessons
 
-Lessons drawn from collaboration, governance, and organizational experience.
-
-Protect personal privacy and describe situations fairly. Distinguish documented events from individual interpretations and current agreements.
+- Owner direction and AI collaboration are visible in current repository notes/commits
+- Commit labels alone may misrepresent AI contribution (2026 owner correction)
+- No independently sourced org-wide retrospective or staff history located

@@ -1,7 +1,9 @@
 # Current State
 
-> **Status:** Draft — source docs checked 2026-11-12; latest Platform deployment snapshot is dated 2026-11-09.
-
-Vapor has a substantial Rust client and separate terminal, graphical, installer, Studio, and Steam-entrypoint applications. The standalone installation and state migration is still in progress. Platform Server documentation records an independent-service deployment slice; Registry currently stores source topology rather than typed content, and Build Cache supports signed snapshot validation/promotion without worker-backed production or a durable native-build operation lifecycle.
-
-The latest deployment status document records `0/2` target snapshots and no configured worker. This is a dated source snapshot, not a live health check; verify the deployment-status record before updating it. Studio already documents local project discovery, manifest editing, composition preview, and review flows, but these do not establish the missing server-owned catalog or complete acquisition path.
+- Clean-room Vapor Home reinstall + Player/Developer setup verified on Windows 2026-11-11
+- Alpha v0.5 quest catalog/progress and first Player/Developer journeys implemented; Windows builds + deployed CLI status observed
+- No tests or Linux-native build in the workstream checkpoint; owner GUI walkthrough pending
+- Windows self-deploy handoff fix pinned Nov 11; post-fix outcome not recorded
+- Steam-root legacy/runtime/content directories still not migrated/removed
+- Platform live report is 2026-11-09; newer Nov 10 fleet operations exist in source only
+- [Journey workstream](https://github.com/GHF-Studios/Vapor-Client/blob/2c7e534/.agents/workstreams/open/alpha-v05-quest-journeys.md) · [Platform deployment status](https://github.com/GHF-Studios/Vapor-Platform-Server/blob/65ade3c/docs/deployment-status.md)

@@ -1,7 +1,6 @@
 # Identity
 
-> **Status:** Draft — descriptive questions; not an approved identity statement.
-
-Describe what GHF Studios is, what kind of work it brings together, and what makes the studio distinct. Support factual descriptions with current evidence and label aspirations as aspirations.
-
-Do not use identity as a substitute for [purpose](../purpose/README.md), [mission](../mission/README.md), or [vision](../vision/README.md); keep each only if it answers a different question.
+- Atlas self-description: knowledge base spanning GHF Studios, Vapor, Spacetime Engine, Loo Cast, broader ambitions ([root](../../README.md))
+- Observed portfolio: game/content · engine/runtime · client tooling · platform server · registry
+- Unsettled: legal form · active people · durable differentiator
+- Repository activity ≠ formal studio structure

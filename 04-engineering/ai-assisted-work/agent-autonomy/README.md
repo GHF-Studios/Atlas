@@ -1,7 +1,6 @@
 # Agent Autonomy
 
-> **Status:** Draft — no shared autonomy policy is established here.
-
-Describe how engineering tasks bound tool or agent authority: repository, files, permitted actions, checkpoints, and stop conditions. Distinguish read-only investigation from writing, restructuring, publishing, or deployment.
-
-Use this for technical task design. Organizational approvals and accountability belong in Organization.
+- User direction: bounded, visible work; no indiscriminate autonomous rewrite
+- Current Atlas pass explicitly authorized broad bullet drafting while user is away
+- Structural moves/removals should expose scope/trade-off; preserve user edits
+- No general studio agent-permission policy adopted

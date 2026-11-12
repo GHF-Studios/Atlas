@@ -1,7 +1,5 @@
 # Candidate Ideas
 
-> **Status:** Draft — uncommitted possibilities.
-
-Record ideas that may merit investigation or planning, with the need, assumptions, possible benefit, and evidence required. Do not treat inclusion as prioritization or an assignment.
-
-Promote an idea to an initiative only when its outcome, scope, and ownership are clear.
+- Unvetted ideas awaiting evidence, owner choice, or scope
+- Record source · affected user · assumptions · next decision
+- Do not imply implementation approval

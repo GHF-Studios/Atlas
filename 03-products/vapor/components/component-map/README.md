@@ -1,7 +1,6 @@
 # Component Map
 
-> **Status:** Draft — authoritative repository and service map needs consolidation.
-
-Show the relationships among Vapor Client, CLI, GUI, Studio, Installer, Steam Entrypoint, Platform Server, Registry, and independent services. Identify whether each is a repository, executable, service, or content artifact.
-
-Use Reference's repository index for names and source locations; this map explains responsibility and composition.
+- Runtime/core: `Vapor/`
+- Product UIs: Vapor-CLI · Vapor-GUI · Vapor-Studio · Vapor-Installer · Steam-Entrypoint
+- Remote platform: Homepage · Docs · Identity · Diagnostics · Registry · Artifact · Build Cache · Platform operations
+- [Client repo map](https://github.com/GHF-Studios/Vapor-Client/blob/2c7e534/README.md) · [Platform map](https://github.com/GHF-Studios/Vapor-Platform-Server/blob/65ade3c/README.md)

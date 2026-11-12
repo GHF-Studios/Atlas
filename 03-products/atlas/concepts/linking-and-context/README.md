@@ -1,7 +1,6 @@
 # Linking and Context
 
-> **Status:** Draft — product concept; link conventions live in Reference.
-
-Describe how a link should help readers move between related topics without losing context. Prefer links that explain the relationship and keep the linked page's scope clear.
-
-Use the shared link-conventions reference for exact syntax. This topic concerns the reader's mental model, not a duplicate style manual.
+- TOC links folders to README destinations; inline titles provide the short tree description
+- Cross-repo evidence can go stale; prefer versioned commit/file links for historical claims
+- Local folder hierarchy should carry context instead of repeated title prefixes
+- Check links after moves/renames

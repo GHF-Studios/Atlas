@@ -1,7 +1,6 @@
-# System Integrations
+# Integrations
 
-> **Status:** Draft — the listed folders do not establish that integrations exist.
-
-Catalogue concrete connections among products, services, and external systems. For each, record the systems involved, purpose, current status, owner, and supporting source when known.
-
-Keep abstract extension seams in [Integration Points](../integration-points/README.md), and cross-system compatibility constraints in [Interoperability](../interoperability/README.md). Merge these topics if those distinctions do not hold.
+- **Current external systems:** Steam/Steamworks · GitHub Actions/repositories · Rust/Cargo toolchain
+- **Internal integration:** Client submodules · Platform independent services · Registry manifest
+- **Status varies:** configuration/code presence does not prove external credentials, publication, or live service
+- **Open:** maintain one sourced integration inventory or remove duplicate views

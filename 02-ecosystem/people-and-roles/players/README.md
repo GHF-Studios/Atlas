@@ -1,7 +1,6 @@
 # Players
 
-> **Status:** Draft — audience assumptions are not validated here.
-
-Describe people who play or experience the studio's interactive products, including needs and contexts that may matter across products. Ground claims in research or mark them as hypotheses.
-
-Keep product-specific player experience and accessibility decisions with each product. Do not assume every ecosystem participant is a player.
+- **Loo-Cast product target:** play a composed Packagepack through Steam/Vapor handoff
+- **Current evidence:** Steam locator routes into separately installed Vapor Home
+- **Not established:** complete game, user research, broad release availability
+- **Source:** [Loo-Cast workspace](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/README.md)

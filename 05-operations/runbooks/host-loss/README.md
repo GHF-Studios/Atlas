@@ -1,7 +1,6 @@
 # Host Loss
 
-> **Status:** Draft — recovery depends on state exports and provider access.
-
-Describe how to declare a host unavailable, preserve available evidence, provision a replacement, rebuild source-derived services, restore mutable state, and verify dependencies.
-
-Distinguish a completed restore drill from a plan. Record provider reauthorization gaps explicitly.
+- Restore provider account/root access; provision clean supported Ubuntu host
+- Restore validated state-only bundle + pinned source/config
+- Restore DNS/TLS/auth callbacks before public activation
+- Clean-host drill still open (2026-11-09 report)

@@ -1,5 +1,6 @@
 # Configuration Index
 
-An index of significant configuration surfaces and the software or deployment contexts that consume them.
-
-Do not copy secret values. Link to authoritative schemas and explain precedence only when verified against current implementation or documentation.
+- Engine: compiled defaults → `assets/config/engine.ron` → typed runtime overrides
+- Client: Vapor Home · workspace/runtime manifests · managed toolchain configuration
+- Platform: service-specific environment variables, loopback bindings, protected tokens
+- Never copy secret values into Atlas

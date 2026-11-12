@@ -1,5 +1,5 @@
 # Eras
 
-An interpretive map of broad periods in the studio's history, linked to dated evidence and relevant projects.
-
-Era boundaries are useful summaries, not necessarily formal transitions. Explain the basis for dates and preserve uncertainty where sources disagree.
+- Pre-Git origins (remembered) → Unity/Loo-Cast Legacy → Rust/Mk experiments → Vapor design/ecosystem → current multi-repo work
+- Boundaries interpretive; not official phase changes
+- [Timeline/intent evidence](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-history-timeline.md)

@@ -1,7 +1,5 @@
 # Targets and Platforms
 
-> **Status:** Draft — list supported targets only from current build evidence.
-
-Record target triples, platform assumptions, required toolchains, and differences that affect build or runtime behavior. Separate configured targets from tested and officially supported targets.
-
-Link to repository manifests and recent build evidence; do not infer support from a dependency's capabilities.
+- Loo-Cast README lists Linux GNU + Windows GNU targets for Packagepack depots
+- Vapor content can use workspace runtime target matrix; public Workshop requires declared Linux/Windows matrix
+- Current Build Cache supports Linux/Windows identifiers but dated probe showed snapshots unavailable

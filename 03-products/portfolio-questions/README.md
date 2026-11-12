@@ -1,7 +1,5 @@
 # Portfolio Questions
 
-> **Status:** Draft — open questions about the studio portfolio.
-
-Collect questions about which products and projects belong in this section, how they relate, and where shared investment or ownership is unclear. Link questions to the affected product or portfolio topic.
-
-Keep product-specific unknowns in that product's own questions page and time-bound proposals in Planning.
+- Is Spacetime Engine a product, reusable subsystem, or both? Current source nests it inside Loo-Cast
+- Which projects merit separate portfolio pages vs component/index entries?
+- Who owns cross-product lifecycle and public availability claims?

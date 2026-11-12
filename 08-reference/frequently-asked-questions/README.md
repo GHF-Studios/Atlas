@@ -1,5 +1,5 @@
 # Frequently Asked Questions
 
-Short answers to recurring questions about the studio and its projects, with links to fuller explanations.
-
-Keep answers factual and current. Move durable explanations to their owning pages instead of allowing this list to become a parallel source of truth.
+- No recurring FAQ corpus located
+- Candidate questions: what is Vapor Home? · how does Packagepack relate to Steam? · where is current Registry catalog?
+- Link answers to owner pages; do not create parallel definitions

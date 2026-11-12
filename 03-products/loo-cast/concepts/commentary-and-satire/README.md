@@ -1,7 +1,5 @@
 # Commentary and Satire
 
-> **Status:** Draft — no satirical target or stance is established here.
-
-Explore whether and how Loo Cast may use satire or commentary, what it is aimed at, and how humor affects the player's understanding of the world. Avoid treating a reference or joke as the product's complete position.
-
-Keep specific story or world material with the relevant content topic.
+- Historical owner-intent lead: societal commentary and social parody
+- No current narrative specification or validated interpretation located
+- Keep character/world claims sourced to authored content

@@ -1,7 +1,6 @@
 # Narrative Worldbuilding
 
-> **Status:** Draft — authored context and narrative canon remain to be established.
-
-Develop the history, relationships, and causal context that give the world meaning. Label confirmed canon, proposed material, and open questions distinctly, and record who made a canon decision.
-
-Do not duplicate high-level narrative themes from Art and Direction; put concrete world facts here.
+- Historical owner-intent lead: social commentary/parody · science/teaching universe
+- Current workspace has no verified complete narrative canon or character/faction corpus
+- Label confirmed authored canon vs proposed material vs recollection
+- [Origin/intent evidence](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-origin-and-intent.md)

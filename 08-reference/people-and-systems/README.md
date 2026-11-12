@@ -1,5 +1,5 @@
 # People and Systems
 
-Navigation for directories of people, services, and tools relevant to studio work.
-
-Keep personal information minimal and appropriate. Operational ownership belongs in Operations; this section helps identify entities and points to their authoritative records.
+- Navigation to people/organization · service · tool directories
+- People/roles: Organization/Ecosystem; operational service owners: Operations
+- Risk: duplicate indexes; retain only if cross-domain lookup adds value

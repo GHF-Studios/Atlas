@@ -1,7 +1,6 @@
 # State and Lifecycle
 
-> **Status:** Draft — distinguish user-owned local state from service-owned state.
-
-Describe the lifecycle of installation, app-root state, developer workspaces, content, compositions, signed releases, build snapshots, and service state. Each has a different owner and recovery path.
-
-The standalone Vapor installation and state move out of the Loo Cast Steam directory is still in progress; record observed behavior and source date before claiming the migration is complete.
+- Vapor Home owns installed runtime/tools, caches, local state, and mutable app data
+- Steam Packagepack depot owns only product manifest/executable/allowlisted sidecars
+- Client service owns compositions/install policy/persistence; provider operations act on files/Steam
+- Standalone move out of Steam directory remains in progress

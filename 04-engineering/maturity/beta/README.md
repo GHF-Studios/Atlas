@@ -1,7 +1,5 @@
 # Beta
 
-> **Status:** Draft — stage criteria need human agreement.
-
-Describe what evidence would distinguish beta from alpha, including whether intended workflows are sufficiently complete and whether feedback or reliability expectations change. State audience, platform, and known gaps.
-
-Do not let beta imply production readiness unless the criteria explicitly establish that meaning.
+- Candidate meaning: feature-complete enough for broader validation; stability/support remain open
+- Not an adopted release criterion
+- Do not infer beta from a roadmap phase title

@@ -1,7 +1,6 @@
-# Discover-to-Play
+# Discover to Play
 
-> **Status:** Draft — proposed journey; no complete user path is verified.
-
-Trace how someone might discover a product, decide whether it fits their needs, obtain it, and begin using or playing it. Record where the journey crosses services and where evidence is missing.
-
-Separate this ecosystem path from a product's in-app onboarding or gameplay flow.
+- **Target path:** discover/select Packagepack → resolve dependencies → acquire/install → verify → launch
+- **Vapor service:** owns local composition/install lifecycle; Workshop is an acquisition provider
+- **Gap:** end-to-end community catalog/release path not established
+- **Source:** [Vapor Client service contract](https://github.com/GHF-Studios/Vapor/blob/a633583/docs/vapor-client-service.md)

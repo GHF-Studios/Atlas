@@ -1,7 +1,5 @@
 # Visual Language
 
-> **Status:** Draft — no visual system is established here.
-
-Explore the shapes, color, scale, material, and visual cues that could make Loo Cast recognizable and legible. Separate visual references from chosen rules and product implementation.
-
-Keep reusable asset specifications and actual rendered behavior with their source projects.
+- Current engine includes authored geometry and runtime-generated presentation facilities
+- No reviewed Loo-Cast art style guide or final asset canon located
+- Celestial Fixture is explicit engine content, not evidence of final art direction

@@ -1,7 +1,5 @@
 # Diagnostics
 
-> **Status:** Draft — diagnostics are observability, not semantic authority.
-
-Describe how software reports errors, health, and diagnostic context to developers or operators. State what information is collected, how it is protected, and which service owns it.
-
-Keep product instrumentation in its source docs and opt-in server diagnostics in the Platform service contract.
+- Engine diagnostics/devtools expose local runtime evidence
+- Vapor Platform Diagnostics is explicit opt-in upload/storage service
+- Product runtime logs and uploaded reports have different owners/privacy boundaries

@@ -1,7 +1,5 @@
 # Cosmic Perspective
 
-> **Status:** Draft — conceptual interest, not a defined mechanic.
-
-Consider how vast scales, limited knowledge, and a perspective beyond the immediate scene could shape the player's understanding. State whether each idea concerns narrative, simulation, interface, or more than one.
-
-Implementation belongs with the Engine or Game source as appropriate.
+- Long-lived design theme: very large spatial scales and viewpoint changes
+- Current Engine has USF spatial-number algebra and bounded runtime projections
+- A working scale model ≠ complete universe or playable traversal

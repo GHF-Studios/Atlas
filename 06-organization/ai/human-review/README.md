@@ -1,7 +1,6 @@
-# Human Review within AI
+# Human Review
 
-> **Status:** Draft — review expectations require agreement and proportionality.
-
-Describe what a human must understand and verify before accepting AI-assisted work, including source claims, sensitive data, legal implications, and user-visible outcomes. State when review needs independent expertise.
-
-Do not imply heavyweight approval gates for routine low-risk work unless the organization adopts them.
+- Atlas drafts intended for human review; current bullet pass is provisional
+- User directs preservation of human authorship/review for knowledge-base content
+- Development policy rejects mandatory PR/review gates without concrete benefit
+- Human review should scale with claim risk; not a universal bureaucracy

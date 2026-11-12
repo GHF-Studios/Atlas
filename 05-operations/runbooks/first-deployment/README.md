@@ -1,7 +1,5 @@
 # First Deployment
 
-> **Status:** Draft — one-time provisioning differs from routine deployment.
-
-Describe prerequisites and steps for bringing a new service or host into operation, including identity, routing, storage, backups, health checks, and recovery. Mark actions that require root or provider authority.
-
-Verify the runbook on a disposable environment before using it on production.
+- Platform scripts cover bootstrap · hardening · Caddy/systemd · deployment · smoke checks
+- Production already deployed; first-deploy steps may be historical
+- Verify exact code/config/recovery generation before use

@@ -1,7 +1,7 @@
-# Boundaries
+# System Boundaries
 
-> **Status:** Draft — system responsibilities and interfaces are not fully mapped.
-
-Identify where one system ends and another begins, what each owns, and which interactions cross that boundary. Base claims on architecture or operational evidence and flag uncertain edges.
-
-Keep a portfolio relationship map at [Product Relationships](../product-relationships/README.md); use this topic for system scope and responsibility, not a second catalogue.
+- **Loo-Cast source:** three sibling registered content projects; no Steam app manifest in Vapor Client root
+- **Steam payload:** Packagepack manifest + per-target executable + explicitly allowlisted libraries
+- **Vapor Home:** runtime, tools, local state; not stored in game Steam directory
+- **Platform:** process/deployment coordination; service handlers/state remain service-owned
+- **Source:** [Loo-Cast](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/README.md) · [Platform](https://github.com/GHF-Studios/Vapor-Platform-Server/blob/65ade3c/README.md)

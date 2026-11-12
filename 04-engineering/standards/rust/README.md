@@ -1,7 +1,5 @@
 # Rust
 
-> **Status:** Draft — Rust-specific guidance must remain compatible with each crate's toolchain.
-
-Record shared Rust practices for ownership, error types, public APIs, async boundaries, unsafe code, and dependency management where they apply across repositories. Link to local lint and formatting configuration.
-
-Keep crate-specific decisions and version requirements with their manifests.
+- Rust 2024 used by Spacetime Engine/current Rust repos
+- Vapor managed toolchain and lockfiles support reproducible development
+- Crate boundaries vary; no shared Rust style/semver standard located

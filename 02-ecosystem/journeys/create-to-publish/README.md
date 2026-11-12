@@ -1,7 +1,6 @@
-# Create-to-Publish
+# Create to Publish
 
-> **Status:** Draft — proposed journey; no complete publishing path is verified.
-
-Trace a creator's possible path from making or contributing something to sharing it with an audience. Identify participating products, permissions, review points, and unresolved handoffs.
-
-Keep product-specific authoring and publishing interfaces with the product. Do not imply that a creator economy or publishing service currently exists.
+- **Observed local path:** register source project → edit/validate manifest → compose/preview → open review surface
+- **Boundary:** preview is read-only; publication requires separate explicit review/confirmation
+- **Gap:** Registry's typed catalog/release authority remains target work
+- **Source:** [Vapor Studio](https://github.com/GHF-Studios/Vapor-Studio/blob/94d45ad/README.md)

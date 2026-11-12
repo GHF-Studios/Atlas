@@ -1,7 +1,6 @@
 # Automation Boundaries
 
-> **Status:** Draft — no content generator or TOC generator is adopted.
-
-Define which publication tasks may be automated without transferring authorship of the knowledge itself. Build, link checking, and static rendering can be evaluated as distinct operations; authored claims, summaries, and TOC titles remain human work unless explicitly reviewed.
-
-Do not introduce templates or a permanent generator by implication. Record the cost and value before proposing one.
+- Current authoring content: Markdown; TOCs are maintained as files
+- User prefers no generator/template default; structured reader/renderer remains an open idea
+- Publication build automation is separate from authoring-content generation
+- Do not add a script without an agreed source-of-truth and review path

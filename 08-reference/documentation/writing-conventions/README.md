@@ -1,5 +1,6 @@
 # Writing Conventions
 
-Lightweight guidance for writing clear, navigable Atlas pages: lead with purpose, name scope, link to evidence, and say plainly when something is unknown.
-
-This is guidance rather than a style-enforcement checklist. Prefer readable prose and useful structure over uniformity for its own sake.
+- Draft form requested by owner: concise topic bullets, not polished paragraphs
+- Prefer evidence/source · observed state · open gap; keep each topic focused
+- Label proposals, owner direction, recollection, and unverified claims
+- No required template adopted

@@ -1,5 +1,5 @@
 # Chronology Gaps
 
-Known uncertainties and missing periods in the timeline of projects, decisions, and organizational history.
-
-State what is missing, why the date is uncertain, and what evidence might resolve it. Do not fill gaps with precise dates unsupported by sources.
+- Pre-Git Loo-Cast beginnings around 2021 rely on owner recollection
+- Full Unity-era source evolution not locally checked out; selected diffs only
+- Prototype-to-current concept lineage incomplete; Vapor repository histories begin later

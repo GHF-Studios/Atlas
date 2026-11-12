@@ -1,5 +1,5 @@
 # Historical Decisions
 
-An index of past decisions and decision-like records that help explain the current direction.
-
-Current authority belongs to the relevant governance or planning page. This history records what was decided, when, by whom if known, and whether it endured or changed.
+- Decisions visible in dated specs, manifests, commit diffs, and owner answers
+- June 2026 Vapor design records precede concrete multi-repo service topology
+- Current implementation often lags stated design; see evidence atlas

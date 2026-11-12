@@ -1,7 +1,5 @@
 # Manual Validation
 
-> **Status:** Draft — preserve the observed conditions and result.
-
-Describe how to validate behavior manually when automation is absent or insufficient. Record the revision, platform, setup, steps, expected result, and actual observation.
-
-A successful build is not evidence that a runtime workflow works.
+- Engine behavior changes: inspect relevant scene and record result (source README)
+- Release/deployment checks require target or live-host evidence
+- Manual checks should name revision, environment, scenario, and outcome

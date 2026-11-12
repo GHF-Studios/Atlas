@@ -1,7 +1,6 @@
 # Services
 
-> **Status:** Draft — operational service domain; concrete inventory is a child topic.
-
-Describe how live services are operated, monitored, depended upon, and assigned owners. The child inventory should list actual services; health contracts, dependencies, and state ownership should link to service-owned sources.
-
-Reference's service directory may link to this authoritative operations inventory rather than maintain a second live list.
+- Production report (2026-11-09): Platform · Homepage · Docs · Identity · Diagnostics · Registry · Artifact · Build Cache
+- Nov 9–10 source adds enrolled host fleet/typed operations beyond the service list
+- Services own routes/state; Platform coordinates deployment/recovery
+- Health probe ≠ feature readiness; live topology may have changed

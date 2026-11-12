@@ -1,7 +1,5 @@
 # Reference
 
-> **Status:** Draft — product-specific reference material only.
-
-Keep Loo Cast-specific constraints, terminology, and source references needed to understand its content and composed product. Shared Vapor and studio references belong elsewhere.
-
-Avoid repeating Engine documentation or canonical repository indexes.
+- Current authority: [Loo-Cast workspace README](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/README.md)
+- Engine source map: [Spacetime Engine README](https://github.com/GHF-Studios/Loo-Cast/blob/598e98c/spacetime-engine/README.md)
+- Historical context: [origins/intent reconstruction](https://github.com/GHF-Studios/Atlas/blob/874a24a/archive/audit-snapshot-2026-10-26/loo-cast-vapor-origin-and-intent.md)

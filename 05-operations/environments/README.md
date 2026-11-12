@@ -1,7 +1,5 @@
-# Operational Environments
+# Environments
 
-> **Status:** Draft — overview of environment purpose; inventory belongs under Infrastructure.
-
-Explain the distinctions among local development, CI, staging or disposable drills, and production operations where they actually exist. State which environments are real and which are proposed.
-
-Use Infrastructure/Environments for concrete hosts and configuration. If this overview only duplicates that inventory, consolidate it during structural review.
+- Primary environment: owner-operated VPS, independent services mode (2026-11-09 evidence)
+- Local development/source checkouts are separate
+- Build Cache targets unconfigured/no snapshots in dated probe

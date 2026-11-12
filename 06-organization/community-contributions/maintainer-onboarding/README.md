@@ -1,7 +1,5 @@
 # Maintainer Onboarding
 
-> **Status:** Draft — maintainer roles and access are not yet defined.
-
-Describe the information, permissions, security responsibilities, and handoff a new maintainer needs for a specific project or service. Separate technical setup from authority to approve or publish.
-
-Keep service-specific operational access in Operations and canonical role assignments in the Roles and Ownership branch.
+- No formal maintainer qualification/transfer process located
+- Repository access and Identity roles are distinct from published source visibility
+- Open: permissions · escalation · continuity · recovery of ownership

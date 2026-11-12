@@ -1,7 +1,5 @@
 # Disaster Recovery
 
-> **Status:** Draft — scenario, authority, and recovery evidence need review.
-
-Describe how operations recover from loss of a host, credentials, provider access, or service state. Separate rebuild-from-source, empty initialization, state import, and reauthorization steps.
-
-Do not claim a recovery path is proven until a drill records what was restored and what remained unavailable.
+- Layers: hosting account · independent root SSH · owner USB bundle · external Steam/GitHub accounts
+- USB sync verified 2026-11-09; clean-host restore still needed
+- Optional second VPS cannot replace owner-controlled recovery

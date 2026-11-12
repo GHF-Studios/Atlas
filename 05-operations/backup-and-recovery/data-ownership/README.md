@@ -1,7 +1,6 @@
 # Data Ownership
 
-> **Status:** Draft — every stateful service needs one canonical owner.
-
-Map state to the service or repository that owns its schema, writes, export/import, and recovery. Dashboards and aggregate backups may present or compose state without becoming a second authority.
-
-Keep product-domain ownership in the service contracts and link to them from the operational map.
+- Services own state meaning; Platform coordinates whole-system export/restore
+- Stateful: Identity · Diagnostics · Docs · Registry · Artifact · Operations
+- Build Cache snapshots treated as rebuildable
+- [Recovery contract](https://github.com/GHF-Studios/Vapor-Platform-Server/blob/65ade3c/docs/operations-evidence-and-recovery-contract.md)

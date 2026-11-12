@@ -1,14 +1,9 @@
 # Document Statuses
 
-> **Status:** Draft — proposed labels for human review; not an adopted standard.
-
-This page proposes a small vocabulary for describing how much confidence or review a document has received. The labels describe the page’s current state, not the process that changed it.
-
-- **Placeholder:** a named place in the structure with little or no substantive content.
-- **Draft:** content exists but remains incomplete, uncertain, or under review.
-- **Established:** people responsible for the topic have reviewed it as a current position; it may still change when evidence or decisions change.
-- **Superseded:** a newer source replaces this page; retain a link to the replacement where useful.
-
-## Current state
-
-These meanings need human agreement before they are used as a repository-wide convention. A status label should never imply more certainty than the page’s evidence supports.
+- **Proposed labels:** Placeholder · Draft · Established · Superseded
+- **Placeholder:** structural destination with little/no substantive content
+- **Draft:** content present; incomplete, uncertain, or awaiting review
+- **Established:** topic owners reviewed as current; still revisable
+- **Superseded:** replaced by a newer source; link replacement where useful
+- **Caution:** document maturity ≠ truth, implementation, or approval of every claim
+- **Status:** vocabulary not yet adopted repository-wide

@@ -1,7 +1,5 @@
-# Goals
+# Organizational Goals
 
-> **Status:** Draft — organizational outcomes and horizon are not established.
-
-Describe outcomes about the health and capacity of GHF Studios as an organization, such as sustainable collaboration or stewardship, if these are explicitly adopted. State time horizon and owner.
-
-Do not duplicate enduring studio direction in Foundations or active work in Planning.
+- PRE-ALPHA policy objective: maximize meaningful development progress per time/AI usage
+- Next milestone in policy: Alpha v0.5 integrated, comprehensive tech demos across Vapor/Engine/Loo Cast
+- Dated/current milestone status needs comparison with later commits and owner direction

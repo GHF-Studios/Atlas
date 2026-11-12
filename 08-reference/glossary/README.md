@@ -1,5 +1,6 @@
 # Glossary
 
-Terms that benefit from a concise shared definition across Atlas. Definitions should state context, note ambiguity, and link to the pages or systems that establish usage.
-
-The glossary is not a mandate to standardize every word. Where project usage conflicts, record the conflict and its scope rather than flattening it.
+- Current vocab sources: Vapor role manifests · Client content docs · Registry/Platform contracts · Engine module docs
+- Imported Vapor planning corpus includes 125 Glossary + 27 Tech Glossary pages; register marks them unprocessed/unvetted
+- Old glossary text is historical source material, not approved current definition
+- Terms with conflicts: Engine/Game/Pack/Packagepack · Project/Workspace/Composition · Registry

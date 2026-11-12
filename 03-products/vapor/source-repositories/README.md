@@ -1,7 +1,7 @@
 # Source Repositories
 
-> **Status:** Draft — map ownership; use Reference's repository index for canonical entries.
-
-Vapor Client owns the standalone runtime and shared tools; CLI, GUI, Installer, Studio, and Steam Entrypoint are separate application repositories in its checkout topology. Vapor Platform Server lives beside Client rather than as its submodule, and Vapor Registry is a separate authority repository.
-
-Use this page for product relationships and ownership. Do not duplicate clone URLs, branch data, or the full source index.
+- [Vapor-Client](https://github.com/GHF-Studios/Vapor-Client/tree/2c7e534): source root/submodule workspaces
+- [Vapor-Platform-Server](https://github.com/GHF-Studios/Vapor-Platform-Server/tree/65ade3c): deployment/service source
+- [Vapor-Registry](https://github.com/GHF-Studios/Vapor-Registry): machine-readable authority
+- [Loo-Cast](https://github.com/GHF-Studios/Loo-Cast): product content/Steam staging
+- Commits reflect checked local snapshots; verify branch freshness

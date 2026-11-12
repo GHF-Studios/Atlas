@@ -1,7 +1,6 @@
 # Opportunities
 
-> **Status:** Draft — possibilities, not commitments or forecasts.
-
-Capture plausible ways the wider ecosystem could create value, enable participation, or connect existing capabilities. Record who might benefit, what assumptions the idea depends on, and what evidence would justify further work.
-
-Move accepted, time-bound work into Planning. Keep this from becoming a second backlog or a list of unsupported market claims.
+- **Evidence-backed candidates:** reduce friction between authoring, composition, staging, acquisition
+- **Possible benefits:** reusable content · clearer product boundaries · traceable releases
+- **Unverified:** demand, market size, adoption, community scale
+- **Planning gate:** capture assumptions/evidence before turning opportunity into initiative
