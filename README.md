@@ -6,6 +6,8 @@ Its Markdown is human-authored or receives substantial human review. It brings t
 
 Atlas preserves and organizes what the studio understands about what it is building, why, and how its parts fit together. For implementation details, source code and other primary sources remain authoritative; Atlas should cite and explain them, not replace them.
 
+Atlas is also intended to have a book-like structure: each folder's child folders should use numeric prefixes to establish their reading order and make the whole knowledge base straightforward to assemble as one mdBook. This is a structural goal; nested folders do not yet follow it consistently.
+
 Atlas covers GHF Studios as a whole, including Vapor, the Spacetime Engine, Loo Cast, and our broader ambitions.
 
 ## Where to Begin
