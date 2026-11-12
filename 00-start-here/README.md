@@ -23,7 +23,7 @@ You do not need to read or complete everything. Most topic pages now contain sho
 ## Guides in this folder
 
 - [Reading Guide](01-reading-guide/README.md) — How to approach Atlas as a reader.
-- [Repository Map](02-repository-map/README.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
+- [Topic Placement](02-topic-placement/README.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
 - [Sources and Evidence](03-sources-and-evidence/README.md) — How to support claims and express uncertainty.
 - [Document Statuses](04-document-statuses/README.md) — How to distinguish placeholders, drafts, established positions, and superseded material; this describes a document's state, not the process for changing it.
 - [Knowledge Lifecycle](05-knowledge-lifecycle/README.md) — How knowledge is captured, reviewed, maintained, or retired.

@@ -8,7 +8,7 @@ Each folder links to its README and has a short human-readable title. README fil
 <a href="README.md">Atlas/</a> — GHF Studios Knowledge Base
 ├── <a href="00-start-here/README.md">00-start-here/</a> — Atlas Reading and Writing Guide
 │   ├── <a href="00-start-here/01-reading-guide/README.md">01-reading-guide/</a> — How to Read Atlas
-│   ├── <a href="00-start-here/02-repository-map/README.md">02-repository-map/</a> — Where Topics Belong
+│   ├── <a href="00-start-here/02-topic-placement/README.md">02-topic-placement/</a> — Where Topics Belong
 │   ├── <a href="00-start-here/03-sources-and-evidence/README.md">03-sources-and-evidence/</a> — Sources and Evidence
 │   ├── <a href="00-start-here/04-document-statuses/README.md">04-document-statuses/</a> — Document Status Labels
 │   ├── <a href="00-start-here/05-knowledge-lifecycle/README.md">05-knowledge-lifecycle/</a> — How Knowledge Changes
