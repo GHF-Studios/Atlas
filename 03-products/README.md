@@ -1,6 +1,6 @@
-# Products
+# Studio Portfolio
 
-This section introduces each product, its purpose, current capabilities, limitations, and relationship to the others.
+This section describes the studio's products and major projects: their purpose, current capabilities, limitations, and relationships to one another.
 Detailed implementation truth remains in the relevant source repository.
 
 ## Current state — 2026-11-11
