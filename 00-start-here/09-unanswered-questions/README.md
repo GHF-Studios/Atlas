@@ -1,6 +1,3 @@
 # Unanswered Questions
 
-- **Scope:** Atlas structure · navigation · writing · evidence practice · maintenance
-- **Route elsewhere:** product questions → portfolio · work proposals → Planning · authority → Organization
-- **Question record:** why it matters · source/discussion · answered/deferred state
-- **Current reality:** not a complete register; tracking process not adopted
+Open questions stay with the topics they concern. This page is a signpost to a shared index of those pages; the index will be added under [Reference](../../08-reference/README.md) when that section is reviewed and ordered. It will link to the topic pages rather than copy their questions.

@@ -25,12 +25,12 @@ You do not need to read or complete everything. Most topic pages now contain sho
 - [Reading Guide](01-reading-guide/README.md) — How to approach Atlas as a reader.
 - [Topic Placement](02-topic-placement/README.md) — What belongs where and why; the [Table of Contents](../TABLE_OF_CONTENTS.md) is the navigable file tree.
 - [Sources and Evidence](03-sources-and-evidence/README.md) — How to support claims and express uncertainty.
-- [Document Statuses](04-document-statuses/README.md) — How to distinguish placeholders, drafts, established positions, and superseded material; this describes a document's state, not the process for changing it.
+- [Document Statuses](04-document-statuses/README.md) — Proposed labels for a page's writing and review state, separate from whether its claims are true or adopted.
 - [Knowledge Lifecycle](05-knowledge-lifecycle/README.md) — How knowledge is captured, reviewed, maintained, or retired.
 - [Writing Guide](06-writing-guide/README.md) — How to start and structure a useful document.
 - [Contribution Process](07-contribution-process/README.md) — How people can propose, discuss, and review changes to Atlas documents.
-- [Inbox](08-inbox/README.md) — A temporary holding place for material that has not found its home, not a task backlog.
-- [Unanswered Questions](09-unanswered-questions/README.md) — Unresolved questions about Atlas's own structure and practices, not open questions about every subject it documents.
+- [Inbox](08-inbox/README.md) — A possible holding place for unplaced material; no intake process is adopted.
+- [Unanswered Questions](09-unanswered-questions/README.md) — Signpost to a shared index of open questions kept with their topics.
 
 ## Drafting principle (proposal)
 

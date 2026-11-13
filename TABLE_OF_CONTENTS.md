@@ -14,8 +14,8 @@ Each folder links to its README and has a short human-readable title. README fil
 │   ├── <a href="00-start-here/05-knowledge-lifecycle/README.md">05-knowledge-lifecycle/</a> — How Knowledge Changes
 │   ├── <a href="00-start-here/06-writing-guide/README.md">06-writing-guide/</a> — Writing Atlas Documents
 │   ├── <a href="00-start-here/07-contribution-process/README.md">07-contribution-process/</a> — Proposing Atlas Changes
-│   ├── <a href="00-start-here/08-inbox/README.md">08-inbox/</a> — Unsorted Notes and Links
-│   └── <a href="00-start-here/09-unanswered-questions/README.md">09-unanswered-questions/</a> — Questions About Atlas
+│   ├── <a href="00-start-here/08-inbox/README.md">08-inbox/</a> — Possible Inbox for Unplaced Notes
+│   └── <a href="00-start-here/09-unanswered-questions/README.md">09-unanswered-questions/</a> — Where to Find Open Questions
 ├── <a href="01-foundations/README.md">01-foundations/</a> — Purpose, Beliefs, and Direction
 │   ├── <a href="01-foundations/assumptions/README.md">assumptions/</a> — Working Assumptions
 │   ├── <a href="01-foundations/convictions/README.md">convictions/</a> — Convictions
