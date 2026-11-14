@@ -52,6 +52,8 @@ One proposed division is for Chunks to carry the rough background state of a reg
 
 Interaction fields may be global in meaning even if they are stored sparsely. A phenomenon that produces an influence—such as a magnet or a sound source—could contribute to the relevant part of a world-spanning field, which can make room for that contribution and mediate it. Nearby operations might use scale-local coordinates to place, transform, and query the relevant support without repeatedly calculating a full-scale USF position. This is a proposed design direction; field types, influence rules, storage, and ownership have not been specified.
 
+Spatial and temporal extent may be separate classifications from scale and representation. The current idea is that phenomena can be localized or continuous, while events or other time-bearing things can be instantaneous or extended. An [early USF prompt backup](https://github.com/GHF-Studios/Loo-Cast-Legacy/blob/7a6e534a40524f9efa23353c5e4458b6b1133588/loo_cast_legacy/documents/legacy_stuff/universal_simulation_framework_prompts_backup.txt) offers a related but not identical vocabulary: Phenomenon Models are called “Localized” or “Aerial” (the latter described as having ambiguous boundaries), and events combine Localized/Aerial with Instant/Continuous. That old taxonomy is useful evidence of prior thinking, not an adopted classification; in particular, “Aerial” does not clearly mean the same thing as “Continuous.”
+
 
 ## Framework, kernels, mechanics, and content
 
@@ -82,6 +84,17 @@ The first demonstration should test one capability at a time rather than pretend
 4. Introduce background fields and typed Phenomena, then test a generic kernel contract with one domain solver before adding other domains.
 
 The order and exact boundaries are provisional. This prototype ladder is a way to pose and isolate problems; passing one stage would not establish that other physical, chemical, optical, or social regimes are solved.
+
+## Major open questions
+
+- **World ontology:** What is the exact relationship between a Phenomenon, its scale-bound Models, background field state in Chunks, and residual or typed changes? When and how does information move between them?
+- **Extent and scale:** Are localized/continuous and instantaneous/extended the right names and categories? How do these axes relate to integer scale anchors, a continuous scale coordinate, and domain-specific measures such as physical fields or social influence?
+- **Representation changes:** What must remain invariant when detail is materialized, retained, or aggregated? Which information may be approximated or lost, under what conditions, and how can a changed region be reconstructed consistently?
+- **Observation and identity:** How does a player's active scale relate to their in-world identity or embodiment, chunk demand, camera zoom, and bounded requests for finer detail? The first model is singleplayer; multiplayer authority remains open.
+- **Time and persistence:** How should temporal scale follow spatial scale, and how do lifetimes, events, causality, and persistence behave when time is accelerated or slowed? The first spatial prototype deliberately avoids settling this.
+- **Kernel framework:** What shared contract lets domain kernels declare assumptions, inputs, outputs, state ownership, scale support, and interaction with other kernels? Which parts can genuinely be generic, and which remain domain-specific?
+- **Fidelity and evidence:** What does photorealism across visual and non-visual behavior require in each domain, and what evidence would show that a prototype meets its chosen fidelity target?
+- **Authoring and proof:** How are typed declarative content, world definitions, and procedural generators authored and changed safely? Which progressively more capable prototype should test each part of the vision?
 
 ## How this reaches the products
 
