@@ -57,7 +57,11 @@ Spatial and temporal extent may be separate classifications from scale and repre
 
 ## Framework, kernels, mechanics, and content
 
-The engine is not one universal solver. It needs a generic framework that lets many domain-specific computational kernels solve different kinds of problems under explicit, compatible contracts. A kernel's contract would make its assumptions, required inputs, outputs, state ownership, and relationship to scale clear enough that other mechanisms can use and compose it. What belongs in that common contract remains to be discovered.
+The engine is not one universal solver, and it should not impose one answer on every kind of process. Its framework should let a very large family of domain-specific computational kernels—potentially thousands of distinct mechanisms working together—address different physical, chemical, subatomic, societal, planetary, cosmological, and other problems. Their detailed assumptions, representations, and fidelity targets are decided case by case. The framework makes those solutions possible to describe, integrate, and run; it does not make the domain-specific solutions disappear.
+
+This also shapes the expected size of the work: the shared framework and kernel foundation may be substantial, but concrete domain mechanisms, gameplay rules, and content are expected to account for much more code overall.
+
+The kernel contract is therefore more than a list of inputs and outputs. It may need to describe a kernel's identity and scope; assumptions and required state; units and interpretation; outputs, effects, and authority over state; spatial and temporal support; coupling to fields and other kernels; scheduling and demand; persistence and transitions; fidelity, error, and uncertainty; resource bounds; and diagnostics. Which of these form universal guarantees, which are optional declarations, and which remain domain-specific is itself a major design problem. The framework must allow unlike kernels to cooperate without forcing them into one representation or update model.
 
 The intended layers appear to be:
 
@@ -87,14 +91,20 @@ The order and exact boundaries are provisional. This prototype ladder is a way t
 
 ## Major open questions
 
-- **World ontology:** What is the exact relationship between a Phenomenon, its scale-bound Models, background field state in Chunks, and residual or typed changes? When and how does information move between them?
-- **Extent and scale:** Are localized/continuous and instantaneous/extended the right names and categories? How do these axes relate to integer scale anchors, a continuous scale coordinate, and domain-specific measures such as physical fields or social influence?
-- **Representation changes:** What must remain invariant when detail is materialized, retained, or aggregated? Which information may be approximated or lost, under what conditions, and how can a changed region be reconstructed consistently?
-- **Observation and identity:** How does a player's active scale relate to their in-world identity or embodiment, chunk demand, camera zoom, and bounded requests for finer detail? The first model is singleplayer; multiplayer authority remains open.
-- **Time and persistence:** How should temporal scale follow spatial scale, and how do lifetimes, events, causality, and persistence behave when time is accelerated or slowed? The first spatial prototype deliberately avoids settling this.
-- **Kernel framework:** What shared contract lets domain kernels declare assumptions, inputs, outputs, state ownership, scale support, and interaction with other kernels? Which parts can genuinely be generic, and which remain domain-specific?
-- **Fidelity and evidence:** What does photorealism across visual and non-visual behavior require in each domain, and what evidence would show that a prototype meets its chosen fidelity target?
-- **Authoring and proof:** How are typed declarative content, world definitions, and procedural generators authored and changed safely? Which progressively more capable prototype should test each part of the vision?
+The first five questions are not expected to receive one universal answer. They are a repeatable case-by-case inquiry for each domain, process, or Phenomenon and its Models—potentially thousands of cases in a mature Engine:
+
+- What are the relevant entities, fields, Phenomena, and state owners in this domain, and how do they relate?
+- What spatial and temporal extents apply? Are the relevant things localized or continuous, instantaneous or extended, and how do those categories relate to scale and representation?
+- Which representations and kernels fit, and what must remain invariant when detail is materialized, retained, or aggregated? What may be approximated or lost, and how is the state reconstructed?
+- How does observation or a player's in-world identity create demand for this domain's detail? What do camera zoom and bounded inspection requests change, and what do they leave alone?
+- What does believable behavior mean here, and what domain-specific evidence would demonstrate the chosen fidelity? How do time, lifetimes, events, causality, and persistence work in this case?
+
+The framework-wide questions are different:
+
+- **Kernel contract and coordination:** What is the minimum shared contract across unlike kernels? Which details are required versus optional, how can kernels declare coupling and state authority, and how do they coexist when their domains interact or compete for resources?
+- **Generic versus domain-specific structure:** Which services should the framework provide once—such as spatial addressing, scheduling, state exchange, demand, persistence, or diagnostics—and which decisions must remain local to each domain?
+- **Authoring:** How are typed declarations, domain models, and procedural generators authored, validated, composed, and safely changed?
+- **Prototype evidence:** Which progressively more capable prototypes can test the framework's generic claims without implying that untested domains are solved?
 
 ## How this reaches the products
 
