@@ -1,12 +1,12 @@
 # Vision
 
-This page records the owner-stated ambition for GHF Studios and the design ideas it has begun to suggest. It is a working vision, not a claim about what current software can do or a settled engine specification.
+This page records what we want to build and the ideas that follow from it. It is our working vision, not a claim that current software already realizes it or a settled Engine specification.
 
 ## The ambition
 
-GHF Studios is defined by the ambition to create the Spacetime Engine and show what a game engine can make possible. The deliberately bold version is to “solve game engines”: build a framework for worlds with extraordinary spatial range and mechanistic depth, where different kinds of play can coexist in one universe.
+We aim to create the Spacetime Engine: a framework for worlds with extraordinary spatial range and mechanistic depth, where different kinds of play can coexist in one universe. At its boldest, we call this “solving game engines.” We are here to implement what we already believe is possible.
 
-Loo-Cast is meant to make that ambition tangible as a game. It should show how the Engine can be used, not merely demonstrate that its code runs. The Engine is the reusable framework being explored; Loo-Cast is a major creative proof of what such a framework could enable. Neither is complete today.
+Vapor is the evolving glue and tooling that connects this work and adapts to what we need. The Spacetime Engine is a more concrete concept whose contract we aim to fully specify and implement. Loo Cast is less concrete than the Engine but more concrete than Vapor; it is the game through which we intend to use the Engine and make its possibilities playable. The Engine and game are not complete today.
 
 ## A hierarchical world
 
